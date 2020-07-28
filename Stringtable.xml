@@ -1135,253 +1135,336 @@
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Features_6">
         <Original>Radio Towers</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Features_6">
         <Original>Destroy or capture Radio Towers in order to build trust with %1 citizens.</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_header_Features_7">
         <Original>Vehicles</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Features_7">
         <Original>You may buy vehicles for your squad at Faction flags.</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_header_Features_8">
         <Original>Static Weapons</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Features_8">
         <Original>You may steal static weapons found in enemy airports. You must use the 'Steal Static' action to do so. DO NOT disassemble them before using the 'Steal Static' action!</Original>
-      </Key>
+		<Ukrainian></Ukrainian>
+	</Key>
       <Key ID="STR_antistasi_journal_entry_header_Features_9">
         <Original>Conquer</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Features_9">
         <Original>Some zones, like airports require you to use the ""Take the Flag"" action on their respective flags in order to conquer them. Some others, like roadblocks and some outposts, simply require you to defeat the garrison.</Original>
-      </Key>
+		<Ukrainian></Ukrainian>
+	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Features_10">
         <Original>Ammobox Transfer</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Features_10">
         <Original>When you mount a truck, you may use the Transfer action in the action menu. It will search for nearby ammoboxes and load the contents of the nearest one into the truck's cargo space. You may then unload the truck in your ammobox at HQ for future use. Before transferring, make sure to unload backpack/vest contents into the Truck cargo space and then transfer. TIP: If your HQ Ammobox is full, use this functionality from a nearby truck to add more content to the ammobox as it will then accept everything :)</Original>
-      </Key>
+		<Ukrainian></Ukrainian>
+	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Features_11">
         <Original>Fast Travel</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Features_11">
         <Original>When there are no enemies nearby, fast travel to Faction controlled places. The Commander also has the ability to use this option on HC groups, selecting the group on HC bar and clicking on this button.</Original>
-      </Key>
+		<Ukrainian></Ukrainian>
+	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Features_12">
         <Original>Base Static Emplacement</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Features_12">
         <Original>Purchased static weapons won't despawn if you leave them in a base or zone, AI garrison will man them. Reinforce places as you desire.</Original>
-      </Key>
+		<Ukrainian></Ukrainian>
+	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Features_13">
         <Original>Group Selection</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Features_13">
         <Original>You can build groups with up to 10 human players. Commander is excluded of this function.</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_header_Features_14">
         <Original>Server Members</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Features_14">
         <Original>If enabled, this feature will exclude all non-members from using the HQ Ammobox and become Commander. This feature is intended to avoid having your game ruined by the casual troll in open server environments.</Original>
-      </Key>
+		<Ukrainian></Ukrainian>
+	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Features_15">
         <Original>Player and Money</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Features_15">
         <Original>Use this option to donate money to other players or your faction funds. Commanders may add or remove players from the Server Members List if the feature is enabled.</Original>
-      </Key>
+		<Ukrainian></Ukrainian>
+	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Features_16">
         <Original>Breach Vehicles</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Features_16">
         <Original>Tanks and APC can be breached by engineers with explosives to open them and get their crew out. Check 'Breaching charges' for the charges needed. Breaching vehicles applies damage, so take care when breaching heavily damaged vehicles. To breach a vehicle, get close to it and select the breaching option!</Original>
-      </Key>
+		<Ukrainian></Ukrainian>
+	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Features_17">
         <Original>Breaching charges</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Features_17">
         <Original>To breach an APC you need %1 %2To breach a tank you need %3</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_header_AI_1">
         <Original>Recruit</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_AI_1">
         <Original>You may recruit up to 9 AI squad-mates at some Faction flags and the HQ flag.</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_header_AI_2">
         <Original>AI Control</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_AI_2">
         <Original>Select a squad-mate or HC Group to gain direct control over them for a limited time. Selecting this option for a HC squad will give you control over the squad's leader.</Original>
-      </Key>
+		<Ukrainian></Ukrainian>
+	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_AI_3">
         <Original>AI Radio</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_AI_3">
         <Original>This feature aims to simulate the lack of radio communications with AI fighters. Your AI squad-mates won't have a radio until you unlock it from the Arsenal. Without a radio, if an AI squad-mate gets too far away, they will get lost and return to the leader's position after completing the last order they received. To avoid this, you may scavenge some radios from enemy (AutoRearm feature will do) or let the AI use a military vehicle which has long range radios. If it takes too long to find their leader, they will automatically return to the HQ.</Original>
-      </Key>
+		<Ukrainian></Ukrainian>
+	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_AI_4">
         <Original>Auto Heal</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_AI_4">
         <Original>AI Medic squad-mates will heal other AI’s automatically without the need to give any orders. If in combat, your AI will use smoke grenades for cover. If there is no medic in the group, the AI will use their own medikits.</Original>
-      </Key>
+		<Ukrainian></Ukrainian>
+	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_AI_5">
         <Original>Auto Rearm \ Loot</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_AI_5">
         <Original>Your AI squad-mates will automatically look for and scavenge any ammunition from nearby corpses, vehicles and ammoboxes if needed. Also they will try to renew their weapons with more powerful ones. If AI is inside a vehicle, they will loot weapons and launchers, and drop them in their truck until there is nothing in the area. Use this instead of the vanilla Rearm radio option.</Original>
-      </Key>
+		<Ukrainian></Ukrainian>
+	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_AI_6">
         <Original>Vehicle Squad</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_AI_6">
         <Original>Commander Only. Use this option to assign the vehicle you are looking at to any HC squad. Check vehicle status, order them to mount or disembark, and automate mounted static squads.</Original>
-      </Key>
+		<Ukrainian></Ukrainian>
+	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_AI_7">
         <Original>Dismiss Squad-mate</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_AI_7">
         <Original>Select the unit and use the 'Dismiss Squad-mate' option to send them back to HQ. You will recover some of the money you spent on them.</Original>
-      </Key>
+		<Ukrainian></Ukrainian>
+	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Options_1">
         <Original>Map Info</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Options_1">
         <Original>Click on a city to learn the strength of their support for the enemy or Faction. Click on other zones to know relevant info about them.</Original>
-      </Key>
+		<Ukrainian></Ukrainian>
+	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Options_2">
         <Original>AI Limiter</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Options_2">
         <Original>Commander Only. Sets the the maximum amount of AI in map per server or HC. Up to 200 AI may behave decently.</Original>
-      </Key>
+		<Ukrainian></Ukrainian>
+	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Options_3">
         <Original>Persistent Save-game</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Options_3">
         <Original>Commander Only. You may save the game at your HQ Map. This will allow you to continue playing upon mission update or server restart, preserving stats, player's equipment, conquered zones, enemy asset availability and many more things. WARNING: Normal save and load runs badly in this mission. This system is your only guarantee of saving the game properly</Original>
-      </Key>
+		<Ukrainian></Ukrainian>
+	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Options_4">
         <Original>Music ON/OFF</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Options_4">
         <Original>Antistasi has a situational music script, depending on a player's stance and time of day. The default in MP is OFF, and ON in Singleplayer</Original>
-      </Key>
+		<Ukrainian></Ukrainian>
+	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Options_5">
         <Original>Civ Spawn</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Options_5">
         <Original>Increase or decrease the percentage of city civilian population that spawn. At 0% only one civilian will spawn in each city.</Original>
-      </Key>
+		<Ukrainian></Ukrainian>
+	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Options_6">
         <Original>Spawn Distance</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Options_6">
         <Original>Commander only. Increase or decrease general spawn and despawn distance. Use it carefully combined with other options.</Original>
-      </Key>
+		<Ukrainian></Ukrainian>
+	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Options_7">
         <Original>Garbage Cleaner</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Options_7">
         <Original>Commander only. Will delete things like dropped weapons, magazines, clothing etc.&lt;br/&gt;&lt;br/&gt; Beware, it freezes the game for some time.</Original>
-      </Key>
+		<Ukrainian></Ukrainian>
+	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Options_8">
         <Original>Reinit UI</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Options_8">
         <Original>Select this option when the Y key or Statistics bar are not working.</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_header_Diary_1">
         <Original>%1 and %2 Aggro</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Diary_1">
         <Original>There is an All vs All war in %4. %1 and %2 are constantly attacking each other, but that does not mean they don't shoot at %3 on first sight.&lt;br/&gt;&lt;br/&gt;%1 and %2 Aggro points represent how much threat they see in %3 faction.&lt;br/&gt;&lt;br/&gt;Generally speaking those points will low or raise depending on your actions against them and civilians.</Original>
-      </Key>
+		<Ukrainian></Ukrainian>
+	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Diary_2">
         <Original>HR</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Diary_2">
         <Original>HR or Manpower comes from citizen support on each city. Manpower is needed to recruit more units (1 HR Points = 1 Soldier)</Original>
-      </Key>
+		<Ukrainian></Ukrainian>
+	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Diary_3">
         <Original>Money - MP</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Diary_3">
         <Original>In MP games there are two money pools. Faction Money -which is for Commander use only- and personal money. Personal money can be used by any player to recruit AI or buy vehicles. Faction earns money by taxes and accomplishing missions. Personal money comes from killing enemies and accomplishing missions. Options to transfer or donate money are found in the Y menu. Commander can grab money from the Faction Pool to his own account.</Original>
-      </Key>
+		<Ukrainian></Ukrainian>
+	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Diary_4">
         <Original>Money</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Diary_4">
         <Original>Money comes from a combination of citizens support on each city, resources conquered, factories conquered (which boost the economy) and power provided to all of them with a nearby friendly power plant (you may also conquer them to cut off Money supply to the enemy). Money is used to purchase vehicles, units and squads.</Original>
-      </Key>
+		<Ukrainian></Ukrainian>
+	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Diary_5">
         <Original>Resources</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Diary_5">
         <Original>Every 10 minutes each faction receives Money and Manpower according to the zones they own, and the state they are in. Having a good amount of resource zones and some factories is the way of getting enough resources to win this war.</Original>
-      </Key>
+		<Ukrainian></Ukrainian>
+	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Diary_6">
         <Original>HQ - Basics</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Diary_6">
         <Original>Flag: Vehicle and Squad Unit Recruitment. Commander Options.&lt;br/&gt;Maru: Side-missions (Commander Only).&lt;br/&gt;Map: Game Options.&lt;br/&gt;Camp-fire: Rest for 8 hours and Clear Forest (Commander Only).</Original>
-      </Key>
+		<Ukrainian></Ukrainian>
+	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_gamemode">
         <Original>AI Rules of Engagement</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_gamemode_1">
         <Original>%2 vs %1 war.</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_gamemode_2">
         <Original>%2 vs %1 war.</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_gamemode_3">
         <Original>%3 vs All war.&lt;br/&gt;&lt;br/&gt;%1 and %2 will attack only %3 and act independently. Both can conquer.</Original>
-      </Key>
+		<Ukrainian></Ukrainian>
+	  </Key>
       <Key ID="STR_antistasi_journal_entry_text_gamemode_4">
         <Original>All vs All war.&lt;br/&gt;&lt;br/&gt;%1 and %2 will attack each other and both to %3.</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_header_Default_1">
         <Original>Welcome</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Default_1">
         <Original>Welcome to Arma 3 - %1. This mission aims to simulate guerilla combat, tactics and strategic situations. It is not a quick and easy mod, it is long term, step-by-step mission with LOTS of features and enhanced AI.</Original>
-      </Key>
+		<Ukrainian></Ukrainian>
+	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Default_2">
         <Original>Win</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Default_2">
         <Original>You will win the game when most of the population supports Faction and you have conquered all the Airbases.</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_header_Default_3">
         <Original>Lose</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Default_3">
         <Original>You will loose the game if %1 has murdered 1/3 of the total population.</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_header_Credits_1">
         <Original>Script Credits</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Credits_1">
         <Original>UPSMon by Monsada, Kronzy and Cool=Azroul13 &lt;br/&gt;Persistent Save by zooloo75.&lt;br/&gt;Tags by Marker and Melbo.&lt;br/&gt;JAS by Jeroen (sorry for including you that late)&lt;br/&gt;Tags by Marker and Melbo.&lt;br/&gt;Advanced Towing by Seth Duda.</Original>
-      </Key>
+		<Ukrainian></Ukrainian>
+	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Credits_2">
         <Original>Mods</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Credits_2">
         <Original>Integrated (optional) Mods:&lt;br/&gt;TFAR: Radio integrated in Arsenal. Sound disabled when player is unconscious.&lt;br/&gt;ACE Medical: Will disable Antistasi revive system.&lt;br/&gt;&lt;br/&gt;CAUTION: The use of Persistent Save system with TFAR and any weapon mod activated will make them mandatory in future.&lt;br/&gt;&lt;br/&gt;Any client sided Mod, such as JSRS, Blastcore, UI Mod should work.&lt;br/&gt;&lt;br/&gt;Units and vehicles mods won't work. AI Mods may cause malfunctions (in any case Antistasi has heavy AI tweaking).</Original>
-      </Key>
+		<Ukrainian></Ukrainian>
+	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Credits_3">
         <Original>Thanks</Original>
+		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Credits_3">
         <Original>LanCommi for his artwork.&lt;br/&gt;Goon and jw custom: Part of the code for the NAPALM script.&lt;br/&gt;rebel12340: Radio Jam script&lt;br/&gt;Manko: Earplug snippet&lt;br/&gt;bobchaos: Managing the community despite all difficulties.&lt;br/&gt;And all those players who spend their time on making comments, suggestions and reports on Steam, Github and BIS forums</Original>
-      </Key>
+		<Ukrainian></Ukrainian>
+	  </Key>
     </Container>
   </Package>
 </Project>
