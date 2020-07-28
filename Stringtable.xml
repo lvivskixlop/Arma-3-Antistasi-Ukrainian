@@ -46,146 +46,146 @@
 		<Ukrainian>Забрати 100₴ зі спільного бюджету на свій особистий рахунок. Це зіпсує вашу репутацію, як командира, серед побратимів.</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_dialogs_hq_button_garrisons_text">
-        <Original>Manage Garrisons</Original>
-        <English>Manage Garrisons</English>
+        <Original>Керування гарнізоном</Original>
+        <English>Керування гарнізоном</English>
         <French>Gérer Garnisons</French>
-        <Russian>Построение Обороны</Russian>
-		<Ukrainian></Ukrainian>
+        <Russian>Керування гарнізоном</Russian>
+		<Ukrainian>Керування гарнізоном</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_dialogs_hq_button_garrisons_tooltip">
-        <Original>Add or remove units to garrisons</Original>
-        <English>Add or remove units to garrisons</English>
+        <Original>Додати чи забрати людей до гарнізону</Original>
+        <English>Додати чи забрати людей до гарнізону</English>
         <French>Ajouter ou Supprimer une garnison</French>
-        <Russian>Организация и построение Обороны</Russian>
-		<Ukrainian></Ukrainian>
+        <Russian>Додати чи забрати людей до гарнізону</Russian>
+		<Ukrainian>Додати чи забрати людей до гарнізону</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_dialogs_hq_button_move_headquarters_text">
-        <Original>Move HQ to another Zone</Original>
-        <English>Move HQ to another Zone</English>
+        <Original>Перемістити штаб в інше місце</Original>
+        <English>Перемістити штаб в інше місце</English>
         <French>Déplacer le QG vers une autre Zone</French>
-        <Russian>Переместить Штаб</Russian>
-		<Ukrainian></Ukrainian>
+        <Russian>Перемістити штаб в інше місце</Russian>
+		<Ukrainian>Перемістити штаб в інше місце</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_dialogs_hq_button_move_headquarters_tooltip">
-        <Original>Maru will join your group. Ammobox must be empty. To rebuild, select the Build action near Maru</Original>
-        <English>Maru will join your group. Ammobox must be empty. To rebuild, select the Build action near Maru</English>
+        <Original>Петро долучиться до Вашої групи. Арсенал повинен бути порожнім. Щоб побудувати штаб, виберіть опцію "Побудувати" ("Build") знаходячись біля Петра</Original>
+        <English>Петро долучиться до Вашої групи. Арсенал повинен бути порожнім. Щоб побудувати штаб, виберіть опцію "Побудувати" ("Build") знаходячись біля Петра</English>
         <French>Petros va rejoindre votre groupe. L'Arsenal doit être vide. Pour reconstruire, sélectionnez l'action "Construire" à côté de Petros.</French>
-        <Russian>Петрос присоединится к вашей группе. Чтобы построить Штаб, выберите на нём пункт "Построить Штаб". Арсенал должен быть пуст.</Russian>
-		<Ukrainian></Ukrainian>
+        <Russian>Петро долучиться до Вашої групи. Арсенал повинен бути порожнім. Щоб побудувати штаб, виберіть опцію "Побудувати" ("Build") знаходячись біля Петра</Russian>
+		<Ukrainian>Петро долучиться до Вашої групи. Арсенал повинен бути порожнім. Щоб побудувати штаб, виберіть опцію "Побудувати" ("Build") знаходячись біля Петра</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_dialogs_hq_button_members_list_text">
-        <Original>Ingame Member List</Original>
-        <English>Ingame Member List</English>
+        <Original>Список гравців</Original>
+        <English>Список гравців</English>
         <French>Liste des membres en ligne</French>
-        <Russian>Список Игроков</Russian>
-		<Ukrainian></Ukrainian>
+        <Russian>Список гравців</Russian>
+		<Ukrainian>Список гравців</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_dialogs_hq_button_members_list_tooltip">
-        <Original>Displays which server members are currently playing</Original>
-        <English>Displays which server members are currently playing</English>
+        <Original>Показує, хто з учасників сервера зара грає</Original>
+        <English>Показує, хто з учасників сервера зара грає</English>
         <French>Affiche quels membres du serveur sont actuellement en jeu</French>
-        <Russian>Показывает, кто из Игроков сейчас на сервере</Russian>
-		<Ukrainian></Ukrainian>
+        <Russian>Показує, хто з учасників сервера зара грає</Russian>
+		<Ukrainian>Показує, хто з учасників сервера зара грає</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_dialogs_hq_button_rebuild_assets_text">
-        <Original>Rebuild Assets</Original>
-        <English>Rebuild Assets</English>
+        <Original>Відновлення майна</Original>
+        <English>Відновлення майна</English>
         <French>Reconstruire les (biens)</French>
-        <Russian>Восстановление Объектов</Russian>
-		<Ukrainian></Ukrainian>
+        <Russian>Відновлення майна</Russian>
+		<Ukrainian>Відновлення майна</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_dialogs_hq_button_rebuild_assets_tooltip">
-        <Original>Cost: €5000</Original>
-        <English>Cost: €5000</English>
+        <Original>Ціна: 5000₴</Original>
+        <English>Ціна: 5000₴</English>
         <French>Coût : 5000€</French>
-        <Russian>Цена: 5000$</Russian>
-		<Ukrainian></Ukrainian>
+        <Russian>Ціна: 5000₴</Russian>
+		<Ukrainian>Ціна: 5000₴</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_dialogs_hq_button_train_ai_text">
-        <Original>Train FIA Troops</Original>
-        <English>Train FIA Troops</English>
+        <Original>Тренувати військо</Original>
+        <English>Тренувати військо</English>
         <French>Entrainer les troupes de la FIA</French>
-        <Russian>Тренировать Войска</Russian>
-		<Ukrainian></Ukrainian>
+        <Russian>Тренувати військо</Russian>
+		<Ukrainian>Тренувати військо</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_dialogs_hq_button_train_ai_tooltip">
-        <Original>Upgrades the AI skill level</Original>
-        <English>Upgrades the AI skill level</English>
+        <Original>Піднімає рівень майстерності ботів</Original>
+        <English>Піднімає рівень майстерності ботів</English>
         <French>Améliorer le niveau de l'IA</French>
-        <Russian>Увеличивает уровень готовности войск</Russian>
-		<Ukrainian></Ukrainian>
+        <Russian>Піднімає рівень майстерності ботів</Russian>
+		<Ukrainian>Піднімає рівень майстерності ботів</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_dialogs_hq_button_garage_text">
-        <Original>Garage Access</Original>
-        <English>Garage Access</English>
+        <Original>Гараж</Original><!--Garage Access-->
+        <English>Гараж</English>
         <French>Accès au garage</French>
-        <Russian>Гараж Сопротивления</Russian>
-		<Ukrainian></Ukrainian>
+        <Russian>Гараж</Russian>
+		<Ukrainian>Гараж</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_dialogs_hq_button_garage_tooltip">
-        <Original>Check Faction garage</Original>
-        <English>Check Faction garage</English>
+        <Original>Глянути спільний гараж</Original><!--Check Faction garage-->
+        <English>Глянути спільний гараж</English>
         <French>Examiner le garage de la faction</French>
-        <Russian>Проверить Гараж Сопротивления</Russian>
-		<Ukrainian></Ukrainian>
+        <Russian>Глянути спільний гараж</Russian>
+		<Ukrainian>Глянути спільний гараж</Ukrainian>
       </Key>
     </Container>
     <Container name="dialog_build_menu">
       <Key ID="STR_antistasi_dialogs_build_frame_text">
-        <Original>Building - Garrison Options</Original>
-        <English>Building - Garrison Options</English>
+        <Original>Будова гарнізону</Original><!--Building - Garrison Options-->
+        <English>Будова гарнізону</English>
         <French>Construction - Options de Garnison</French>
-        <Russian>Построение Обороны</Russian>
-		<Ukrainian></Ukrainian>
+        <Russian>Будова гарнізону</Russian>
+		<Ukrainian>Будова гарнізону</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_dialogs_build_button_no_text">
-        <Original>Back</Original>
-        <English>Back</English>
+        <Original>Назад</Original>
+        <English>Назад</English>
         <French>Retour</French>
         <Russian>Назад</Russian>
-		<Ukrainian></Ukrainian>
+		<Ukrainian>Назад</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_dialogs_build_minefield_button_text">
-        <Original>Minefield Options</Original>
-        <English>Minefield Options</English>
+        <Original>Мінні поля</Original>
+        <English>Мінні поля</English>
         <French>Options de Champ de Mines</French>
-        <Russian>Минные поля</Russian>
-		<Ukrainian></Ukrainian>
+        <Russian>Мінні поля</Russian>
+		<Ukrainian>Мінні поля</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_dialogs_build_minefield_button_tooltip">
-        <Original>AI will deploy or remove mines on desired objectives, using current arsenal mine stock</Original>
-        <English>AI will deploy or remove mines on desired objectives, using current arsenal mine stock</English>
+        <Original>Боти будуть мінувати чи розміновувати на обраних об'єктах, використовуючи міни з арсеналу.</Original>
+        <English>Боти будуть мінувати чи розміновувати на обраних об'єктах, використовуючи міни з арсеналу.</English>
         <French>L'IA va déployer ou retirer des mines sur les objectifs désirés, en utilisant le stock disponible dans l'arsenal</French>
-        <Russian>Инженеры установят или удалят мины на выбранной позиции, используя мины из арсенала</Russian>
-		<Ukrainian></Ukrainian>
+        <Russian>Боти будуть мінувати чи розміновувати на обраних об'єктах, використовуючи міни з арсеналу.</Russian>
+		<Ukrainian>Боти будуть мінувати чи розміновувати на обраних об'єктах, використовуючи міни з арсеналу.</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_dialogs_build_outpost_button_text">
-        <Original>Outpost or Roadblock</Original>
-        <English>Outpost or Roadblock</English>
+        <Original>Аванпост чи блокпост</Original>
+        <English>Аванпост чи блокпост</English>
         <French>Avant-Poste ou Barrage Routier</French>
-        <Russian>БП или НП</Russian>
-		<Ukrainian></Ukrainian>
+        <Russian>Аванпост чи блокпост</Russian>
+		<Ukrainian>Аванпост чи блокпост</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_dialogs_build_outpost_button_tooltip">
-        <Original>Establish a new watchpost or roadblock depending on the type of terrain you select.</Original>
-        <English>Establish a new watchpost or roadblock depending on the type of terrain you select.</English>
+        <Original>Поставити аванпост чи блокпост, залежно від місцевості.</Original>
+        <English>Поставити аванпост чи блокпост, залежно від місцевості.</English>
         <French>Créer un nouvel avant-poste ou barrage routier en fonction du type de terrain sélectionné</French>
-        <Russian>Установить Наблюдательный Пост или Блок Пост в зависимости от выбранного места.</Russian>
-		<Ukrainian></Ukrainian>
+        <Russian>Поставити аванпост чи блокпост, залежно від місцевості.</Russian>
+		<Ukrainian>Поставити аванпост чи блокпост, залежно від місцевості.</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_dialogs_build_recruit_units_button_text">
-        <Original>Recruit Units</Original>
-        <English>Recruit Units</English>
+        <Original>Найняти бійців</Original>
+        <English>Найняти бійців</English>
         <French>Recruter des unités</French>
-        <Russian>Добавить в Гарнизон</Russian>
-		<Ukrainian></Ukrainian>
+        <Russian>Найняти бійців</Russian>
+		<Ukrainian>Найняти бійців</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_dialogs_build_recruit_units_button_tooltip">
-        <Original>Add units to an existing garrison.</Original>
-        <English>Add units to an existing garrison.</English>
+        <Original>Додати бійців до гарнізону</Original>
+        <English>Додати бійців до гарнізону</English>
         <French>Ajouter des unités à une garnison existante</French>
-        <Russian>Добавить добровольца в гарнизон.</Russian>
-		<Ukrainian></Ukrainian>
+        <Russian>Додати бійців до гарнізону</Russian>
+		<Ukrainian>Додати бійців до гарнізону.</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_dialogs_build_disband_units_button_text">
         <Original>Disband Units or Posts</Original>
