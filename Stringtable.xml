@@ -890,53 +890,53 @@
 		<Ukrainian>Стратегія</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_tutorial_3">
-        <Original>Once you have a nice amount of resources, focus on enemy communications. If you disturb them enough, you won't have to face big counter-attacks.</Original>
-        <English>Once you have a nice amount of resources, focus on enemy communications. If you disturb them enough, you won't have to face big counter-attacks.</English>
-		<Ukrainian></Ukrainian>
+        <Original>Як тільки у вас буде достатньо ресурсів, сконцентруйте свої сили на знищення ворожих комунікацій. Якщо ви їх добряче потріпаєте, то ворог не буде контр-атакувати так люто.</Original>
+        <English>Як тільки у вас буде достатньо ресурсів, сконцентруйте свої сили на знищення ворожих комунікацій. Якщо ви їх добряче потріпаєте, то ворог не буде контр-атакувати так люто.</English>
+		<Ukrainian>Як тільки у вас буде достатньо ресурсів, сконцентруйте свої сили на знищення ворожих комунікацій. Якщо ви їх добряче потріпаєте, то ворог не буде контр-атакувати так люто.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_tutorial_4">
-        <Original>Conquer and Hold</Original>
-        <English>Conquer and Hold</English>
-		<Ukrainian></Ukrainian>
+        <Original>Захоплення і утримання</Original>
+        <English>Захоплення і утримання</English>
+		<Ukrainian>Захоплення і утримання</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_tutorial_4">
-        <Original>Don't expect a light counter-attack when you conquer strategic zones such as resources or airportsX. The enemy will send everything they can, if available. If you conquer a zone and expect a counter-attack, fleeing is a nice option.</Original>
-        <English>Don't expect a light counter-attack when you conquer strategic zones such as resources or airportsX. The enemy will send everything they can, if available. If you conquer a zone and expect a counter-attack, fleeing is a nice option.</English>
-		<Ukrainian></Ukrainian>
+        <Original>Не чекайте маленьких легеньких контр-атак, коли завойовуєте стратегічно важливі зони, наприклад ресурси чи аеропорти. Якщо ви захопили зону і чекаєте на контр-атаку, то дати драла це теж не поганий варіант.</Original>
+        <English>Не чекайте маленьких легеньких контр-атак, коли завойовуєте стратегічно важливі зони, наприклад ресурси чи аеропорти. Якщо ви захопили зону і чекаєте на контр-атаку, то дати драла це теж не поганий варіант.</English>
+		<Ukrainian>Не чекайте маленьких легеньких контр-атак, коли завойовуєте стратегічно важливі зони, наприклад ресурси чи аеропорти. Якщо ви захопили зону і чекаєте на контр-атаку, то дати драла це теж не поганий варіант.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_tutorial_5">
-        <Original>Resources</Original>
-        <English>Resources</English>
-		<Ukrainian></Ukrainian>
+        <Original>Ресурси</Original>
+        <English>Ресурси</English>
+		<Ukrainian>Ресурси</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_tutorial_5">
-        <Original>Having a good amount of resources for bigger operations is mandatory, especially weapons and ammo. In the initial stages, your main source of resources is accomplishing side-missions.</Original>
-        <English>Having a good amount of resources for bigger operations is mandatory, especially weapons and ammo. In the initial stages, your main source of resources is accomplishing side-missions.</English>
-		<Ukrainian></Ukrainian>
+        <Original>Для провернення більших операцій необхідно мати добротну кількість ресурсів, особливо зброю і амуніцію. На початках основним джерелом ресурсів є виконання завдань від Петра.</Original><!--Having a good amount of resources for bigger operations is mandatory, especially weapons and ammo. In the initial stages, your main source of resources is accomplishing side-missions.-->
+        <English>Для провернення більших операцій необхідно мати добротну кількість ресурсів, особливо зброю і амуніцію. На початках основним джерелом ресурсів є виконання завдань від Петра.</English>
+		<Ukrainian>Для провернення більших операцій необхідно мати добротну кількість ресурсів, особливо зброю і амуніцію. На початках основним джерелом ресурсів є виконання завдань від Петра.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_tutorial_6">
         <Original>Starting Position</Original>
         <English>Starting Position</English>
-		<Ukrainian></Ukrainian>
+		<Ukrainian>Стартова позиція</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_tutorial_6">
-        <Original>Find a good spot to begin the mission. Your experience is very different from one start spot to another. Study the surrounding markers and roads between them well. If you start near a road between enemy zones, a patrol may appear and kill Petros.</Original>
-        <English>Find a good spot to begin the mission. Your experience is very different from one start spot to another. Study the surrounding markers and roads between them well. If you start near a road between enemy zones, a patrol may appear and kill Petros.</English>
-		<Ukrainian></Ukrainian>
+        <Original>Знайдіть добре місце для штабу, щоб почати місію. Досвід гри може кардинально змінитись, в залежності від початкового місця. Дослідіть довколишні маркери, дороги, локації. Якщо ви стартанете на дорозі поміж ворожими зонами, то може з'явитись патруль і вбити Петра.</Original>
+        <English>Знайдіть добре місце для штабу, щоб почати місію. Досвід гри може кардинально змінитись, в залежності від початкового місця. Дослідіть довколишні маркери, дороги, локації. Якщо ви стартанете на дорозі поміж ворожими зонами, то може з'явитись патруль і вбити Петра.</English>
+		<Ukrainian>Знайдіть добре місце для штабу, щоб почати місію. Досвід гри може кардинально змінитись, в залежності від початкового місця. Дослідіть довколишні маркери, дороги, локації. Якщо ви стартанете на дорозі поміж ворожими зонами, то може з'явитись патруль і вбити Петра.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_tutorial_7">
-        <Original>Undercover</Original>
-        <English>Undercover</English>
-		<Ukrainian></Ukrainian>
+        <Original>Режим інкогніто (цивільний)</Original><!--Undercover-->
+        <English>Режим інкогніто (цивільний)</English>
+		<Ukrainian>Режим інкогніто (цивільний)</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_text_tutorial_7">
-        <Original>In the early stages, especially when accomplishing certain missions, being undercover can be extremely helpful. Just as for real resistance fighters, your ability to disappear is something the enemy cannot counter. See Features section for a deep explanation of Undercover Mode.</Original>
-        <English>In the early stages, especially when accomplishing certain missions, being undercover can be extremely helpful. Just as for real resistance fighters, your ability to disappear is something the enemy cannot counter. See Features section for a deep explanation of Undercover Mode.</English>
-		<Ukrainian></Ukrainian>
+        <Original>Для деяких місій на ранніх стадіях стан цивільного може бути дуже помічним. Як і в справжніх повстанців, можливість розчинитись це те з чим ворог не може ніяк боротись. Для детальнішої інформації гляньте в розділ Особливості, або ліпше в когось запитайте, наприклад в мене.</Original><!--In the early stages, especially when accomplishing certain missions, being undercover can be extremely helpful. Just as for real resistance fighters, your ability to disappear is something the enemy cannot counter. See Features section for a deep explanation of Undercover Mode.-->
+        <English>Для деяких місій на ранніх стадіях стан цивільного може бути дуже помічним. Як і в справжніх повстанців, можливість розчинитись це те з чим ворог не може ніяк боротись. Для детальнішої інформації гляньте в розділ Особливості, або ліпше в когось запитайте, наприклад в мене.</English>
+		<Ukrainian>Для деяких місій на ранніх стадіях стан цивільного може бути дуже помічним. Як і в справжніх повстанців, можливість розчинитись це те з чим ворог не може ніяк боротись. Для детальнішої інформації гляньте в розділ Особливості, або ліпше в когось запитайте, наприклад в мене.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_commander_1">
-        <Original>General</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Командир</Original><!--General-->
+		<Ukrainian>Командир</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_commander_1">
         <Original>Having a commander is necessary because he is the commander of the Faction attacking ground forces. Many options are available only to the commander and, depending on your settings, if you play MP, the most experienced player will usually occupy this position.</Original>
