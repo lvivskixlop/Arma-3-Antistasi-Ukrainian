@@ -402,18 +402,18 @@
 		<Ukrainian>Назад</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_dialogs_generic_button_yes_text">
-        <Original>Так</Original>
-        <English>Так</English>
+        <Original>Та</Original>
+        <English>Та</English>
         <French>Oui</French>
-        <Russian>Так</Russian>
-		<Ukrainian>Так</Ukrainian>
+        <Russian>Та</Russian>
+		<Ukrainian>Та</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_dialogs_generic_button_no_text">
-        <Original>Ні</Original>
-        <English>Ні</English>
+        <Original>Нє</Original>
+        <English>Нє</English>
         <French>Ніт</French>
-        <Russian>Ні</Russian>
-		<Ukrainian>Ні</Ukrainian>
+        <Russian>Нє</Russian>
+		<Ukrainian>Нє</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_dialogs_generic_button_yes_tooltip">
         <Original />
@@ -685,14 +685,14 @@
         <Original>Be the Resistance Leader. Fight against a superior enemy in technology, number, assets and vehicles. Use guerrilla tactics in a totally dynamic world, with around 18 sidemissions, everywhere, anytime, anything.</Original>
         <English>Be the Resistance Leader. Fight against a superior enemy in technology, number, assets and vehicles. Use guerrilla tactics in a totally dynamic world, with around 18 sidemissions, everywhere, anytime, anything.</English>
         <French>Devenez le Chef de la Résistance. Battez-vous contre un ennemi en surnombre et avec un niveau technologique supérieur. Utilisez les tactiques des Guerrillas dans un monde complétement dynamique, avec environ 18 missions. Quand vous voulez, où vous voulez, avec ce que vous voulez...</French>
-        <Russian>Стань лидером сопротивления. Сражайся против врага превосходящего в технологии, количистве, вооружении и технике. Используй партизанскую тактику в полностью динамическом мире.</Russian>
+        <Russian></Russian>
 		<Ukrainian></Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_mission_info_chernawinter_description_text">
         <Original>Be the Resistance Leader. Fight against a superior enemy in technology, number, assets and vehicles. Use guerrilla tactics in a totally dynamic world, with around 18 sidemissions, everywhere, anytime, anything.</Original>
         <English>Be the Resistance Leader. Fight against a superior enemy in technology, number, assets and vehicles. Use guerrilla tactics in a totally dynamic world, with around 18 sidemissions, everywhere, anytime, anything.</English>
         <French>Devenez le Chef de la Résistance. Battez-vous contre un ennemi en surnombre et avec un niveau technologique supérieur. Utilisez les tactiques des Guerrillas dans un monde complétement dynamique, avec environ 18 missions. Quand vous voulez, où vous voulez, avec ce que vous voulez...</French>
-        <Russian>Стань лидером сопротивления. Сражайся против врага превосходящего в технологии, количистве, вооружении и технике. Используй партизанскую тактику в полностью динамическом мире.</Russian>
+        <Russian></Russian>
 		<Ukrainian></Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_mission_info_cherna_mapname_text">
@@ -1011,108 +1011,108 @@
 		<Ukrainian>Мінні поля</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_commander_10">
-        <Original>Take the engineers truck to the desired position to build a minefield. Cover them while they deploy mines. From then on, no one will be able to pass the area safely (even your own units - so use with caution). Mines (AT and AP) are taken from your Ammobox. The quantity of mines in the field will depend on the contents of your ammobox, up to a max. number depending on the type of minefield. Delete those minefields to recover the mines.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Відвезіть інженерну вантажівку до зони, де має бути мінне поле. Прикривайте саперів, поки вони займаються мінуванням. Від того моменту ніхто не зможе безпечно пересуватись замінованою ділянкою, що, звісно, очевидно. Усі міни (ПП та ПТ) беруться з арсеналую Кількість мін у полі залежить від кількості мін в арсеналі. Максимальна кількість мін залежить від типу мінного поля. Видаліть мінне поле, щоб повернути міни до арсеналу.</Original>
+		<Ukrainian>Відвезіть інженерну вантажівку до зони, де має бути мінне поле. Прикривайте саперів, поки вони займаються мінуванням. Від того моменту ніхто не зможе безпечно пересуватись замінованою ділянкою, що, звісно, очевидно. Усі міни (ПП та ПТ) беруться з арсеналую Кількість мін у полі залежить від кількості мін в арсеналі. Максимальна кількість мін залежить від типу мінного поля. Видаліть мінне поле, щоб повернути міни до арсеналу.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_commander_11">
-        <Original>Sell Vehicle</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Продати техніку</Original>
+		<Ukrainian>Продати техніку</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_commander_11">
-        <Original>Use this option to sell captured vehicles and increase Faction funds.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Продайте техніку, щоб збільшити кошти на спільному рахунку фракції.</Original>
+		<Ukrainian>Продайте техніку, щоб збільшити кошти на спільному рахунку фракції.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_commander_12">
-        <Original>Observation Post</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Аванпост</Original><!--Observation Post-->
+		<Ukrainian>Аванпост</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_commander_12">
-        <Original>Use the radio and select a spot on the map with good field of vision. A group of snipers will join you. Send them to the selected place and they will spot for you, attempting to remain hidden and not engaging enemies upon contact.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Використовуючи радіо, виберіть на карті позицію з гарним оглядом. До вас долучиться група снайперів. Пошліть їх в обране місце, де вони будуть вишукувати ворогів, залишаючись не поміченими, та не відкриваючи вогонь до першого контакту.</Original>
+		<Ukrainian>Використовуючи радіо, виберіть на карті позицію з гарним оглядом. До вас долучиться група снайперів. Пошліть їх в обране місце, де вони будуть вишукувати ворогів, залишаючись не поміченими, та не відкриваючи вогонь до першого контакту.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_commander_13">
-        <Original>Roadblocks</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Блокпости</Original>
+		<Ukrainian>Блокпости</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_commander_13">
-        <Original>Use the menu and select a spot on the map. Click where a road is. A group of AT soldiers will join you. Send them to the selected place and they will establish a roadblock there.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Виберіть місце на карті, використовуючи меню. Клікайте тільки там, де є дорога. До вас доєднається група з ПТ стрільців. Пошліть їх в обране місце, щоб вони організували там блокпост.</Original>
+		<Ukrainian>Виберіть місце на карті, використовуючи меню. Клікайте тільки там, де є дорога. До вас доєднається група з ПТ стрільців. Пошліть їх в обране місце, щоб вони організували там блокпост.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_commander_14">
-        <Original>Grab Faction Funds</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Взяти гроші зі спільного рахунку</Original>
+		<Ukrainian>Взяти гроші зі спільного рахунку</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_text_commander_14">
-        <Original>Use this option to grab money from the Faction pool to your personal account. Please note this will have an impact on your score and future promotion chances. Corrupt Commanders may find themselves loosing their command.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Ця опція дозволяє перевести гроші зі спільного рахунку на свій. Майте на увазі, що це шкодить вашій репутації і шанси майбутнього підвищення. Корумповані командири можуть втратити командування.</Original>
+		<Ukrainian>Ця опція дозволяє перевести гроші зі спільного рахунку на свій. Майте на увазі, що це шкодить вашій репутації і шанси майбутнього підвищення. Корумповані командири можуть втратити командування.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_commander_15">
-        <Original>In-game Members</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Члени сервера</Original>
+		<Ukrainian>Члени сервера</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_commander_15">
-        <Original>In the HQ Flag, if the Server Member feature is enabled, you may check which of the Server Members are in game and the total number of non members.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Якщо ввімкнена функція членів сервера, то біля штабового прапора можна глянути на список членів сервера, які зараз у грі, та загальну простих гравців.</Original>
+		<Ukrainian>Якщо ввімкнена функція членів сервера, то біля штабового прапора можна глянути на список членів сервера, які зараз у грі, та загальну простих гравців.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_SpecialK_1">
-        <Original>Battle Options</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Бойове меню</Original>
+		<Ukrainian>Бойове меню</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_SpecialK_1">
-        <Original>Press Y in-game to have access any time to several options. Most of them are explained in the Commander or Features sections.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Натисніть Y, щоб відкрити бойове меню. Про більшість функцій вже пояснено в Особливостях та Командуванні.</Original>
+		<Ukrainian>Натисніть Y, щоб відкрити бойове меню. Про більшість функцій вже пояснено в Особливостях та Командуванні.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_SpecialK_2">
-        <Original>High Command</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Вище командування</Original>
+		<Ukrainian>Вище командування</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_SpecialK_2">
-        <Original>When you are the Commander, hit CTRL + SPACE to give way-points and other orders to your AI squads using the HC mode. Non commanders may use it to check enemy contacts reported by the Faction communications network.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Якщо ви є командиром, натисніть CTRL + SPACE, щоб віддавати накази своїм відділенням. Не командири також можуть використовувати це для перевірки на предмет ворожих контактів, які звітуються в комунікаційну мережу фракції.</Original>
+		<Ukrainian>Якщо ви є командиром, натисніть CTRL + SPACE, щоб віддавати накази своїм відділенням. Не командири також можуть використовувати це для перевірки на предмет ворожих контактів, які звітуються в комунікаційну мережу фракції.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_SpecialK_3">
-        <Original>Artillery</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Артилерія</Original>
+		<Ukrainian>Артилерія</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_SpecialK_3">
-        <Original>Press SHIFT + Y in-game while having an artillery squad selected on the HC bar.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Коли в меню вищого командування обрано артилерійське відділення, натисніть SHIFT + Y.</Original><!--Press SHIFT + Y in-game while having an artillery squad selected on the HC bar.-->
+		<Ukrainian>Коли в меню вищого командування обрано артилерійське відділення, натисніть SHIFT + Y.</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_header_SpecialK_4">
-        <Original>Group Manager</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Керування відділенням</Original>
+		<Ukrainian>Керування відділенням</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_SpecialK_4">
-        <Original>MP Only: Press U in-game to join another player's group</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Натисніть U, щоб долучитись до відділення іншого гравця.</Original>
+		<Ukrainian>Натисніть U, щоб долучитись до відділення іншого гравця.</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_header_SpecialK_5">
-        <Original>Earplugs</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Беруші</Original>
+		<Ukrainian>Беруші</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_SpecialK_5">
-        <Original>Press END to enable / disable earplugs. Disabled with ACE.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Тицяйде END, щоб ввімкнути / вимкнути беруші. Вимикається через Ace.</Original>
+		<Ukrainian>Тицяйде END, щоб ввімкнути / вимкнути беруші. Вимикається через Ace.</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_header_Features_1">
-        <Original>Faction Leader</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Лідер фракції</Original>
+		<Ukrainian>Лідер фракції</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Features_1">
-        <Original>Just as with any resistance movement, leadership is not as stable as in organised states. Any player can take the role of Faction Force Commander if the current one is not very popular... Demonstrate your skill while accomplishing missions and killing enemies and maybe you will become the next leader.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Кожен гравець може взяти на себе відповідальність командира, якщо теперішній командир був не дуже... Підвищуйте свої вміння, виконуючи місії та вбиваючи ворогів і, можливо, ви теж колись станете командиром.</Original>
+		<Ukrainian>Кожен гравець може взяти на себе відповідальність командира, якщо теперішній командир був не дуже... Підвищуйте свої вміння, виконуючи місії та вбиваючи ворогів і, можливо, ви теж колись станете командиром.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Features_2">
-        <Original>Garage</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Гараж</Original>
+		<Ukrainian>Гараж</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Features_2">
-        <Original>Add any vehicle near your personal Virtual Garage (or factions garage if you are the commander) and keep it safe for future use. Vehicle add option is under the Y menu. Garage management is in HQ options (Flag). Garage recovery capacities may depend on where you are: Air Units can be recovered only near Airbases, boats, near the shore etc.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Додати будь-яку техніку, що поблизу, до персонального гаражу (чи гаражу фракції, якщо Ви є командир). Додати техніку можна через Y меню. Керування гаражом здійсьнюється через прапор. Не назумну техніку (повітряну і наводну) можна діставати тільки в призначених для цього місцях. Літаки тільки на злітній смузі, човни біля причалу, і т.д..</Original>
+		<Ukrainian>Додати будь-яку техніку, що поблизу, до персонального гаражу (чи гаражу фракції, якщо Ви є командир). Додати техніку можна через Y меню. Керування гаражом здійсьнюється через прапор. Не назумну техніку (повітряну і наводну) можна діставати тільки в призначених для цього місцях. Літаки тільки на злітній смузі, човни біля причалу, і т.д..</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Features_3">
-        <Original>Undercover</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Інкогніто</Original>
+		<Ukrainian>Інкогніто</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Features_3">
         <Original>Click on this button to go undercover. If you meet the requirements, the enemy won't attack you on sight. On foot, to go undercover you must have no weapons or military equipment visible.&lt;br/&gt;You will lose undercover status when you change load-out, get spotted by enemy guard-dogs, plant mines, and can also be reported by some civilians to the enemy. If you are discovered you won't be able to go undercover on foot again for 30 minutes. You can also go undercover by getting into any civilian vehicle. You will lose undercover status by firing any weapon or being spotted far from a road. If you are discovered you won't be able to go undercover in that vehicle again. Getting close to enemy Airbases, outposts and roadblocks will also make you lose undercover status.</Original>
