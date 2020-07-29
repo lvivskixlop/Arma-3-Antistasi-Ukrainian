@@ -939,75 +939,76 @@
 		<Ukrainian>Командир</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_commander_1">
-        <Original>Having a commander is necessary because he is the commander of the Faction attacking ground forces. Many options are available only to the commander and, depending on your settings, if you play MP, the most experienced player will usually occupy this position.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Командир це важлива одиниця, яка відповідяє за військо вашої фракції. Багато опцій доступні лише командиру, і тільки найбільш досвідченим гравцям варто займати цю позицію.</Original>
+		<Ukrainian>Командир це важлива одиниця, яка відповідяє за військо вашої фракції. Багато опцій доступні лише командиру, і тільки найбільш досвідченим гравцям варто займати цю позицію.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_commander_2">
-        <Original>Garrisons</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Гарнізони</Original>
+		<Ukrainian>Гарнізони</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_commander_2">
-        <Original>The Commander is responsible for assigning units as garrisons in  conquered areas. Use the Garrison Management option in the HQ flag in order to add or remove garrison troops at each zone. Check Map Info screen for a quick overview of how many soldiers are assigned to each zone.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Командир відповідальний за призначення бійців до гарнізонів завойованих об'єктів. Тицяйте опцію "Управління гарнізоном" на прапорі Штабу, шоб додати чи забрати піхотинців на об'єктах. Щоб подивитися стільки бійців вже є у зоні, перевірте "Інформацію на карті", вибравши відповідну опцію біля тої карти, що є в вашому штабі.</Original>
+		<Ukrainian>Командир відповідальний за призначення бійців до гарнізонів завойованих об'єктів. Тицяйте опцію "Управління гарнізоном" на прапорі Штабу, шоб додати чи забрати піхотинців на об'єктах. Щоб подивитися стільки бійців вже є у зоні, перевірте "Інформацію на карті", вибравши відповідну опцію біля тої карти, що є в вашому штабі.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_commander_3">
-        <Original>Faction Skill Upgrade</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Покращення майстерності війська</Original>
+		<Ukrainian>Покращення майстерності війська</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_commander_3">
-        <Original>For a price, you can upgrade Faction training so that future recruits will have better skills.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Дозволяє придбати покращення для армії, піхотинці будуть мати ліпші скіли.</Original>
+		<Ukrainian>Дозволяє придбати покращення для армії, піхотинці будуть мати ліпші скіли.</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_header_commander_4">
-        <Original>Side Missions - Petros</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Побічні місії від Петра</Original>
+		<Ukrainian>Побічні місії від Петра</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_commander_4">
-        <Original>Ask Petros for any type of mission you want. Mission availability is subject to HQ positioning, current allocated tasks and ownership of the surrounding areas.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Підійдіть до Петра, щоб обрати місії певного типу. Доступність місій залежить від розміщення штабу, вже активних місій, та наявності ворога поблизу.</Original>
+		<Ukrainian>Підійдіть до Петра, щоб обрати місії певного типу. Доступність місій залежить від розміщення штабу, вже активних місій, та наявності ворога поблизу.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_commander_5">
-        <Original>Move HQ</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Переміщення штабу</Original>
+		<Ukrainian>Переміщення штабу</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_commander_5">
-        <Original>The Commander may select this option on the HQ Flag in order to move the HQ emplacement to another spot. This will allow you to move your HQ to a safer location or move closer to the front-lines. The closer your HQ is to the enemy, the greater the number of possibile side-missions you will have available. Remember! Keep Petros Safe or you will lose the game!</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Щоб перемістити штаб до іншого місця, командир повинен вибрати цю опцію біля штабового прапору. Це дасть можливість перемістити штаю до більш безпечної позиції, або ж навпаки -- ближче до фронту. Чим ближче штаб до ворога тим більше побічних місій буде доступно. Але пам'ятайте тримати Петра в безпеці, або ви програєте!</Original>
+		<Ukrainian>Щоб перемістити штаб до іншого місця, командир повинен вибрати цю опцію біля штабового прапору. Це дасть можливість перемістити штаю до більш безпечної позиції, або ж навпаки -- ближче до фронту. Чим ближче штаб до ворога тим більше побічних місій буде доступно. Але пам'ятайте тримати Петра в безпеці, або ви програєте!</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_commander_6">
-        <Original>Rest - Camp-fire</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Відпочинок коло кострища</Original>
+		<Ukrainian>Відпочинок коло кострища</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_commander_6">
-        <Original>Use the action menu on your HQ Camp-fire to rest for 8 hours.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Виберіть цю опцію біля штабового кострища, щоб пропустити 8 годин.</Original>
+		<Ukrainian>Виберіть цю опцію біля штабового кострища, щоб пропустити 8 годин.</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_header_commander_7">
-        <Original>Bomb Run</Original>
+        <Original>Бомбардування</Original>
+		<Ukrainian>Бомбардування</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_commander_7">
-        <Original>Use your Airstrike points to perform a bombing run of the specified type.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Використовуйте очки авіаудару, щоб провести бомбардування.</Original><!--Use your Airstrike points to perform a bombing run of the specified type.-->
+		<Ukrainian>Використовуйте очки авіаудару, щоб провести бомбардування.</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_header_commander_8">
-        <Original>Artillery</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Артилерія</Original>
+		<Ukrainian>Артилерія</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_commander_8">
-        <Original>Mounted mortar teams may be used as artillery support. Select a mortar team using the High Command bar, and press SHIFT + Y in-game to call in a mortar fire mission.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Для артилерійської підтримки можна використовувати мінометні групи. Виберіть групу мінометників в командирському меню, і тицьніть SHIFT + Y, щоб викликати артилерійський удар.</Original><!--Mounted mortar teams may be used as artillery support. Select a mortar team using the High Command bar, and press SHIFT + Y in-game to call in a mortar fire mission.-->
+		<Ukrainian>Для артилерійської підтримки можна використовувати мінометні групи. Виберіть групу мінометників в командирському меню, і тицьніть SHIFT + Y, щоб викликати артилерійський удар.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_commander_9">
-        <Original>Recruit Squad</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Найняти загін</Original>
+		<Ukrainian>Найняти загін</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_commander_9">
-        <Original>The Commander may recruit an AI manned squad at base camp flags. Use the High Command module (CTRL + SPACE) to give orders to your squads. Also you may temporally control and dismiss the squad leader in the same way you do with squad-mates.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Командир може наймати відділення ботів біля прапорів на військових об'єктах. Використовуйте модуль вищого командування (CTRL + SPACE), щоб віддати наказ відділенням. Також ви можете контролювати та звільняти командирів відділень так само, як ви це робите з бійцями свого відділення.</Original><!--The Commander may recruit an AI manned squad at base camp flags. Use the High Command module (CTRL + SPACE) to give orders to your squads. Also you may temporally control and dismiss the squad leader in the same way you do with squad-mates.-->
+		<Ukrainian>Командир може наймати відділення ботів біля прапорів на військових об'єктах. Використовуйте модуль вищого командування (CTRL + SPACE), щоб віддати наказ відділенням. Також ви можете контролювати та звільняти командирів відділень так само, як ви це робите з бійцями свого відділення.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_commander_10">
-        <Original>Minefields</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Мінні поля</Original>
+		<Ukrainian>Мінні поля</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_commander_10">
         <Original>Take the engineers truck to the desired position to build a minefield. Cover them while they deploy mines. From then on, no one will be able to pass the area safely (even your own units - so use with caution). Mines (AT and AP) are taken from your Ammobox. The quantity of mines in the field will depend on the contents of your ammobox, up to a max. number depending on the type of minefield. Delete those minefields to recover the mines.</Original>
