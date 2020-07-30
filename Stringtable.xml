@@ -1123,96 +1123,96 @@
 		<Ukrainian>Арсенал</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Features_4">
-        <Original>Scavenge for items, weapons and magazines and put them in your HQ Ammobox. Once you have a specific amount of an them, they will be unlocked and added to the Arsenal for personal use (and for your Faction squads).&lt;br/&gt;The amount required to unlock depends on how many assets the Faction has unlocked and the number of factories owned. Unlocked weapons, optics and night-vision Googles may also change AI load-out. Basic militiamen are especially affected by this: their load-out will start from small SMGs and progress to having an extra AA / AT launcher. Please note this will not affect their dress, which will depend on the current Faction Skill Level (helmets and uniform). Arsenal is the standard BIS Arsenal, check their documentation for interaction and use.&lt;br/&gt;&lt;br/&gt;To see the amounts required to unlock each group of items, open the HQ Ammobox and you will receive a detailed report on the right.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Лутайте зброю, набої, предмети, і зберігайте їх в арсеналі. Як тільки назбирається достатня кількість відповідних предметів, вони стануть доступні для Вас і ваших ботів в необмеженій кількості. &lt;br/&gt;Це залежить від кількості підконтрольних вам об'єктів та заводів. Безкінечна зброя, оптика, ПНБ також впливають на спорядження ботів. Переважно це стосується до звичайних солдатів. Майте на квазі, що їх одяг та броня залежить від рівня майстерності армії.&lt;br/&gt;&lt;br/&gt;</Original><!--Scavenge for items, weapons and magazines and put them in your HQ Ammobox. Once you have a specific amount of an them, they will be unlocked and added to the Arsenal for personal use (and for your Faction squads).&lt;br/&gt;The amount required to unlock depends on how many assets the Faction has unlocked and the number of factories owned. Unlocked weapons, optics and night-vision Googles may also change AI load-out. Basic militiamen are especially affected by this: their load-out will start from small SMGs and progress to having an extra AA / AT launcher. Please note this will not affect their dress, which will depend on the current Faction Skill Level (helmets and uniform). Arsenal is the standard BIS Arsenal, check their documentation for interaction and use.&lt;br/&gt;&lt;br/&gt;To see the amounts required to unlock each group of items, open the HQ Ammobox and you will receive a detailed report on the right.-->
+		<Ukrainian>Лутайте зброю, набої, предмети, і зберігайте їх в арсеналі. Як тільки назбирається достатня кількість відповідних предметів, вони стануть доступні для Вас і ваших ботів в необмеженій кількості. &lt;br/&gt;Це залежить від кількості підконтрольних вам об'єктів та заводів. Безкінечна зброя, оптика, ПНБ також впливають на спорядження ботів. Переважно це стосується до звичайних солдатів. Майте на квазі, що їх одяг та броня залежить від рівня майстерності армії.&lt;br/&gt;&lt;br/&gt;</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Features_5">
-        <Original>Politics</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Політика</Original>
+		<Ukrainian>Політика</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Features_5">
-        <Original>This is a civil war. People are not conquered if you cannot conquer their hearts. In game mechanics, this means you cannot conquer cities. The citizens of each town support the enemy or Faction to some amount.&lt;br/&gt;The dominant faction is the one who owns the city and benefits from their support in terms of money and human resources (HR). Your actions may lower enemy Support or raise yours, or both. Killing enemies, accomplishing missions, conquering resources, and power-stations, affect the amount of citizen support.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Важливою частиною цієї місії є підтримка міст. Місто не можливо завоювати, але можливо переманити його мешканців на свій бік. Кожне місто може підтримувати окупанта, чи вашу армію певною мірою. &lt;br/&gt;Сторона, яка має більше підтримки отримує від міста грошову підтримку та людські ресурси (HR). Ваші дії можуть як і зменшити підтримку ворога, так і збільшити підтримку вас миротворців, або ж і те і інше. Ліквідація окупантів, виконання завдань, завойовування ресурсів, заводів чи електростанцій приносять вам підтримку міста.</Original>
+		<Ukrainian>Важливою частиною цієї місії є підтримка міст. Місто не можливо завоювати, але можливо переманити його мешканців на свій бік. Кожне місто може підтримувати окупанта, чи вашу армію певною мірою. &lt;br/&gt;Сторона, яка має більше підтримки отримує від міста грошову підтримку та людські ресурси (HR). Ваші дії можуть як і зменшити підтримку ворога, так і збільшити підтримку вас миротворців, або ж і те і інше. Ліквідація окупантів, виконання завдань, завойовування ресурсів, заводів чи електростанцій приносять вам підтримку міста.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Features_6">
-        <Original>Radio Towers</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Радіовежі</Original>
+		<Ukrainian>Радіовежі</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Features_6">
         <Original>Destroy or capture Radio Towers in order to build trust with %1 citizens.</Original>
-		<Ukrainian></Ukrainian>
+		<Ukrainian>Знищуйте чи захоплюйте радіовежі, щоб збільшити підтримку населення на %1</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_header_Features_7">
-        <Original>Vehicles</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Техніка</Original>
+		<Ukrainian>Техніка</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Features_7">
-        <Original>You may buy vehicles for your squad at Faction flags.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Ви можете купувати техніку для вашого відділення біля прапорів.</Original>
+		<Ukrainian>Ви можете купувати техніку для вашого відділення біля прапорів.</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_header_Features_8">
-        <Original>Static Weapons</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Станкове озброєння</Original>
+		<Ukrainian>Станкове озброєння</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Features_8">
-        <Original>You may steal static weapons found in enemy airports. You must use the 'Steal Static' action to do so. DO NOT disassemble them before using the 'Steal Static' action!</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Можна красти станкову зброю з ворожих аеродромів. Щоб це зробити виберіть опцію 'Вкрасти'('Steal Static'). В ЖОДНОМУ РАЗІ не розбирайте зброю перш ніж її вкрасти!</Original>
+		<Ukrainian>Можна красти станкову зброю з ворожих аеродромів. Щоб це зробити виберіть опцію 'Вкрасти'('Steal Static'). В ЖОДНОМУ РАЗІ не розбирайте зброю перш ніж її вкрасти!</Ukrainian>
 	</Key>
       <Key ID="STR_antistasi_journal_entry_header_Features_9">
-        <Original>Conquer</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Завойовування</Original>
+		<Ukrainian>Завойовування</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Features_9">
-        <Original>Some zones, like airports require you to use the ""Take the Flag"" action on their respective flags in order to conquer them. Some others, like roadblocks and some outposts, simply require you to defeat the garrison.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Щоб захопити деякі згони, наприклад, аеродроми ви поаинні натиснути опцію "Взяти прапор" ("Take the Flag") біля прапора цього об'єкту. А для інших об'єктві, наприклад, блокпостів чи аванпостів, необхідно лише перебити всіх ворогів.</Original>
+		<Ukrainian>Щоб захопити деякі згони, наприклад, аеродроми ви поаинні натиснути опцію "Взяти прапор" ("Take the Flag") біля прапора цього об'єкту. А для інших об'єктві, наприклад, блокпостів чи аванпостів, необхідно лише перебити всіх ворогів.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Features_10">
-        <Original>Ammobox Transfer</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Вантажити спорядження</Original>
+		<Ukrainian>Вантажити спорядження</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Features_10">
-        <Original>When you mount a truck, you may use the Transfer action in the action menu. It will search for nearby ammoboxes and load the contents of the nearest one into the truck's cargo space. You may then unload the truck in your ammobox at HQ for future use. Before transferring, make sure to unload backpack/vest contents into the Truck cargo space and then transfer. TIP: If your HQ Ammobox is full, use this functionality from a nearby truck to add more content to the ammobox as it will then accept everything :)</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Тицяйте опцію "Вивантажити спорядження", сидячи в вантажівці. Функція шукатиме найближчі коробки зі спорядженням і перенесе їх вміст в інвентар вантажівки. Потім вантажівку можна вивантажити в арсенал. Але перш ніж вивантажувати, вигрузіть все з бронежелетів, розгрузок, та рюкзаків в інвентар вантажівки.</Original>
+		<Ukrainian>Тицяйте опцію "Вивантажити спорядження", сидячи в вантажівці. Функція шукатиме найближчі коробки зі спорядженням і перенесе їх вміст в інвентар вантажівки. Потім вантажівку можна вивантажити в арсенал. Але перш ніж вивантажувати, вигрузіть все з бронежелетів, розгрузок, та рюкзаків в інвентар вантажівки.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Features_11">
-        <Original>Fast Travel</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Швидке переміщення</Original>
+		<Ukrainian>Швидке переміщення</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Features_11">
-        <Original>When there are no enemies nearby, fast travel to Faction controlled places. The Commander also has the ability to use this option on HC groups, selecting the group on HC bar and clicking on this button.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Ви можете телепортуватись, на підконтрольні вами об'єкти, коли поблизу немає ворогів. Командир також може телепортувати групи через менб вищого командування, вибравши в меню потрібну групу і тикнувши на цю кнопку.</Original>
+		<Ukrainian>Ви можете телепортуватись, на підконтрольні вами об'єкти, коли поблизу немає ворогів. Командир також може телепортувати групи через менб вищого командування, вибравши в меню потрібну групу і тикнувши на цю кнопку.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Features_12">
-        <Original>Base Static Emplacement</Original>
+        <Original>Станкова зброя бази</Original>
 		<Ukrainian></Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Features_12">
-        <Original>Purchased static weapons won't despawn if you leave them in a base or zone, AI garrison will man them. Reinforce places as you desire.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Якщо залишити куплену станкову зброю біля штабу, чи іншого підконтрольного об'єкту, вона не зникає. Боти можуть використовувати її для захисту об'єктів.</Original>
+		<Ukrainian>Якщо залишити куплену станкову зброю біля штабу, чи іншого підконтрольного об'єкту, вона не зникає. Боти можуть використовувати її для захисту об'єктів.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Features_13">
         <Original>Group Selection</Original>
-		<Ukrainian></Ukrainian>
+		<Ukrainian>Вибір груп</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Features_13">
-        <Original>You can build groups with up to 10 human players. Commander is excluded of this function.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Ви можете робити групи до 10 людей. В командирів ця функція виключена.</Original><!--You can build groups with up to 10 human players. Commander is excluded of this function.-->
+		<Ukrainian>Ви можете робити групи до 10 людей. В командирів ця функція виключена.</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_header_Features_14">
-        <Original>Server Members</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Члени сервера</Original>
+		<Ukrainian>Члени сервера</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Features_14">
-        <Original>If enabled, this feature will exclude all non-members from using the HQ Ammobox and become Commander. This feature is intended to avoid having your game ruined by the casual troll in open server environments.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Якщо така функція ввімкнена, то вона не дозволяє не членам використовувати арсенал та ставати командиром.</Original><!--If enabled, this feature will exclude all non-members from using the HQ Ammobox and become Commander. This feature is intended to avoid having your game ruined by the casual troll in open server environments.-->
+		<Ukrainian>Якщо така функція ввімкнена, то вона не дозволяє не членам використовувати арсенал та ставати командиром.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Features_15">
-        <Original>Player and Money</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Гравець і гроші</Original>
+		<Ukrainian>Гравець і гроші</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Features_15">
         <Original>Use this option to donate money to other players or your faction funds. Commanders may add or remove players from the Server Members List if the feature is enabled.</Original>
-		<Ukrainian></Ukrainian>
+		<Ukrainian>Для передачі грошей до спільного фонду, чи інших гравців. ....................</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Features_16">
         <Original>Breach Vehicles</Original>
