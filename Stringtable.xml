@@ -1355,48 +1355,48 @@
 		<Ukrainian>%1 і %2 Агресія</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Diary_1">
-        <Original>There is an All vs All war in %4. %1 and %2 are constantly attacking each other, but that does not mean they don't shoot at %3 on first sight.&lt;br/&gt;&lt;br/&gt;%1 and %2 Aggro points represent how much threat they see in %3 faction.&lt;br/&gt;&lt;br/&gt;Generally speaking those points will low or raise depending on your actions against them and civilians.</Original>
-		<Ukrainian>Війна всіх проти всіх на %4. %1 і %2 постійно атакують одне одного, але %3 вони також стрілятимуть, як тільки побачуть.&lt;br/&gt;&lt;br/&gt; Очки агресії %1 і %2 означають рівень загрози %3 для них. &lt;br/&gt;&lt;br/&gt;</Ukrainian>
+        <Original>Війна всіх проти всіх на %4. %1 і %2 постійно атакують одне одного, але %3 вони також стрілятимуть, як тільки побачуть.&lt;br/&gt;&lt;br/&gt; Очки агресії %1 і %2 означають рівень загрози %3 для них. &lt;br/&gt;&lt;br/&gt;Ті очки збільшуються чи зменшуються в залежності від ваших дій проти них, чи цивільних.</Original>
+		<Ukrainian>Війна всіх проти всіх на %4. %1 і %2 постійно атакують одне одного, але %3 вони також стрілятимуть, як тільки побачуть.&lt;br/&gt;&lt;br/&gt; Очки агресії %1 і %2 означають рівень загрози %3 для них. &lt;br/&gt;&lt;br/&gt;Ті очки збільшуються чи зменшуються в залежності від ваших дій проти них, чи цивільних.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Diary_2">
-        <Original>HR</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Людські ресурси ('HR')</Original>
+		<Ukrainian>Людські ресурси ('HR')</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Diary_2">
-        <Original>HR or Manpower comes from citizen support on each city. Manpower is needed to recruit more units (1 HR Points = 1 Soldier)</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Кадри, або ж людські ресурси поступають від підтримки міст. Вони потрібні для того, щоб наймати бійців (1 HR = 1 бієць)</Original>
+		<Ukrainian>Кадри, або ж людські ресурси поступають від підтримки міст. Вони потрібні для того, щоб наймати бійців (1 HR = 1 бієць)</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Diary_3">
-        <Original>Money - MP</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Фінансові ресурси ('ФР')</Original>
+		<Ukrainian>Фінансові ресурси ('ФР')</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Diary_3">
-        <Original>In MP games there are two money pools. Faction Money -which is for Commander use only- and personal money. Personal money can be used by any player to recruit AI or buy vehicles. Faction earns money by taxes and accomplishing missions. Personal money comes from killing enemies and accomplishing missions. Options to transfer or donate money are found in the Y menu. Commander can grab money from the Faction Pool to his own account.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>В грі є два рахунки: ваш особистий, та рахунок фракції (використовувати може лише командир). За гроші з особистого рахунку можна наймати ботів, чи купувати техніку. Фракційні гроші заробляються від податків з міст, та з виконання місій. Особисті гроші заробляються з вбивств ворогів та виконання місій також. Щоб переказати гроші, використовуйте Y-меню. Командир може брати гроші на свій особистий рахунок з загального рахунку.</Original>
+		<Ukrainian>В грі є два рахунки: ваш особистий, та рахунок фракції (використовувати може лише командир). За гроші з особистого рахунку можна наймати ботів, чи купувати техніку. Фракційні гроші заробляються від податків з міст, та з виконання місій. Особисті гроші заробляються з вбивств ворогів та виконання місій також. Щоб переказати гроші, використовуйте Y-меню. Командир може брати гроші на свій особистий рахунок з загального рахунку.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Diary_4">
-        <Original>Money</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Гроші</Original>
+		<Ukrainian>Гроші</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Diary_4">
-        <Original>Money comes from a combination of citizens support on each city, resources conquered, factories conquered (which boost the economy) and power provided to all of them with a nearby friendly power plant (you may also conquer them to cut off Money supply to the enemy). Money is used to purchase vehicles, units and squads.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Гроші приходять від лояльних міст, завойованих ресурсів та фабрик, та електрики, яка поставляється до цих всіх інстанцій від найближчої захопленої електростанції. Також завойовування елекростанцій добряче б'є по ворожих фінансах. Гроші використовуються для покупки техніки, бійців, та відділень.</Original>
+		<Ukrainian>Гроші приходять від лояльних міст, завойованих ресурсів та фабрик, та електрики, яка поставляється до цих всіх інстанцій від найближчої захопленої електростанції. Також завойовування елекростанцій добряче б'є по ворожих фінансах. Гроші використовуються для покупки техніки, бійців, та відділень.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Diary_5">
-        <Original>Resources</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Ресурси</Original>
+		<Ukrainian>Ресурси</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Diary_5">
-        <Original>Every 10 minutes each faction receives Money and Manpower according to the zones they own, and the state they are in. Having a good amount of resource zones and some factories is the way of getting enough resources to win this war.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Кожні 10 хвилин фракція отримує гроші та HR, відповідно від зон, які їй підконтрольні. Лише маючи добру кількість ресурсів та заводів можна виграти цю війну.</Original>
+		<Ukrainian>Кожні 10 хвилин фракція отримує гроші та HR, відповідно від зон, які їй підконтрольні. Лише маючи добру кількість ресурсів та заводів можна виграти цю війну.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Diary_6">
-        <Original>HQ - Basics</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Штаб - основи</Original>
+		<Ukrainian>Штаб - основи</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Diary_6">
         <Original>Flag: Vehicle and Squad Unit Recruitment. Commander Options.&lt;br/&gt;Maru: Side-missions (Commander Only).&lt;br/&gt;Map: Game Options.&lt;br/&gt;Camp-fire: Rest for 8 hours and Clear Forest (Commander Only).</Original>
-		<Ukrainian></Ukrainian>
+		<Ukrainian>Прапор: купівля техніки та ботів. Командирські опції.&lt;br/&gt;Петро: </Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_gamemode">
         <Original>AI Rules of Engagement</Original>
