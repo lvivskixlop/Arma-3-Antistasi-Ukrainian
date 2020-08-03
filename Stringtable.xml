@@ -1211,104 +1211,104 @@
 		<Ukrainian>Гравець і гроші</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Features_15">
-        <Original>Use this option to donate money to other players or your faction funds. Commanders may add or remove players from the Server Members List if the feature is enabled.</Original>
+        <Original>Для передачі грошей до спільного фонду, чи до інших гравців. Командир може додавати чи видаляти гравців до членів серверу, якщо така функція ввімкнена.</Original>
 		<Ukrainian>Для передачі грошей до спільного фонду, чи до інших гравців. Командир може додавати чи видаляти гравців до членів серверу, якщо така функція ввімкнена.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Features_16">
-        <Original>Breach Vehicles</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Вибивання техніки</Original><!--Breach Vehicles-->
+		<Ukrainian>Вибивання техніки</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Features_16">
-        <Original>Tanks and APC can be breached by engineers with explosives to open them and get their crew out. Check 'Breaching charges' for the charges needed. Breaching vehicles applies damage, so take care when breaching heavily damaged vehicles. To breach a vehicle, get close to it and select the breaching option!</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Інженери можуть використовувати вибухівку, щоб вибити і витягти екіпаж з танка чи БМП. Вибивання техніки таким чином може нанести їй пошкодження, тож будьте обережні, якщо техніка вже є побита. Щоб вибити техніку підійдіть до неї близько, та виберіть опцію 'Вибити' ('Breach'). Для цого потрібно мати підривні заряди ('Breaching charges').</Original>
+		<Ukrainian>Інженери можуть використовувати вибухівку, щоб вибити і витягти екіпаж з танка чи БМП. Вибивання техніки таким чином може нанести їй пошкодження, тож будьте обережні, якщо техніка вже є побита. Щоб вибити техніку підійдіть до неї близько, та виберіть опцію 'Вибити' ('Breach'). Для цого потрібно мати підривні заряди ('Breaching charges').</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Features_17">
-        <Original>Breaching charges</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Підривні заряди</Original><!--Breaching charges-->
+		<Ukrainian>Підривні заряди</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Features_17">
-        <Original>To breach an APC you need %1 %2To breach a tank you need %3</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Для вибивання БМП потрібно %1 %2Для танка потрібно %3</Original><!--To breach an APC you need %1 %2To breach a tank you need %3-->
+		<Ukrainian>Для вибивання БМП потрібно %1 %2Для танка потрібно %3</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_header_AI_1">
-        <Original>Recruit</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Наймання</Original><!--Recruit-->
+		<Ukrainian>Наймання</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_AI_1">
-        <Original>You may recruit up to 9 AI squad-mates at some Faction flags and the HQ flag.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Ви можете найняти до 9-ти ботів біля прапора підконтрольного об'єкту, чи біля прапора штабу.</Original>
+		<Ukrainian>Ви можете найняти до 9-ти ботів біля прапора підконтрольного об'єкту, чи біля прапора штабу.</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_header_AI_2">
-        <Original>AI Control</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Керування ботами</Original><!--AI Control-->
+		<Ukrainian>Керування ботами</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_AI_2">
-        <Original>Select a squad-mate or HC Group to gain direct control over them for a limited time. Selecting this option for a HC squad will give you control over the squad's leader.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Виберіть бійця, чи відділення, щоб мати контроль над ними протягом обмеженого часу. Вибираючи відділення ви отримуєте контроль над командиром відділення.</Original><!--Select a squad-mate or HC Group to gain direct control over them for a limited time. Selecting this option for a HC squad will give you control over the squad's leader.-->
+		<Ukrainian>Виберіть бійця, чи відділення, щоб мати контроль над ними протягом обмеженого часу. Вибираючи відділення ви отримуєте контроль над командиром відділення.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_AI_3">
-        <Original>AI Radio</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Радіо для ШІ</Original><!--AI Radio-->
+		<Ukrainian>Радіо для ШІ</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_AI_3">
-        <Original>This feature aims to simulate the lack of radio communications with AI fighters. Your AI squad-mates won't have a radio until you unlock it from the Arsenal. Without a radio, if an AI squad-mate gets too far away, they will get lost and return to the leader's position after completing the last order they received. To avoid this, you may scavenge some radios from enemy (AutoRearm feature will do) or let the AI use a military vehicle which has long range radios. If it takes too long to find their leader, they will automatically return to the HQ.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Ця функція придумана для симуляції складності комунікацій між бійцями ботами. Якщо бот без рації відійде надто далеко, то він спочатку виконає свій останній наказ, а потім побіжить до останньої відомої позиції командира. Якщо він надто довго не може найти командира, то він повертається до штабу. Щоб цього уникнути, треба щоб у ботів були рації. Вони їх будуть брати з арсеналу, чи підбирати в ворожих трупів (якщо ввімкнено АвтоЛутання). Або ж якщо їм дати техніку з ДХ раціями.</Original>
+		<Ukrainian>Ця функція придумана для симуляції складності комунікацій між бійцями ботами. Якщо бот без рації відійде надто далеко, то він спочатку виконає свій останній наказ, а потім побіжить до останньої відомої позиції командира. Якщо він надто довго не може найти командира, то він повертається до штабу. Щоб цього уникнути, треба щоб у ботів були рації. Вони їх будуть брати з арсеналу, чи підбирати в ворожих трупів (якщо ввімкнено АвтоЛутання). Або ж якщо їм дати техніку з ДХ раціями.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_AI_4">
-        <Original>Auto Heal</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Автоматичне лікування</Original>
+		<Ukrainian>Автоматичне лікування</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_AI_4">
-        <Original>AI Medic squad-mates will heal other AI’s automatically without the need to give any orders. If in combat, your AI will use smoke grenades for cover. If there is no medic in the group, the AI will use their own medikits.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Бієць медиу буде лікувати інших бійців без наказу. В бою вони кидатимуть димові гранати, щоб прикритись. Якщо в грумі немає медика, бійці використовуватимуть свою медицину.</Original>
+		<Ukrainian>Бієць медиу буде лікувати інших бійців без наказу. В бою вони кидатимуть димові гранати, щоб прикритись. Якщо в грумі немає медика, бійці використовуватимуть свою медицину.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_AI_5">
         <Original>Auto Rearm \ Loot</Original>
-		<Ukrainian></Ukrainian>
+		<Ukrainian>Автоматичне переозброєння \ Лутання</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_AI_5">
-        <Original>Your AI squad-mates will automatically look for and scavenge any ammunition from nearby corpses, vehicles and ammoboxes if needed. Also they will try to renew their weapons with more powerful ones. If AI is inside a vehicle, they will loot weapons and launchers, and drop them in their truck until there is nothing in the area. Use this instead of the vanilla Rearm radio option.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Боти будуть автоматично підбирати екіпіровку, амуніцію та озброєння. Якщо бот сидить в техніці, він буде зновити до неї все що є поблизу.</Original>
+		<Ukrainian>Боти будуть автоматично підбирати екіпіровку, амуніцію та озброєння. Якщо бот сидить в техніці, він буде зновити до неї все що є поблизу.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_AI_6">
-        <Original>Vehicle Squad</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Відділення з технікою</Original>
+		<Ukrainian>Відділення з технікою</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_AI_6">
-        <Original>Commander Only. Use this option to assign the vehicle you are looking at to any HC squad. Check vehicle status, order them to mount or disembark, and automate mounted static squads.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Тільки для командира. Використовуйте цю опцію, щоб призначити техніку до якогось відділення.</Original><!--Commander Only. Use this option to assign the vehicle you are looking at to any HC squad. Check vehicle status, order them to mount or disembark, and automate mounted static squads.-->
+		<Ukrainian>Тільки для командира. Використовуйте цю опцію, щоб призначити техніку до якогось відділення.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_AI_7">
-        <Original>Dismiss Squad-mate</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Відставити бійця</Original><!--Dismiss Squad-mate-->
+		<Ukrainian>Відставити бійця</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_AI_7">
-        <Original>Select the unit and use the 'Dismiss Squad-mate' option to send them back to HQ. You will recover some of the money you spent on them.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Оберіть бійця, та виберіть опцію 'Відставити бійця' ('Dismiss Squad-mate'), щоб послати його назад до штабу. Ви отримаєте назад частину грошей, які на нього потратили.</Original>
+		<Ukrainian>Оберіть бійця, та виберіть опцію 'Відставити бійця' ('Dismiss Squad-mate'), щоб послати його назад до штабу. Ви отримаєте назад частину грошей, які на нього потратили.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Options_1">
-        <Original>Map Info</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Інформація карти</Original>
+		<Ukrainian>Інформація карти</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Options_1">
-        <Original>Click on a city to learn the strength of their support for the enemy or Faction. Click on other zones to know relevant info about them.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Клікайте на місто, щоб дізнатись кого воно підтримує. Клікайте на інші зони, щоб дізнатись відповідну інформацію про них.</Original>
+		<Ukrainian>Клікайте на місто, щоб дізнатись кого воно підтримує. Клікайте на інші зони, щоб дізнатись відповідну інформацію про них.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Options_2">
-        <Original>AI Limiter</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Обмежувач ШІ</Original>
+		<Ukrainian>Обмежувач ШІ</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Options_2">
-        <Original>Commander Only. Sets the the maximum amount of AI in map per server or HC. Up to 200 AI may behave decently.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Тільки для командира. Поставити максимальну кількість штучного інтелекту на карті. До 200 одиниць воно витримує нормально.</Original>
+		<Ukrainian>Тільки для командира. Поставити максимальну кількість штучного інтелекту на карті. До 200 одиниць воно витримує нормально.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Options_3">
-        <Original>Persistent Save-game</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Ручне збереження</Original>
+		<Ukrainian>Ручне збереження</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Options_3">
         <Original>Commander Only. You may save the game at your HQ Map. This will allow you to continue playing upon mission update or server restart, preserving stats, player's equipment, conquered zones, enemy asset availability and many more things. WARNING: Normal save and load runs badly in this mission. This system is your only guarantee of saving the game properly</Original>
-		<Ukrainian></Ukrainian>
+		<Ukrainian>Тільки для командира. Ви можете зберегти гру біля карти штабу. </Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Options_4">
         <Original>Music ON/OFF</Original>
