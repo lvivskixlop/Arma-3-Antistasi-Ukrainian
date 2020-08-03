@@ -1395,28 +1395,28 @@
 		<Ukrainian>Штаб - основи</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Diary_6">
-        <Original>Flag: Vehicle and Squad Unit Recruitment. Commander Options.&lt;br/&gt;Maru: Side-missions (Commander Only).&lt;br/&gt;Map: Game Options.&lt;br/&gt;Camp-fire: Rest for 8 hours and Clear Forest (Commander Only).</Original>
-		<Ukrainian>Прапор: купівля техніки та ботів. Командирські опції.&lt;br/&gt;Петро: </Ukrainian>
+        <Original>Прапор: купівля техніки та ботів. Командирські опції.&lt;br/&gt;Петро: Побічні місії (тільки для командира).&lt;br/&gt;Карта: Опції гри.&lt;br/&gt;Кострище: Відпочити 8 годин і вирубати ліс і кущі (тільки для командира).</Original>
+		<Ukrainian>Прапор: купівля техніки та ботів. Командирські опції.&lt;br/&gt;Петро: Побічні місії (тільки для командира).&lt;br/&gt;Карта: Опції гри.&lt;br/&gt;Кострище: Відпочити 8 годин і вирубати ліс і кущі (тільки для командира).</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_gamemode">
-        <Original>AI Rules of Engagement</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Правила ШІ для вогню</Original>
+		<Ukrainian>Правила ШІ для вогню</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_gamemode_1">
-        <Original>%2 vs %1 war.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>%2 проти %1.</Original><!--%2 vs %1 war.-->
+		<Ukrainian>%2 проти %1.</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_gamemode_2">
-        <Original>%2 vs %1 war.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>%2 проти %1.</Original><!--%2 vs %1 war.-->
+		<Ukrainian>%2 проти %1.</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_gamemode_3">
-        <Original>%3 vs All war.&lt;br/&gt;&lt;br/&gt;%1 and %2 will attack only %3 and act independently. Both can conquer.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>%3 проти всіх.&lt;br/&gt;&lt;br/&gt;%1 і %2 атакують, тільки %3 діють незалежно. Обоє можуть завойовувати.</Original>
+		<Ukrainian>%3 проти всіх.&lt;br/&gt;&lt;br/&gt;%1 і %2 атакують, тільки %3 діють незалежно. Обоє можуть завойовувати.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_text_gamemode_4">
-        <Original>All vs All war.&lt;br/&gt;&lt;br/&gt;%1 and %2 will attack each other and both to %3.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Всі проти всіх.&lt;br/&gt;&lt;br/&gt;</Original><!--All vs All war.&lt;br/&gt;&lt;br/&gt;%1 and %2 will attack each other and both to %3.-->
+		<Ukrainian>Всі проти всіх.&lt;br/&gt;&lt;br/&gt;</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_header_Default_1">
         <Original>Welcome</Original>
@@ -1427,45 +1427,45 @@
 		<Ukrainian></Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Default_2">
-        <Original>Win</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Перемога</Original>
+		<Ukrainian>Перемога</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Default_2">
-        <Original>You will win the game when most of the population supports Faction and you have conquered all the Airbases.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Перемога зараховується, коли більшість населення вас підтримує, і завойовані всі аеропорти.</Original>
+		<Ukrainian>Перемога зараховується, коли більшість населення вас підтримує, і завойовані всі аеропорти.</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_header_Default_3">
-        <Original>Lose</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Програш</Original>
+		<Ukrainian>Програш</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Default_3">
-        <Original>You will loose the game if %1 has murdered 1/3 of the total population.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Програш відбувається, коли %1 вбили третину всього населення.</Original>
+		<Ukrainian>Програш відбувається, коли %1 вбили третину всього населення.</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_header_Credits_1">
-        <Original>Script Credits</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Автори</Original>
+		<Ukrainian>Автори</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Credits_1">
-        <Original>UPSMon by Monsada, Kronzy and Cool=Azroul13 &lt;br/&gt;Persistent Save by zooloo75.&lt;br/&gt;Tags by Marker and Melbo.&lt;br/&gt;JAS by Jeroen (sorry for including you that late)&lt;br/&gt;Tags by Marker and Melbo.&lt;br/&gt;Advanced Towing by Seth Duda.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Робив [TRD]Nakpena, перекладав [TRD]lvivskixlop &lt;br/&gt;UPSMon by Monsada, Kronzy and Cool=Azroul13 &lt;br/&gt;Persistent Save by zooloo75.&lt;br/&gt;Tags by Marker and Melbo.&lt;br/&gt;JAS by Jeroen (sorry for including you that late)&lt;br/&gt;Tags by Marker and Melbo.&lt;br/&gt;Advanced Towing by Seth Duda.</Original>
+		<Ukrainian>Робив [TRD]Nakpena, перекладав [TRD]lvivskixlop &lt;br/&gt;UPSMon by Monsada, Kronzy and Cool=Azroul13 &lt;br/&gt;Persistent Save by zooloo75.&lt;br/&gt;Tags by Marker and Melbo.&lt;br/&gt;JAS by Jeroen (sorry for including you that late)&lt;br/&gt;Tags by Marker and Melbo.&lt;br/&gt;Advanced Towing by Seth Duda.</Ukrainian>
 	  </Key>
-      <Key ID="STR_antistasi_journal_entry_header_Credits_2">
-        <Original>Mods</Original>
-		<Ukrainian></Ukrainian>
+      <!--<Key ID="STR_antistasi_journal_entry_header_Credits_2">
+        <Original>Моди</Original>
+		<Ukrainian>Моди</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Credits_2">
         <Original>Integrated (optional) Mods:&lt;br/&gt;TFAR: Radio integrated in Arsenal. Sound disabled when player is unconscious.&lt;br/&gt;ACE Medical: Will disable Antistasi revive system.&lt;br/&gt;&lt;br/&gt;CAUTION: The use of Persistent Save system with TFAR and any weapon mod activated will make them mandatory in future.&lt;br/&gt;&lt;br/&gt;Any client sided Mod, such as JSRS, Blastcore, UI Mod should work.&lt;br/&gt;&lt;br/&gt;Units and vehicles mods won't work. AI Mods may cause malfunctions (in any case Antistasi has heavy AI tweaking).</Original>
 		<Ukrainian></Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Credits_3">
-        <Original>Thanks</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Подяка</Original>
+		<Ukrainian>Подяка</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Credits_3">
         <Original>LanCommi for his artwork.&lt;br/&gt;Goon and jw custom: Part of the code for the NAPALM script.&lt;br/&gt;rebel12340: Radio Jam script&lt;br/&gt;Manko: Earplug snippet&lt;br/&gt;bobchaos: Managing the community despite all difficulties.&lt;br/&gt;And all those players who spend their time on making comments, suggestions and reports on Steam, Github and BIS forums</Original>
-		<Ukrainian></Ukrainian>
-	  </Key>
+		<Ukrainian>LanCommi for his artwork.&lt;br/&gt;Goon and jw custom: Part of the code for the NAPALM script.&lt;br/&gt;rebel12340: Radio Jam script&lt;br/&gt;Manko: Earplug snippet&lt;br/&gt;bobchaos: Managing the community despite all difficulties.&lt;br/&gt;And all those players who spend their time on making comments, suggestions and reports on Steam, Github and BIS forums</Ukrainian>
+	  </Key>-->
     </Container>
   </Package>
 </Project>
