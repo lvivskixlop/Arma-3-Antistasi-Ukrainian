@@ -1212,7 +1212,7 @@
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Features_15">
         <Original>Use this option to donate money to other players or your faction funds. Commanders may add or remove players from the Server Members List if the feature is enabled.</Original>
-		<Ukrainian>Для передачі грошей до спільного фонду, чи інших гравців. ....................</Ukrainian>
+		<Ukrainian>Для передачі грошей до спільного фонду, чи до інших гравців. Командир може додавати чи видаляти гравців до членів серверу, якщо така функція ввімкнена.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Features_16">
         <Original>Breach Vehicles</Original>
