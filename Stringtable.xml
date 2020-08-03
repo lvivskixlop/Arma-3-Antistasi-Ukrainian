@@ -1307,48 +1307,48 @@
 		<Ukrainian>Ручне збереження</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Options_3">
-        <Original>Commander Only. You may save the game at your HQ Map. This will allow you to continue playing upon mission update or server restart, preserving stats, player's equipment, conquered zones, enemy asset availability and many more things. WARNING: Normal save and load runs badly in this mission. This system is your only guarantee of saving the game properly</Original>
-		<Ukrainian>Тільки для командира. Ви можете зберегти гру біля карти штабу. </Ukrainian>
+        <Original>Тільки для командира. Ви можете зберегти гру біля карти штабу.</Original><!--Commander Only. You may save the game at your HQ Map. This will allow you to continue playing upon mission update or server restart, preserving stats, player's equipment, conquered zones, enemy asset availability and many more things. WARNING: Normal save and load runs badly in this mission. This system is your only guarantee of saving the game properly-->
+		<Ukrainian>Тільки для командира. Ви можете зберегти гру біля карти штабу.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Options_4">
         <Original>Music ON/OFF</Original>
-		<Ukrainian></Ukrainian>
+		<Ukrainian>Музика Ввімк/Вимк</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Options_4">
-        <Original>Antistasi has a situational music script, depending on a player's stance and time of day. The default in MP is OFF, and ON in Singleplayer</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Загалом ця функція вимкнена за замовчуванням, що й добре.</Original><!--Antistasi has a situational music script, depending on a player's stance and time of day. The default in MP is OFF, and ON in Singleplayer-->
+		<Ukrainian>Загалом ця функція вимкнена за замовчуванням, що й добре.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Options_5">
         <Original>Civ Spawn</Original>
-		<Ukrainian></Ukrainian>
+		<Ukrainian>Поява цивільних</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Options_5">
-        <Original>Increase or decrease the percentage of city civilian population that spawn. At 0% only one civilian will spawn in each city.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Збільшує чи зменшує відсоток цивільного населення в містах. При 0% буде лише один цивільний.</Original>
+		<Ukrainian>Збільшує чи зменшує відсоток цивільного населення в містах. При 0% буде лише один цивільний.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Options_6">
-        <Original>Spawn Distance</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Відстань спауну</Original>
+		<Ukrainian>Відстань спауну</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Options_6">
-        <Original>Commander only. Increase or decrease general spawn and despawn distance. Use it carefully combined with other options.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Тільки для командира. Збільшує чи зменшує відстань появи. Використовуйте обережно в поєднанні з іншими опціями.</Original>
+		<Ukrainian>Тільки для командира. Збільшує чи зменшує відстань появи. Використовуйте обережно в поєднанні з іншими опціями.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Options_7">
-        <Original>Garbage Cleaner</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Очищувач сміття</Original>
+		<Ukrainian>Очищувач сміття</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Options_7">
-        <Original>Commander only. Will delete things like dropped weapons, magazines, clothing etc.&lt;br/&gt;&lt;br/&gt; Beware, it freezes the game for some time.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Тільки для командира. Видаляє такі речі як зброю, амуніцію, одяг, і т.д., які лежать на землі.&lt;br/&gt;&lt;br/&gt; Але обережно, бо гра іноді може від такого трохи підвиснути.</Original>
+		<Ukrainian>Тільки для командира. Видаляє такі речі як зброю, амуніцію, одяг, і т.д., які лежать на землі.&lt;br/&gt;&lt;br/&gt; Але обережно, бо гра іноді може від такого трохи підвиснути.</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Options_8">
-        <Original>Reinit UI</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Перезавантажити інтерфейс</Original>
+		<Ukrainian>Перезавантажити інтерфейс</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Options_8">
-        <Original>Select this option when the Y key or Statistics bar are not working.</Original>
-		<Ukrainian></Ukrainian>
+        <Original>Виберіть цю опцію, якщо Y-меню, чи верхня стрічка статусу (там, де пише гроші, звання, режим інкогніто, і.т.д.) не працюють</Original>
+		<Ukrainian>Виберіть цю опцію, якщо Y-меню, чи верхня стрічка статусу (там, де пише гроші, звання, режим інкогніто, і.т.д.) не працюють</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_header_Diary_1">
         <Original>%1 and %2 Aggro</Original>
