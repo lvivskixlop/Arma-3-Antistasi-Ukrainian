@@ -1351,12 +1351,12 @@
 		<Ukrainian>Виберіть цю опцію, якщо Y-меню, чи верхня стрічка статусу (там, де пише гроші, звання, режим інкогніто, і.т.д.) не працюють</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_header_Diary_1">
-        <Original>%1 and %2 Aggro</Original>
-		<Ukrainian></Ukrainian>
+        <Original>%1 і %2 Агресія</Original>
+		<Ukrainian>%1 і %2 Агресія</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_text_Diary_1">
         <Original>There is an All vs All war in %4. %1 and %2 are constantly attacking each other, but that does not mean they don't shoot at %3 on first sight.&lt;br/&gt;&lt;br/&gt;%1 and %2 Aggro points represent how much threat they see in %3 faction.&lt;br/&gt;&lt;br/&gt;Generally speaking those points will low or raise depending on your actions against them and civilians.</Original>
-		<Ukrainian></Ukrainian>
+		<Ukrainian>Війна всіх проти всіх на %4. %1 і %2 постійно атакують одне одного, але %3 вони також стрілятимуть, як тільки побачуть.&lt;br/&gt;&lt;br/&gt; Очки агресії %1 і %2 означають рівень загрози %3 для них. &lt;br/&gt;&lt;br/&gt;</Ukrainian>
 	  </Key>
       <Key ID="STR_antistasi_journal_entry_header_Diary_2">
         <Original>HR</Original>
