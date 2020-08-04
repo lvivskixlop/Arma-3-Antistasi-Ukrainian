@@ -13,7 +13,7 @@ if (!alive _unit) exitWith {};
 if (_unit getVariable ["interrogated", false]) exitWith {};
 _unit setVariable ["interrogated", true, true];
 
-_playerX globalChat "You imperialist! Tell me what you know!";
+_playerX globalChat "Розказуй, паскуднику, шо знаєш.";
 _chance = 0;
 _sideX = side (group _unit);
 if (_sideX == Occupants) then
@@ -33,11 +33,11 @@ sleep 5;
 
 if (round random 100 < _chance) then
 	{
-	_unit globalChat "Okay, I'll tell you everything I know";
+	_unit globalChat "Разкажу всьо! Толька ні убівайтє!";
 	[_unit] call A3A_fnc_intelFound;
 	}
 else
 	{
-	_unit globalChat "Screw you!";
+	_unit globalChat "Толька чєрєз мой труп!";
 	};
 

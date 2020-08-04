@@ -6,7 +6,7 @@ _veh = _this select 0;
 _text = _this select 1;
 _convoy = false;
 
-if ((_text == "Convoy Objective") or (_text == "Mission Vehicle") or (_text == "Supply Box")) then {_convoy = true};
+if ((_text == "Ціль колони") or (_text == "Транспорт для місії") or (_text == "Коробка з припасами")) then {_convoy = true};
 
 waitUntil {sleep 1; (not(isNull driver _veh)) or _convoy};
 
@@ -35,7 +35,7 @@ while {alive _veh} do
 	_newPos = getPos _veh;
 
 	_driverX = driver _veh;
-	if ((_newPos distance _pos < 5) and (_text != "Supply Box") and !(isNull _driverX)) then
+	if ((_newPos distance _pos < 5) and (_text != "Коробка з припасами") and !(isNull _driverX)) then
 		{
 		if (_veh isKindOf "Air") then
 			{
