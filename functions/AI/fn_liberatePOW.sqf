@@ -15,7 +15,7 @@ _playerX globalChat "Ти вільний. Пішли з нами";
 _unit setDir (getDir _playerX);
 _playerX playMove "MountSide";
 sleep 3;
-_unit sideChat "Дякую! З мене пиво!";
+_unit sideChat "Дякую! Буду винен тобі пиво!";
 
 _unit enableAI "MOVE";
 _unit enableAI "AUTOTARGET";

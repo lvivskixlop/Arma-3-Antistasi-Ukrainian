@@ -11,7 +11,7 @@ if (vehicle _x isKindOf "staticWeapon") then {_static = vehicle _x;}
 } forEach units _groupX;
 if (isNull _static) exitWith {hint "Selected squad is not a mounted static type"};
 
-if ((typeOf _static == SDKMortar) and (isMultiPlayer)) exitWith {hint "Static Auto Target is not available for Mortar Squads in Multiplayer"};
+if ((typeOf _static == SDKMortar) and (isMultiPlayer)) exitWith {hint "Автоматичне прицілювання мінометів не доступне в мультиплеєрі."};
 if (_groupX getVariable "staticAutoT") exitWith
 	{
 	_groupX setVariable ["staticAutoT",false,true];
