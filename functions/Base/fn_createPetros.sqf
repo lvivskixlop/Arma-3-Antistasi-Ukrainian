@@ -21,7 +21,7 @@ publicVariable "petros";
 groupPetros setGroupIdGlobal ["Petros","GroupColor4"];
 petros setIdentity "friendlyX";
 
-if (worldName == "Tanoa") then {petros setName "Maru"} else {petros setName "Petros"};
+if (worldName == "Tanoa") then {petros setName "Петро"} else {petros setName "Петро"};
 
 petros disableAI "MOVE";
 petros disableAI "AUTOTARGET";
