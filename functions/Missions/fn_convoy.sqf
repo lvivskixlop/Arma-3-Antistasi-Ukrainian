@@ -83,43 +83,43 @@ switch (_typeConvoyX) do
 	{
 	case "ammunition":
 		{
-		_textX = format ["A convoy from %1 is about to depart at %2. It will provide ammunition to %3. Try to intercept it. Steal or destroy that truck before it reaches it's destination.",_nameOrigin,_displayTime,_nameDest];
-		_taskTitle = "Ammo Convoy";
+		_textX = format ["Колона відправляється з %1 о %2. Вона везе амуніцію до %3. Вкрадіть чи знищіть цю вантажівку, перш ніж вона доїде до місця призначення.",_nameOrigin,_displayTime,_nameDest];
+		_taskTitle = "Колона з амуніцією";
 		_taskIcon = "rearm";
 		_typeVehObj = if (_sideX == Occupants) then {vehNATOAmmoTruck} else {vehCSATAmmoTruck};
 		};
 	case "Armor":
 		{
-		_textX = format ["A convoy from %1 is about to depart at %2. It will reinforce %3 with armored vehicles. Try to intercept it. Steal or destroy that thing before it reaches it's destination.",_nameOrigin,_displayTime,_nameDest];
-		_taskTitle = "Armored Convoy";
+		_textX = format ["Колона відправляється з %1 о %2. Вона везе броньовану техніку до %3. Вкрадіть чи знищіть її, перш ніж вона доїде до місця призначення.",_nameOrigin,_displayTime,_nameDest];
+		_taskTitle = "Колона з бронею";
 		_taskIcon = "Destroy";
 		_typeVehObj = if (_sideX == Occupants) then {vehNATOAA} else {vehCSATAA};
 		};
 	case "Prisoners":
 		{
-		_textX = format ["A group os POW's is being transported from %1 to %3, and it's about to depart at %2. Try to intercept it. Kill or capture the truck driver to make them join you and bring them to HQ. Alive if possible.",_nameOrigin,_displayTime,_nameDest];
-		_taskTitle = "Prisoner Convoy";
+		_textX = format ["Колона з полоненими відправляється з %1 о %2, і їде до %3. Перехопіть колону, вбийте водія вантажівки, та завезіть військовополонених до штабу. Бажано живими.",_nameOrigin,_displayTime,_nameDest];//A group os POW's is being transported from %1 to %3, and it's about to depart at %2. Try to intercept it. Kill or capture the truck driver to make them join you and bring them to HQ. Alive if possible.
+		_taskTitle = "Колона з полоненими";
 		_taskIcon = "run";
 		_typeVehObj = if (_sideX == Occupants) then {selectRandom vehNATOTrucks} else {selectRandom vehCSATTrucks};
 		};
 	case "reinforcementsX":
 		{
-		_textX = format ["Reinforcements are being sent from %1 to %3 in a convoy, and it's about to depart at %2. Try to intercept and kill all the troops and vehicle objective.",_nameOrigin,_displayTime,_nameDest];
-		_taskTitle = "Reinforcements Convoy";
+		_textX = format ["Колона з підкріпленням відправляється з %1 о %2, і їде до %3. Перебийте там всіх і пустіть на корм хробакам.",_nameOrigin,_displayTime,_nameDest];	//Reinforcements are being sent from %1 to %3 in a convoy, and it's about to depart at %2. Try to intercept and kill all the troops and vehicle objective.
+		_taskTitle = "Колона з підкріпленням";
 		_taskIcon = "run";
 		_typeVehObj = if (_sideX == Occupants) then {selectRandom vehNATOTrucks} else {selectRandom vehCSATTrucks};
 		};
 	case "Money":
 		{
-		_textX = format ["A truck plenty of money is being moved from %1 to %3, and it's about to depart at %2. Steal that truck and bring it to HQ. Those funds will be very welcome.",_nameOrigin,_displayTime,_nameDest];
-		_taskTitle = "Money Convoy";
+		_textX = format ["Ворожий інкасатор відправляється з %1 о %2, і їде до %3. Ну що ж тут думати, вкрадіть і відвезіть до штабу. Гроші лишні не бувають.",_nameOrigin,_displayTime,_nameDest];
+		_taskTitle = "Інкасаторська колона";
 		_taskIcon = "move";
 		_typeVehObj = "C_Van_01_box_F";
 		};
 	case "Supplies":
 		{
-		_textX = format ["A truck with medical supplies destination %3 it's about to depart at %2 from %1. Steal that truck bring it to %3 and let people in there know it is %4 who's giving those supplies.",_nameOrigin,_displayTime,_nameDest,nameTeamPlayer];
-		_taskTitle = "Supply Convoy";
+		_textX = format ["Вантажівка з медикаментами відправляється з %1 о %2, і їде до %3. Відберіть її, і завезіть до %3, щоб тамтешні люди знали, що це ми їм допомагаємо.",_nameOrigin,_displayTime,_nameDest];		//_textX = format ["A truck with medical supplies destination %3 it's about to depart at %2 from %1. Steal that truck bring it to %3 and let people in there know it is %4 who's giving those supplies.",_nameOrigin,_displayTime,_nameDest,nameTeamPlayer];
+		_taskTitle = "Колона з припасами";
 		_taskIcon = "heal";
 		_typeVehObj = "C_Van_01_box_F";
 		};
