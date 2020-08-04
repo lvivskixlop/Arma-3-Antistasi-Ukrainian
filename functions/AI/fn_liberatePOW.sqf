@@ -11,11 +11,11 @@ if (captive _playerX) then
 	_playerX setCaptive false;
 	};
 
-_playerX globalChat "You are free. Come with us!";
+_playerX globalChat "Ти вільний. Пішли з нами";
 _unit setDir (getDir _playerX);
 _playerX playMove "MountSide";
 sleep 3;
-_unit sideChat "Thank you. I owe you my life!";
+_unit sideChat "Дякую! З мене пиво!";
 
 _unit enableAI "MOVE";
 _unit enableAI "AUTOTARGET";
