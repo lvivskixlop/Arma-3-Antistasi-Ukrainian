@@ -15,7 +15,7 @@ if (_medicX != _unit) then
 	{
 	if !(_unit getVariable ["INCAPACITATED",false]) then
 		{
-		if (_isPlayer) then {_unit groupChat format ["Comrades, this is %1. I'm hurt",name _unit]};
+		if (_isPlayer) then {_unit groupChat format ["Прийом, це %1. Я поранений.",name _unit]};
 		playSound3D [(selectRandom injuredSounds),_unit,false, getPosASL _unit, 1, 1, 50];
 		};
 	if (_isPlayer) then
@@ -26,10 +26,10 @@ if (_medicX != _unit) then
 			private ["_medicX","_unit"];
 			_medicX = _this select 0;
 			_unit = _this select 1;
-			_medicX groupChat format ["Wait a minute comrade %1, I will patch you up",name _unit]
+			_medicX groupChat format ["Почекай хвилинку, %1. Зара ми тебе підмотаєм, будеш як новий.",name _unit]
 			};
 		};
-	if (hasInterface) then {if (player == _unit) then {hint format ["%1 is on the way to help you",name _medicX]}};
+	if (hasInterface) then {if (player == _unit) then {hint format ["%1 вже йде тобі на допомогу",name _medicX]}};
 	_enemy = _medicX findNearestEnemy _unit;
 	_smoked = [_medicX,_unit,_enemy] call A3A_fnc_chargeWithSmoke;
 	_medicX stop false;

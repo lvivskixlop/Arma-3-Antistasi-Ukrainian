@@ -16,7 +16,7 @@ private _response = "";
 private _targetMarker = respawnOccupants;
 
 if (_recruiting) then {
-	_playerX globalChat "How about joining the good guys?";
+	_playerX globalChat "Ну що, не хочеш до нас долучитись?";
 
 	private _chance = 0;
 	if (_sideX == Occupants) then {
@@ -30,22 +30,22 @@ if (_recruiting) then {
 	if (_interrogated) then { _chance = _chance / 2 };
 
 	if (random 100 < _chance) then {
-		_response = "Why not? It can't be any worse.";
+		_response = "Пачіму бі і нєт. Ну нахєр той рускій мір.";
 		_modHR = true;
 		_targetMarker = respawnTeamPlayer;
 	}
 	else {
-		_response =  "Screw you!";
+		_response =  "Пашол ти! Рускіє нє здаюцца!";
 		_modAggroOcc = 0;
 		_modAggroInv = 0;
 	};
 }
 else {
-	_playerX globalChat "Go back to your base and tell your comrades we are not enemies. We just want to live in peace";
+	_playerX globalChat "Вертайся назад на свою базу і скажи своїм колєґам, що в нас ще достатньо гілок на деревах.";
 	_response = selectRandom [
-		"Okay, thank you. I owe you my life",
-		"Thank you. I swear you won't regret it!",
-		"Thank you, I won't forget this!"
+		"Харашо, спасіба. Я дольжен тібє сваю жізьнь!",
+		"Спасіба. Абіщаю, чьто ві нє пожалєєте чьто міня атпустілі.",
+		"Дякую! Я не забуду твоїх добрих вчинків!"
 	];
 
 	private _mult = if (_interrogated) then { 0.5 } else { 1.0 };
