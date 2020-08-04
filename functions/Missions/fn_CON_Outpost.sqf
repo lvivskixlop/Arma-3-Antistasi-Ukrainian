@@ -23,13 +23,13 @@ _textX = "";
 _taskName = "";
 if (_markerX in resourcesX) then
 	{
-	_textX = format ["A %1 would be a fine addition to our cause. Go there and capture it before %2.",_nameDest,_displayTime];
-	_taskName = "Resource Acquisition";
+	_textX = format ["Було б не погано захопити %1. Такшо не сидіть на сраці, йдіть відбийте його до %2",_nameDest,_displayTime];//A %1 would be a fine addition to our cause. Go there and capture it before %2.
+	_taskName = "Відбити ресурси";
 	}
 else
 	{
-	_textX = format ["A %1 is disturbing our operations in the area. Go there and capture it before %2.",_nameDest,_displayTime];
-	_taskName = "Take the Outpost";
+	_textX = format ["%1 заважає проведенню операцій в цьому районі. Перебийте там всіх кацапів та захопіть його до %2",_nameDest,_displayTime];
+	_taskName = "Взяти аванпост";
 	};
 
 
