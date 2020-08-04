@@ -20,9 +20,9 @@ _displayTime = [_dateLimit] call A3A_fnc_dateToTimeString;//Converts the time po
 
 _nameDest = [_markerX] call A3A_fnc_localizar;
 _holdTime = if(_difficultX) then {4} else {2};
-_taskDescription = format ["%1 population is in need of supplies. We may improve our relationship with that city if we are the ones who provide them. I have placed a crate with supplies near our HQ. Deliver the crate to %1 city center, hold it there for %3 minutes and it's done. Do this before %2.",_nameDest,_displayTime, _holdTime];
+_taskDescription = format ["%1 потребує припасів. Ми можемо покращити стосунки з цим містом, якщо саме ми їм привеземо ці припаси. Вони стоять десь біля штабу, завезіть їх в центр міста і стійте там %3 хвилини. Мусите встигнути це зробити до %2.",_nameDest,_displayTime, _holdTime];
 
-[[teamPlayer,civilian],"LOG",[_taskDescription,"City Supplies",_markerX],_positionX,false,0,true,"Heal",true] call BIS_fnc_taskCreate;
+[[teamPlayer,civilian],"LOG",[_taskDescription,"Гуманітарка",_markerX],_positionX,false,0,true,"Heal",true] call BIS_fnc_taskCreate;//[[teamPlayer,civilian],"LOG",[_taskDescription,"City Supplies",_markerX],_positionX,false,0,true,"Heal",true] call BIS_fnc_taskCreate;
 missionsX pushBack ["LOG","CREATED"]; publicVariable "missionsX";
 _pos = (getMarkerPos respawnTeamPlayer) findEmptyPosition [1,50,"C_Van_01_box_F"];
 
@@ -32,7 +32,7 @@ _truckX allowDamage false;
 _truckX call jn_fnc_logistics_addAction;
 _truckX addAction ["Delivery infos",
 	{
-		_text = format ["Deliver this box to %1, unload it to start distributing to people",(_this select 0) getVariable "destinationX"]; //This need a rework
+		_text = format ["Доставте цю коробку до %1, щоб віддати припаси мешканцям.",(_this select 0) getVariable "destinationX"]; //This need a rework
 		_text remoteExecCall ["hint",_this select 2];	//This need a rework
 	},
 	nil,
@@ -52,7 +52,7 @@ waitUntil {sleep 1; (dateToNumber date > _dateLimitNum) or ((_truckX distance _p
 _bonus = if (_difficultX) then {2} else {1};
 if ((dateToNumber date > _dateLimitNum) or (isNull _truckX)) then
 	{
-	["LOG",[_taskDescription,"City Supplies",_markerX],_positionX,"FAILED","Heal"] call A3A_fnc_taskUpdate;
+	["LOG",[_taskDescription,"Гуманітарка",_markerX],_positionX,"FAILED","Heal"] call A3A_fnc_taskUpdate;//["LOG",[_taskDescription,"City Supplies",_markerX],_positionX,"FAILED","Heal"] call A3A_fnc_taskUpdate;
 	[5*_bonus,-5*_bonus,_positionX] remoteExec ["A3A_fnc_citySupportChange",2];
 	[-10*_bonus,theBoss] call A3A_fnc_playerScoreAdd;
 	}
@@ -95,7 +95,7 @@ else
 		if ((dateToNumber date < _dateLimitNum) and !(isNull _truckX)) then
 			{
 			[petros,"hint","Supplies Delivered"] remoteExec ["A3A_fnc_commsMP",[teamPlayer,civilian]];
-			["LOG",[_taskDescription,"City Supplies",_markerX],_positionX,"SUCCEEDED","Heal"] call A3A_fnc_taskUpdate;
+			["LOG",[_taskDescription,"Гуманітарка",_markerX],_positionX,"SUCCEEDED","Heal"] call A3A_fnc_taskUpdate;//["LOG",[_taskDescription,"City Supplies",_markerX],_positionX,"SUCCEEDED","Heal"] call A3A_fnc_taskUpdate;
 			{if (_x distance _positionX < 500) then {[10*_bonus,_x] call A3A_fnc_playerScoreAdd}} forEach (allPlayers - (entities "HeadlessClient_F"));
 			[5*_bonus,theBoss] call A3A_fnc_playerScoreAdd;
 			if (!isMultiplayer) then {_bonus = _bonus + ((20-skillFIA)*0.1)};
@@ -104,7 +104,7 @@ else
 			}
 		else
 			{
-			["LOG",[_taskDescription,"City Supplies",_markerX],_positionX,"FAILED","Heal"] call A3A_fnc_taskUpdate;
+			["LOG",[_taskDescription,"Гуманітарка",_markerX],_positionX,"FAILED","Heal"] call A3A_fnc_taskUpdate;//["LOG",[_taskDescription,"City Supplies",_markerX],_positionX,"FAILED","Heal"] call A3A_fnc_taskUpdate;
 			[5*_bonus,-5*_bonus,_positionX] remoteExec ["A3A_fnc_citySupportChange",2];
 			[-10*_bonus,theBoss] call A3A_fnc_playerScoreAdd;
 			};

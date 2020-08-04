@@ -12,7 +12,7 @@ _exists = false;
 _silencio = false;
 if (count _this > 1) then {_silencio = true};
 
-if ([_typeX] call BIS_fnc_taskExists) exitWith {if (!_silencio) then {[petros,"globalChat","I already gave you a mission of this type"] remoteExec ["A3A_fnc_commsMP",theBoss]}};
+if ([_typeX] call BIS_fnc_taskExists) exitWith {if (!_silencio) then {[petros,"globalChat","Так я ж вже дав вам завдання цього типу."] remoteExec ["A3A_fnc_commsMP",theBoss]}};
 
 if (_typeX == "AS") then
 	{
@@ -48,8 +48,8 @@ if (_typeX == "AS") then
 		{
 		if (!_silencio) then
 			{
-			[petros,"globalChat","I have no assasination missions for you. Move our HQ closer to the enemy or finish some other assasination missions in order to have better intel"] remoteExec ["A3A_fnc_commsMP",theBoss];
-			[petros,"hint","Assasination Missions require cities, Patrolled Jungles or Airports closer than 4Km from your HQ."] remoteExec ["A3A_fnc_commsMP",theBoss];
+			[petros,"globalChat","Я не маю ніяких завдань на вбивство. Або перемістіть штаб ближче до ворога, або добийте ті завдання, які в вас вже є."] remoteExec ["A3A_fnc_commsMP",theBoss];
+			[petros,"hint","Місії на вбивство є тільки тоді, коли в районі 4 км від штабу є міста, патрулі, чи аеродроми."] remoteExec ["A3A_fnc_commsMP",theBoss];
 			};
 		}
 	else
@@ -70,8 +70,8 @@ if (_typeX == "CON") then
 		{
 		if (!_silencio) then
 			{
-			[petros,"globalChat","I have no Conquest missions for you. Move our HQ closer to the enemy or finish some other conquest missions in order to have better intel."] remoteExec ["A3A_fnc_commsMP",theBoss];
-			[petros,"hint","Conquest Missions require roadblocks or outposts closer than 4Km from your HQ."] remoteExec ["A3A_fnc_commsMP",theBoss];
+			[petros,"globalChat","Я не маю ніяких завдань на захоплення. Або перемістіть штаб ближче до ворога, або добийте ті завдання, які в вас вже є."] remoteExec ["A3A_fnc_commsMP",theBoss];
+			[petros,"hint","Місії на захоплення є тільки тоді, коли в районі 4 км від штабу є блокпости чи аванпости.."] remoteExec ["A3A_fnc_commsMP",theBoss];
 			};
 		}
 	else
@@ -108,8 +108,8 @@ if (_typeX == "DES") then
 		{
 		if (!_silencio) then
 			{
-			[petros,"globalChat","I have no destroy missions for you. Move our HQ closer to the enemy or finish some other destroy missions in order to have better intel"] remoteExec ["A3A_fnc_commsMP",theBoss];
-			[petros,"hint","Destroy Missions require Airbases or Radio Towers closer than 4Km from your HQ."] remoteExec ["A3A_fnc_commsMP",theBoss];
+			[petros,"globalChat","Я не маю ніяких завдань на знищення. Або перемістіть штаб ближче до ворога, або добийте ті завдання, які в вас вже є."] remoteExec ["A3A_fnc_commsMP",theBoss];
+			[petros,"hint","Місії на знищення потребують якогось ворожого аеродрому чи радіовежі в районі 4 км від штабу."] remoteExec ["A3A_fnc_commsMP",theBoss];
 			};
 		}
 	else
@@ -166,8 +166,8 @@ if (_typeX == "LOG") then
 		{
 		if (!_silencio) then
 			{
-			[petros,"globalChat","I have no logistics missions for you. Move our HQ closer to the enemy or finish some other logistics missions in order to have better intel"] remoteExec ["A3A_fnc_commsMP",theBoss];
-			[petros,"hint","Logistics Missions require Outposts, Cities or Banks closer than 4Km from your HQ."] remoteExec ["A3A_fnc_commsMP",theBoss];
+			[petros,"globalChat","Я не маю ніяких логістичних місій. Або перемістіть штаб ближче до ворога, або добийте ті завдання, які в вас вже є."] remoteExec ["A3A_fnc_commsMP",theBoss];
+			[petros,"hint","Для логістичних місій треба мати аванпости, міста, чи банки в районі 4 км від штабу."] remoteExec ["A3A_fnc_commsMP",theBoss];
 			};
 		}
 	else
@@ -195,8 +195,8 @@ if (_typeX == "RES") then
 		{
 		if (!_silencio) then
 			{
-			[petros,"globalChat","I have no rescue missions for you. Move our HQ closer to the enemy or finish some other rescue missions in order to have better intel"] remoteExec ["A3A_fnc_commsMP",theBoss];
-			[petros,"hint","Rescue Missions require Cities or Airports closer than 4Km from your HQ."] remoteExec ["A3A_fnc_commsMP",theBoss];
+			[petros,"globalChat","Я не маю ніяких завдань на порятунок. Або перемістіть штаб ближче до ворога, або добийте ті завдання, які в вас вже є."] remoteExec ["A3A_fnc_commsMP",theBoss];
+			[petros,"hint","Завдання на порятунок вимагають міст чи аеродромів в районі 4 км від штабу."] remoteExec ["A3A_fnc_commsMP",theBoss];
 			};
 		}
 	else
@@ -244,8 +244,8 @@ if (_typeX == "CONVOY") then
 			{
 			if (!_silencio) then
 				{
-				[petros,"globalChat","I have no Convoy missions for you. Move our HQ closer to the enemy or finish some other missions in order to have better intel"] remoteExec ["A3A_fnc_commsMP",theBoss];
-				[petros,"hint","Convoy Missions require Airports or Cities closer than 5Km from your HQ, and they must have an idle friendly base in their surroundings."] remoteExec ["A3A_fnc_commsMP",theBoss];
+				[petros,"globalChat","Схоже, що ворог не планує перевозити якісь колони. Можна пересунути штаб ближче, або виконати вже активні завдання, щоб мати більше розвідданих."] remoteExec ["A3A_fnc_commsMP",theBoss];
+				[petros,"hint","Для місій на колони потрібно, щоб в районі 5 км від штабу були міста чи аеродроми, та не активна військова база."] remoteExec ["A3A_fnc_commsMP",theBoss];
 				};
 			}
 		else
@@ -257,9 +257,9 @@ if (_typeX == "CONVOY") then
 		}
 	else
 		{
-		[petros,"globalChat","There is a big battle around, I don't think the enemy will send any convoy"] remoteExec ["A3A_fnc_commsMP",theBoss];
-		[petros,"hint","Convoy Missions require a calmed status around the island, and now it is not the proper time."] remoteExec ["A3A_fnc_commsMP",theBoss];
+		[petros,"globalChat","Там іде якись бій. Не думаю, щоб вони слали звітам якісь колони."] remoteExec ["A3A_fnc_commsMP",theBoss];
+		[petros,"hint","Місії на колони потребують спокійної обстановки, а зара тут трішки загаряче."] remoteExec ["A3A_fnc_commsMP",theBoss];
 		};
 	};
 
-if ((count _potentials > 0) and (!_silencio)) then {[petros,"globalChat","I have a mission for you"] remoteExec ["A3A_fnc_commsMP",theBoss]};
+if ((count _potentials > 0) and (!_silencio)) then {[petros,"globalChat","Маю для вас одне завдання."] remoteExec ["A3A_fnc_commsMP",theBoss]};
