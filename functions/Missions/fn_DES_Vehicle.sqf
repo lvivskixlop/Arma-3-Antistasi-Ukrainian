@@ -23,7 +23,7 @@ _nameDest = [_markerX] call A3A_fnc_localizar;
 
 _typeVehX = if (_sideX == Occupants) then {vehNATOAA} else {vehCSATAA};
 
-[[teamPlayer,civilian],"DES",[format ["We know an enemy armor (%3) is stationed in %1. It is a good chance to destroy or steal it before it causes more damage. Do it before %2.",_nameDest,_displayTime,getText (configFile >> "CfgVehicles" >> (_typeVehX) >> "displayName")],"Steal or Destroy Armor",_markerX],_positionX,false,0,true,"Destroy",true] call BIS_fnc_taskCreate;
+[[teamPlayer,civilian],"DES",[format ["Нам відомо, що кацапська броня (%3) засіла в %1. Було б добре її захопити чи знищити до %2.",_nameDest,_displayTime,getText (configFile >> "CfgVehicles" >> (_typeVehX) >> "displayName")],"Вкрасти чи знищити броню",_markerX],_positionX,false,0,true,"Destroy",true] call BIS_fnc_taskCreate;
 _truckCreated = false;
 missionsX pushBack ["DES","CREATED"]; publicVariable "missionsX";
 
@@ -67,7 +67,7 @@ if (spawner getVariable _markerX == 0) then
 
 	if ((not alive _veh) or ({(_x getVariable ["spawner",false]) and (side group _x == teamPlayer)} count crew _veh > 0)) then
 		{
-		["DES",[format ["We know an enemy armor (%3) is stationed in a %1. It is a good chance to steal or destroy it before it causes more damage. Do it before %2.",_nameDest,_displayTime,getText (configFile >> "CfgVehicles" >> (_typeVehX) >> "displayName")],"Steal or Destroy Armor",_markerX],_positionX,"SUCCEEDED","Destroy"] call A3A_fnc_taskUpdate;
+		["DES",[format ["Нам відомо, що кацапська броня (%3) засіла в %1. Було б добре її захопити чи знищити до %2.",_nameDest,_displayTime,getText (configFile >> "CfgVehicles" >> (_typeVehX) >> "displayName")],"Вкрасти чи знищити броню",_markerX],_positionX,"SUCCEEDED","Destroy"] call A3A_fnc_taskUpdate;
 		if ({(_x getVariable ["spawner",false]) and (side group _x == teamPlayer)} count crew _veh > 0) then
 			{
 			["TaskFailed", ["", format ["AA Stolen in %1",_nameDest]]] remoteExec ["BIS_fnc_showNotification",_sideX];
@@ -81,7 +81,7 @@ if (spawner getVariable _markerX == 0) then
 	}
 else
 	{
-	["DES",[format ["We know an enemy armor (%3) is stationed in a %1. It is a good chance to steal or destroy it before it causes more damage. Do it before %2.",_nameDest,_displayTime,getText (configFile >> "CfgVehicles" >> (_typeVehX) >> "displayName")],"Steal or Destroy Armor",_markerX],_positionX,"FAILED","Destroy"] call A3A_fnc_taskUpdate;
+	["DES",[format ["Нам відомо, що кацапська броня (%3) засіла в %1. Було б добре її захопити чи знищити до %2.",_nameDest,_displayTime,getText (configFile >> "CfgVehicles" >> (_typeVehX) >> "displayName")],"Вкрасти чи знищити броню",_markerX],_positionX,"FAILED","Destroy"] call A3A_fnc_taskUpdate;
 	[-5*_bonus,-100*_bonus] remoteExec ["A3A_fnc_resourcesFIA",2];
 	[5*_bonus,0,_positionX] remoteExec ["A3A_fnc_citySupportChange",2];
 	[-600*_bonus] remoteExec ["A3A_fnc_timingCA",2];
