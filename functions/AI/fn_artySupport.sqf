@@ -57,11 +57,11 @@ if ((_veh != _soldierX) and (not(_veh in _artyArray))) then
 	};
 } forEach _unitsX;
 
-if (!_hasArtillery) exitWith {hint "You must select an artillery group or it is a Mobile Mortar and it's moving"};
-if (!_areAlive) exitWith {hint "All elements in this Batery cannot fire or are disabled"};
-if ((_hasAmmunition < 2) and (!_areReady)) exitWith {hint "The Battery has no ammo to fire. Reload it on HQ"};
-if (!_areReady) exitWith {hint "Selected Battery is busy right now"};
-if (_typeAmmunition == "not_supported") exitWith {hint "Your current modset doesent support this strike type"};
+if (!_hasArtillery) exitWith {hint "Треба вибрати артилерійське відділення, або, якщо це мобільший міномет, то він рухається"};
+if (!_areAlive) exitWith {hint "Всі одиниці батареї не можуть стріляти, чи шось таке. Або вони відсутні."};
+if ((_hasAmmunition < 2) and (!_areReady)) exitWith {hint "В батареї закінчились снаряди. Перезарядіть її в штабі."};
+if (!_areReady) exitWith {hint "Обрана батарея зараз зайнята."};
+if (_typeAmmunition == "not_supported") exitWith {hint "Ваша збірка модів не підтримує такий артобстріл."};
 if (isNil "_typeAmmunition") exitWith {};
 
 hcShowBar false;
@@ -87,7 +87,7 @@ typeArty = nil;
 
 positionTel = [];
 
-hint "Select the position on map where to perform the Artillery strike";
+hint "Виберіть позицію на карті, куди вести обстріл.";
 
 if (!visibleMap) then {openMap true};
 onMapSingleClick "positionTel = _pos;";
@@ -113,7 +113,7 @@ for "_i" from 0 to (count _artyArray) - 1 do
 		};
 	};
 
-if (count _artyArrayDef1 == 0) exitWith {hint "The position you marked is out of bounds for that Battery"};
+if (count _artyArrayDef1 == 0) exitWith {hint "Ця позиція є поза зоною досяжності артилерії."};
 
 _mrkFinal = createMarkerLocal [format ["Arty%1", random 100], _positionTel];
 _mrkFinal setMarkerShapeLocal "ICON";
@@ -122,10 +122,10 @@ _mrkFinal setMarkerColorLocal "ColorRed";
 
 if (_typeArty == "BARRAGE") then
 	{
-	_mrkFinal setMarkerTextLocal "Atry Barrage Begin";
+	_mrkFinal setMarkerTextLocal "Почати обстріл";//"Atry Barrage Begin"
 	positionTel = [];
 
-	hint "Select the position to finish the barrage";
+	hint "Виберіть позицію, щоб завершити обстріл";
 
 	if (!visibleMap) then {openMap true};
 	onMapSingleClick "positionTel = _pos;";
@@ -178,7 +178,7 @@ if ((not(_markerX in forcedSpawn)) and (_positionTel distance (getMarkerPos _mar
 	publicVariable "forcedSpawn";
 	};
 
-_textX = format ["Requesting fire support on Grid %1. %2 Rounds", mapGridPosition _positionTel, round _rounds];
+_textX = format ["Викликаю артилерійську підтримку на %1. Кількість пострілів: %2", mapGridPosition _positionTel, round _rounds];
 [theBoss,"sideChat",_textX] remoteExec ["A3A_fnc_commsMP",[teamPlayer,civilian]];
 
 if (_typeArty == "BARRAGE") then
@@ -257,7 +257,7 @@ if (_typeArty != "BARRAGE") then
 	if (isNil "_timeX") exitWith {
 		diag_log format ["%1: [Antistasi] | ERROR | ArtySupport.sqf | Params: %2,%3,%4,%5",servertime,_artyArrayDef1 select 0,_positionTel,((getArtilleryAmmo [(_artyArrayDef1 select 0)]) select 0),(_artyArrayDef1 select 0) getArtilleryETA [_positionTel, ((getArtilleryAmmo [(_artyArrayDef1 select 0)]) select 0)]];
 		};
-	_textX = format ["Acknowledged. Fire mission is inbound. %2 Rounds fired. ETA %1 secs",round _eta,_roundsMax - _rounds];
+	_textX = format ["Прийнято. Очікуйте на приліт за %1. Пострілів: %2",round _eta,_roundsMax - _rounds];
 	[petros,"sideChat",_textX] remoteExec ["A3A_fnc_commsMP",[teamPlayer,civilian]];
 	};
 
