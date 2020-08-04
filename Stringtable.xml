@@ -409,11 +409,11 @@
 		<Ukrainian>Та</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_dialogs_generic_button_no_text">
-        <Original>Нє</Original>
-        <English>Нє</English>
+        <Original>Ніт</Original>
+        <English>Ніт</English>
         <French>Ніт</French>
-        <Russian>Нє</Russian>
-		<Ukrainian>Нє</Ukrainian>
+        <Russian>Ніт</Russian>
+		<Ukrainian>Ніт</Ukrainian>
       </Key>
       <Key ID="STR_antistasi_dialogs_generic_button_yes_tooltip">
         <Original />

@@ -5,28 +5,28 @@ private ["_typeX","_costs","_groupX","_unit","_radiusX","_roads","_road","_pos",
 _typeX = _this select 0;
 _positionTel = _this select 1;
 
-if (_typeX == "delete") exitWith {hint "Deprecated option. Use Remove Garrison from HQ instead"};
+if (_typeX == "delete") exitWith {hint "Ця функція застаріла. Використовуйте 'Видалити з гарнізону' зі штабу"};//Deprecated option. Use Remove Garrison from HQ instead
 
 _isRoad = isOnRoad _positionTel;
 
-_textX = format ["%1 Observation Post",nameTeamPlayer];
+_textX = format ["%1 Аванпост",nameTeamPlayer];
 _typeGroup = groupsSDKSniper;
 _typeVehX = vehSDKBike;
 private _tsk = "";
 if (_isRoad) then
 	{
-	_textX = format ["%1 Roadblock",nameTeamPlayer];
+	_textX = format ["%1 Блокпост",nameTeamPlayer];
 	_typeGroup = groupsSDKAT;
 	_typeVehX = vehSDKTruck;
 	};
 
-_mrk = createMarker [format ["FIAPost%1", random 1000], _positionTel];
+_mrk = createMarker [format ["Блокпост%1", random 1000], _positionTel];
 _mrk setMarkerShape "ICON";
 
 _dateLimit = [date select 0, date select 1, date select 2, date select 3, (date select 4) + 60];
 _dateLimitNum = dateToNumber _dateLimit;
-[[teamPlayer,civilian],"outpostsFIA",["We are sending a team to establish a Watchpost/Roadblock. Use HC to send the team to their destination","Post \ Roadblock Deploy",_mrk],_positionTel,false,0,true,"Move",true] call BIS_fnc_taskCreate;
-//_tsk = ["outpostsFIA",[teamPlayer,civilian],["We are sending a team to establish a Watchpost/Roadblock. Use HC to send the team to their destination","Post \ Roadblock Deploy",_mrk],_positionTel,"CREATED",5,true,true,"Move"] call BIS_fnc_setTask;
+[[teamPlayer,civilian],"outpostsFIA",["Ми посилаємо команду, щоб побудувати аванпост\блокпост. Використовуйте меню вищого командування, щоб послати групу туди де потрібно.","Побудувати аванпост чи блокпост",_mrk],_positionTel,false,0,true,"Move",true] call BIS_fnc_taskCreate;
+//_tsk = ["outpostsFIA",[teamPlayer,civilian],["Ми посилаємо команду, щоб побудувати аванпост\блокпост. Використовуйте меню вищого командування, щоб послати групу туди де потрібно.","Побудувати аванпост чи блокпост",_mrk],_positionTel,"CREATED",5,true,true,"Move"] call BIS_fnc_setTask;
 //missionsX pushBackUnique _tsk; publicVariable "missionsX";
 _formatX = [];
 {
@@ -64,7 +64,7 @@ if ({(alive _x) and (_x distance _positionTel < 10)} count units _groupX > 0) th
 	markersX = markersX + [_mrk];
 	publicVariable "markersX";
 	spawner setVariable [_mrk,2,true];
-	["outpostsFIA",["We are sending a team to establish a Watchpost/Roadblock. Use HC to send the team to their destination","Post \ Roadblock Deploy",_mrk],_positionTel,"SUCCEEDED"] call A3A_fnc_taskUpdate;
+	["outpostsFIA",["Ми посилаємо команду, щоб побудувати аванпост\блокпост. Використовуйте меню вищого командування, щоб послати групу туди де потрібно.","Побудувати аванпост чи блокпост",_mrk],_positionTel,"SUCCEEDED"] call A3A_fnc_taskUpdate;
 	//["outpostsFIA", "SUCCEEDED",true] spawn BIS_fnc_taskSetState;
 	_nul = [-5,5,_positionTel] remoteExec ["A3A_fnc_citySupportChange",2];
 	_mrk setMarkerType "loc_bunker";
@@ -81,7 +81,7 @@ if ({(alive _x) and (_x distance _positionTel < 10)} count units _groupX > 0) th
 	}
 else
 	{
-	["outpostsFIA",["We are sending a team to establish a Watchpost/Roadblock. Use HC to send the team to their destination","Post \ Roadblock Deploy",_mrk],_positionTel,"FAILED"] call A3A_fnc_taskUpdate;
+	["outpostsFIA",["Ми посилаємо команду, щоб побудувати аванпост\блокпост. Використовуйте меню вищого командування, щоб послати групу туди де потрібно.","Побудувати аванпост чи блокпост",_mrk],_positionTel,"FAILED"] call A3A_fnc_taskUpdate;
 	//["outpostsFIA", "FAILED",true] spawn BIS_fnc_taskSetState;
 	sleep 3;
 	deleteMarker _mrk;
