@@ -12,7 +12,7 @@ _objectsX = nearestObjects [_truckX, ["ReammoBox_F"], 20];
 if (count _objectsX == 0) exitWith {};
 _boxX = _objectsX select 0;
 
-if ((_boxX == boxX) and (player!=theBoss)) exitWith {hint "Only the Commander can transfer this ammobox content to any truck"; [driver _truckX,"truckX"] remoteExec ["A3A_fnc_flagaction",driver _truckX]};
+if ((_boxX == boxX) and (player!=theBoss)) exitWith {hint "Тільки командир може переносити цю коробку до вантажівки"; [driver _truckX,"truckX"] remoteExec ["A3A_fnc_flagaction",driver _truckX]};
 
 
 _weaponsX = weaponCargo _boxX;
@@ -61,7 +61,7 @@ _countX = count _todo;
 
 if (_countX < 1) then
 	{
-	hint "Closest Ammobox is empty";
+	hint "Найближча коробка порожня";
 	_proceed = true;
 	};
 
@@ -78,7 +78,7 @@ if (_countX > 0) then
 	if (_countX < 1) then {_countX = 1};
 	while {(_truckX == vehicle player) and (speed _truckX == 0) and (_countX > 0)} do
 		{
-		hint format ["Truck loading. \n\nTime remaining: %1 secs", _countX];
+		hint format ["Вантажівка грузиться. \n\nЗалишилось: %1 сек", _countX];
 		_countX = _countX -1;
 		sleep 1;
 		if (_countX == 0) then
@@ -88,7 +88,7 @@ if (_countX > 0) then
 			};
 		if ((_truckX != vehicle player) or (speed _truckX != 0)) then
 				{
-				hint "Transfer cancelled due to movement of Truck or Player";
+				hint "Вантаженна відмінено через те, що гравець, чи вантажівка рухались.";
 				_proceed = true;
 				};
 		};
