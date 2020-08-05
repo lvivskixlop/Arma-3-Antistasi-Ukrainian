@@ -4,31 +4,31 @@ private ["_pool","_veh","_typeVehX"];
 _pool = false;
 if (_this select 0 || !isMultiplayer) then {_pool = true};
 
-if (side player != teamPlayer) exitWith {hint "Only rebels can add vehicles to the garage."};
-if (!([player] call A3A_fnc_isMember)) exitWith {hint "Only server members have the garage feature enabled"};
+if (side player != teamPlayer) exitWith {hint "Ви не можете використовувати гараж в режимі інкогніто."};//Only rebels can add vehicles to the garage.
+if (!([player] call A3A_fnc_isMember)) exitWith {hint "Лише члени сервера мають доступ до гаража."};
 
 _veh = cursorTarget;
 
-if (isNull _veh) exitWith {hint "You are not looking at a vehicle"};
+if (isNull _veh) exitWith {hint "Ви не дивитесь на техніку."};
 
-if (!alive _veh) exitWith {hint "You cannot add destroyed vehicles to your garage"};
+if (!alive _veh) exitWith {hint "Знищену техніку не можна додавати до гаража. Ну а нашо? Вона всеодно не воскресне."};
 _closeX = markersX select {sidesX getVariable [_x,sideUnknown] == teamPlayer};
 _closeX = _closeX select {(player inArea _x) and (_veh inArea _x)};
 
-if (_closeX isEqualTo []) exitWith {hint format ["You and the vehicle need to be in a %1 garrison surrounding in order to garage a it",nameTeamPlayer]};
+if (_closeX isEqualTo []) exitWith {hint format ["Ви і ваша техніка повинна бути оточена своїм гарнізоном, щоб покласти техніку до гаража."]};
 
-//if (player distance2d getMarkerPos respawnTeamPlayer > 50) exitWith {hint "You must be closer than 50 meters to HQ"};
+//if (player distance2d getMarkerPos respawnTeamPlayer > 50) exitWith {hint "Ви повинні бути ближче ніж 50м до штабу."};
 
-if ({alive _x} count (crew vehicle _veh) > 0) exitWith { hint "In order to store a vehicle, its crew must disembark."};
+if ({alive _x} count (crew vehicle _veh) > 0) exitWith { hint "Та ж не можна ховати техніку, якщо в ній хтось сидить."};
 
 _typeVehX = typeOf _veh;
 
-if (_veh isKindOf "Man") exitWith {hint "Are you kidding?"};
+if (_veh isKindOf "Man") exitWith {hint "Нє, ну ти знущаєшся чи шо?"};
 
-if !(_veh isKindOf "AllVehicles") exitWith {hint "The vehicle you are looking cannot be stored in our Garage"};
+if !(_veh isKindOf "AllVehicles") exitWith {hint "Цю техніку не можна сховати в гараж."};
 
 
-if (_pool and (count vehInGarage >= (tierWar *3))) exitWith {hint "You cannot garage more vehicles at your current War Level"};
+if (_pool and (count vehInGarage >= (tierWar *3))) exitWith {hint "Ви не можете покласти більше техніки до гаража при теперішньому рівні війни."};
 
 _exit = false;
 if (!_pool) then
@@ -43,7 +43,7 @@ if (!_pool) then
 		};
 	};
 
-if (_exit) exitWith {hint "You are not owner of this vehicle therefore you cannot garage it"};
+if (_exit) exitWith {hint "Ви не можете сховати техніку до гаража, якщо ви не є її власником."};
 
 if (_typeVehX isKindOf "Plane") then
 	{
@@ -51,7 +51,7 @@ if (_typeVehX isKindOf "Plane") then
 	if (count _airportsX == 0) then {_exit = true};
 	};
 
-if (_exit) exitWith {hint format ["You cannot garage an air vehicle while you are not near an Aiport which belongs to %1. Place your HQ near an airbase flag in order to be able to garage it",nameTeamPlayer]};
+if (_exit) exitWith {hint format ["Ви не можете ховати повітряну техніку до гаража, бо ваш штаб не знаходиться біля підконтрольного аеродрому."]};
 
 if (_veh in staticsToSave) then {staticsToSave = staticsToSave - [_veh]; publicVariable "staticsToSave"};
 
@@ -62,10 +62,10 @@ if (_pool) then
 	{
 	vehInGarage = vehInGarage + [_typeVehX];
 	publicVariable "vehInGarage";
-	hint format ["Vehicle added to %1 Garage",nameTeamPlayer];
+	hint format ["Додано до спільного гаражу"];
 	}
 else
 	{
 	[_typeVehX] call A3A_fnc_addToPersonalGarageLocal;
-	hint "Vehicle added to Personal Garage";
+	hint "Додано до особистого гаражу";
 	};
