@@ -1,5 +1,5 @@
 private ["_display","_childControl","_costs","_costHR","_unitsX","_formatX"];
-if (!([player] call A3A_fnc_hasRadio)) exitWith {if !(hasIFA) then {hint "You need a radio in your inventory to be able to give orders to other squads"} else {hint "You need a Radio Man in your group to be able to give orders to other squads"}};
+if (!([player] call A3A_fnc_hasRadio)) exitWith {if !(hasIFA) then {hint "Вам потрібно мати рацію, щоб віддавати накази іншим відділенням."} else {hint "У вашій групі повинен бути радист, щоб віддавати накази іншим відділенням."}};
 _nul = createDialog "squad_options";
 
 sleep 1;
@@ -15,7 +15,7 @@ if (str (_display) != "no display") then
 	//_formatX = (cfgSDKInf >> (groupsSDKSquad select 0));
 	//_unitsX = [_formatX] call groupComposition;
 	{_costs = _costs + (server getVariable (_x select 0)); _costHR = _costHR +1} forEach groupsSDKSquad;
-	_ChildControl  ctrlSetTooltip format ["Cost: %1 €. HR: %2",_costs,_costHR];
+	_ChildControl  ctrlSetTooltip format ["Ціна: %1 ₴. HR: %2",_costs,_costHR];
 
 	_ChildControl = _display displayCtrl 105;
 	_costs = 0;
@@ -23,7 +23,7 @@ if (str (_display) != "no display") then
 	//_formatX = (cfgSDKInf >> (groupsSDKmid select 0));
 	//_unitsX = [_formatX] call groupComposition;
 	{_costs = _costs + (server getVariable (_x select 0)); _costHR = _costHR +1} forEach groupsSDKSquadEng;
-	_ChildControl  ctrlSetTooltip format ["Cost: %1 €. HR: %2",_costs,_costHR];
+	_ChildControl  ctrlSetTooltip format ["Ціна: %1 ₴. HR: %2",_costs,_costHR];
 
 	_ChildControl = _display displayCtrl 106;
 	_costs = 0;
@@ -32,7 +32,7 @@ if (str (_display) != "no display") then
 	//_unitsX = [_formatX] call groupComposition;
 	{_costs = _costs + (server getVariable (_x select 0)); _costHR = _costHR +1} forEach groupsSDKSquadSupp;
 	_costs = _costs + ([SDKMGStatic] call A3A_fnc_vehiclePrice);
-	_ChildControl  ctrlSetTooltip format ["Cost: %1 €. HR: %2",_costs,_costHR];
+	_ChildControl  ctrlSetTooltip format ["Ціна: %1 ₴. HR: %2",_costs,_costHR];
 
 	_ChildControl = _display displayCtrl 107;
 	_costs = 0;
@@ -40,5 +40,5 @@ if (str (_display) != "no display") then
 	//_unitsX = [SDKSL,SDKSL];
 	{_costs = _costs + (server getVariable (_x select 0)); _costHR = _costHR +1} forEach groupsSDKSquadSupp;
 	_costs = _costs + ([SDKMortar] call A3A_fnc_vehiclePrice);
-	_ChildControl  ctrlSetTooltip format ["Cost: %1 €. HR: %2",_costs,_costHR];
+	_ChildControl  ctrlSetTooltip format ["Ціна: %1 ₴. HR: %2",_costs,_costHR];
 };
