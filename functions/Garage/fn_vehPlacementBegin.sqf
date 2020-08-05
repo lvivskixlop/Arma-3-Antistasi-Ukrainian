@@ -10,7 +10,7 @@
 // - Name of target callback in callbacks.sqf: STRING
 // - Extra message to display in menu prompt
 
-if (!(isNil "placingVehicle") && {placingVehicle}) exitWith { hint "Unable to place vehicle, already placing a vehicle" };
+if (!(isNil "placingVehicle") && {placingVehicle}) exitWith { hint "Не можливо ставити техніку, коли ставите техніку :)" };
 placingVehicle = true;
 
 params ["_vehicleType", ["_callbackTarget", ""], ["_displayMessage", ""]];
@@ -23,7 +23,7 @@ vehPlace_previewVeh allowDamage false;
 vehPlace_previewVeh enableSimulation false;
 
 [_vehicleType] call A3A_fnc_displayVehiclePlacementMessage;
-hint "Hover your mouse to the desired position. If it's safe and suitable, you will see the vehicle";
+hint "Наведіть мишкою на бажану позицію. Якщо техніку видно, то її можна безпечно ставити.";
 
 //Control flow is weird here. KeyDown tells onEachFrame it can stop running, and which action to do.
 //This guarantees us no race conditions between keyDown, onEachFrame and the rest of the code.
@@ -45,7 +45,7 @@ if(isNil "vehPlace_keyDownHandler")	then {
 			{
 			if (vehPlace_previewVeh distance [0,0,1000] <= 1500) then
 				{
-				["<t size='0.6'>The current position is not suitable for the vehicle. Try another",0,0,3,0,0,4] spawn bis_fnc_dynamicText;
+				["<t size='0.6'>Ця позиція не підходить. Спробуйте іншу.",0,0,3,0,0,4] spawn bis_fnc_dynamicText;
 				}
 			else 
 				{
