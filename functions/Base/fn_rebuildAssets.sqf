@@ -1,7 +1,7 @@
 
 _resourcesFIA = server getVariable "resourcesFIA";
 
-if (_resourcesFIA < 5000) exitWith {hint "You do not have enough money to rebuild any Asset. You need 5.000 €"};
+if (_resourcesFIA < 5000) exitWith {hint "У ван не достатньо грошей, щоб відбудувати якись об'єкт штабу. Треба мати хоча б 5000 ₴."};
 
 _destroyedSites = destroyedSites - citiesX;
 
@@ -20,13 +20,13 @@ _positionTel = positionTel;
 
 _siteX = [markersX,_positionTel] call BIS_fnc_nearestPosition;
 
-if (getMarkerPos _siteX distance _positionTel > 50) exitWith {hint "You must click near a map marker"};
+if (getMarkerPos _siteX distance _positionTel > 50) exitWith {hint "Треба клацнути біля маркера на карті."};
 
-if ((not(_siteX in _destroyedSites)) and (!(_siteX in outposts))) exitWith {hint "You cannot rebuild that"};
+if ((not(_siteX in _destroyedSites)) and (!(_siteX in outposts))) exitWith {hint "Ви не можете це відбудувати."};
 
 _leave = false;
 _antennaDead = objNull;
-_textX = "That Outpost does not have a destroyed Radio Tower";
+_textX = "На цьому аванпості немає знищеної радіовежі.";
 if (_siteX in outposts) then
 	{
 	_antennasDead = antennasDead select {_x inArea _siteX};
@@ -35,7 +35,7 @@ if (_siteX in outposts) then
 		if (sidesX getVariable [_siteX, sideUnknown] != teamPlayer) then
 			{
 			_leave = true;
-			_textX = format ["You cannot rebuild a Radio Tower in an Outpost which does not belong to %1",nameTeamPlayer];
+			_textX = format ["Ви не можете відбудувати радіовежу на аванпості, який вам не підконтрольний."];
 			}
 		else
 			{

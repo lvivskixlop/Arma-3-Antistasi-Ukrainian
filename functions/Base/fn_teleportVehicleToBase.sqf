@@ -10,7 +10,7 @@ private _newPosition = for "_i" from 1 to 20 do {
 }; 
  
 if (count _newPosition == 0) exitWith { 
- diag_log "[Antistasi] Couldn't find a safe position to teleport vehicle to base.";
+ diag_log "[Antistasi] Не можу найти безпечної позиції для телепорту техніки.";
  false;
 }; 
  

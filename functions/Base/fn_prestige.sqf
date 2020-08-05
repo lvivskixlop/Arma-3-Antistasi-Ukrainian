@@ -31,11 +31,11 @@ _csatSim = "";
 if (_csat > 0.25) then {_castSim = "+"};
 if ((_nato > 0.25) and (_csat > 0.25)) then
 	{
-	_textX = format ["<t size='0.6' color='#C1C0BB'>Prestige Change.<br/> <t size='0.5' color='#C1C0BB'><br/>%5: %3%1<br/>%6: %4%2",_nato,_csat,_natoSim,_csatSim,nameOccupants,nameInvaders]
+	_textX = format ["<t size='0.6' color='#C1C0BB'>Престиж.<br/> <t size='0.5' color='#C1C0BB'><br/>%5: %3%1<br/>%6: %4%2",_nato,_csat,_natoSim,_csatSim,nameOccupants,nameInvaders]//Prestige Change
 	}
 else
 	{
-	if (_nato > 0.25) then {_textX = format ["<t size='0.6' color='#C1C0BB'>Prestige Change.<br/> <t size='0.5' color='#C1C0BB'><br/>%2: %3%1",_nato,nameOccupants,_natoSim]} else {if (_csat > 0.25) then {_textX = format ["<t size='0.6' color='#C1C0BB'>Prestige Change.<br/> <t size='0.5' color='#C1C0BB'><br/>%1: %4%2",nameInvaders,_csat,_natoSim,_csatSim]}};
+	if (_nato > 0.25) then {_textX = format ["<t size='0.6' color='#C1C0BB'>Престиж.<br/> <t size='0.5' color='#C1C0BB'><br/>%2: %3%1",_nato,nameOccupants,_natoSim]} else {if (_csat > 0.25) then {_textX = format ["<t size='0.6' color='#C1C0BB'>Престиж.<br/> <t size='0.5' color='#C1C0BB'><br/>%1: %4%2",nameInvaders,_csat,_natoSim,_csatSim]}};
 	};
 
 if (_textX != "") then {[petros,"income",_textX] remoteExec ["A3A_fnc_commsMP",theBoss]};

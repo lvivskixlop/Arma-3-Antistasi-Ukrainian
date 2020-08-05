@@ -1,17 +1,17 @@
 params["_vehicle", "_caller", "_actionID"];
 
-if(!isPlayer _caller) exitWith {hint "Only players are currently able to breach vehicles!";};
+if(!isPlayer _caller) exitWith {hint "Лише гравці зара можуть вибивати техніку!";};
 
 //Only engineers should be able to breach a vehicle
 private _isEngineer = _caller getUnitTrait "engineer";
 if(!_isEngineer) exitWith
 {
-    hint "You have to be an engineer to breach a vehicle!";
+    hint "Тільки інженер може вибивати техніку!";
 };
 
 if(!alive _vehicle) exitWith
 {
-    hint "Why would you want to breach a destroyed vehicle?";
+    hint "Ну і нашо? Нашо тобі вибивати і так вбиту в хлам техніку?";
     _vehicle removeAction _actionID;
 };
 
@@ -19,14 +19,14 @@ private _vehCrew = crew _vehicle;
 private _aliveCrew = _vehCrew select {alive _x};
 if(count _aliveCrew == 0) exitWith
 {
-    hint "There is no living crew left, no need for breaching!";
+    hint "Там вже нікого живого всередині нема!";
     _vehicle lock false;
     _vehicle removeAction _actionID;
 };
 
 if(side (_aliveCrew select 0) == teamPlayer) exitWith
 {
-    hint "You cannot breach a vehicle which is controlled by the rebels!";
+    hint "Ви не можете вибивати дружню техніку!";
     _vehicle removeAction _actionID;
 };
 
@@ -36,7 +36,7 @@ private _isTank = (typeOf _vehicle) in vehTanks;
 
 if(!_isAPC && !_isTank) exitWith
 {
-    hint "You can only breach APCs and Tanks.";
+    hint "Ви можете вибивати тільки броньовану техніку (танки, БТР, БМП, БМД, ...).";
 };
 
 private _magazines = magazines _caller;
@@ -61,7 +61,7 @@ private _index = -1;
 //Abort if no explosives found
 if(_magazineArray isEqualTo []) exitWith
 {
-    hint "You carry no explosives. You will need some to breach vehicles!";
+    hint "У вас немає вибухівки!";
 };
 
 private _explosive = "";
@@ -98,7 +98,7 @@ if(!(_explo isEqualTo [])) then
 
 if(_explosiveCount == 0) exitWith
 {
-    hint "You don't have the right explosives, check the briefing notes to see what you need!";
+    hint "У вас не правильна вибухівка. Гляньте в інструктаж на карті, щоб дізнатись яка саме підходить.";
 };
 
 private _time = 15 + (random 5);
@@ -120,7 +120,7 @@ _caller setVariable ["breachVeh", _vehicle];
 _caller setVariable ["animsDone",false];
 _caller setVariable ["cancelBreach",false];
 
-private _action = _caller addAction ["Cancel Breaching", {(_this select 1) setVariable ["cancelBreach",true]},nil,6,true,true,"","(isPlayer _this) && (_this == vehicle _this)"];
+private _action = _caller addAction ["Відмінити викурювання", {(_this select 1) setVariable ["cancelBreach",true]},nil,6,true,true,"","(isPlayer _this) && (_this == vehicle _this)"];
 _vehicle removeAction _actionID;
 
 _caller addEventHandler ["AnimDone",
@@ -161,7 +161,7 @@ if
   {_caller getVariable ["cancelBreach",false]}}}}
 ) exitWith
 {
-	hint "Breaching cancelled";
+	hint "Скасовано";
   _caller setVariable ["cancelBreach",nil];
   if(alive _vehicle) then {
 	_vehicle call A3A_fnc_addActionBreachVehicle;
@@ -176,7 +176,7 @@ for "_count" from 1 to _explosiveCount do
 
 //Added as the vehicle might blow up. Best not to blow up in the player's face.
 //Pause AFTER removing the explosive in case they decide to drop it or something.
-hint "Breaching in 10 seconds.";
+hint "Виб'ю за 10 секунд.";
 sleep 10;
 
 private _hitPointsConfigPath = configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "HitPoints";
