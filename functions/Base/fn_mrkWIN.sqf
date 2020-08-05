@@ -9,14 +9,14 @@ if (sidesX getVariable [_markerX,sideUnknown] == teamPlayer) exitWith {};
 _positionX = getMarkerPos _markerX;
 _size = [_markerX] call A3A_fnc_sizeMarker;
 
-if ((!isNull _playerX) and (captive _playerX)) exitWith {hint "You cannot Capture the Flag while Undercover"};
-if ((_markerX in airportsX) and (tierWar < 3)) exitWith {hint "You cannot capture Airports until you reach War Level 3"};
+if ((!isNull _playerX) and (captive _playerX)) exitWith {hint "Ви не можете захоплювати прапори в режимі інкогніто."};
+if ((_markerX in airportsX) and (tierWar < 3)) exitWith {hint "Ви не можете захоплювати аеродроми, поки не досягнете 3-тього рівня війни."};
 _revealX = [];
 
 //Check if the flag is locked
 if(_flagX getVariable ["isGettingCaptured", false]) exitWith
 {
-	hint "This flag pole is locked, try again in 30 seconds!";
+	hint "Цей прапор заблокований. Спробуйте знову через 30 сек.";
 };
 
 //Lock the flag
@@ -30,7 +30,7 @@ _flagX spawn
 };
 
 private _filename = "fn_mrkWIN";
-[2, format ["Flag capture at %1 initiated by %2", _markerX, str _playerX], _filename, true] call A3A_fnc_log;
+[2, format ["%2 почав захоплювати прапор в %1", _markerX, str _playerX], _filename, true] call A3A_fnc_log;
 
 if (!isNull _playerX) then
 {
@@ -59,12 +59,12 @@ if (!isNull _playerX) then
 
 if ((count _revealX) > 2*({([_x,_markerX] call A3A_fnc_canConquer) and (side _x == teamPlayer)} count allUnits)) exitWith
 {
-	[2, format ["Flag capture by %1 abandoned due to outnumbering", str _playerX], _filename, true] call A3A_fnc_log;
-	hint "The enemy still outnumber us, check the map and clear the rest of the area";
+	[2, format ["%1 припинив захоплювати прапор, бо ворогів більше.", str _playerX], _filename, true] call A3A_fnc_log;
+	hint "Ворогів досі забагато. Гляньте карту і зачистіть територію.";
 };
 //if (!isServer) exitWith {};
 
-[2, format ["Flag capture by %1 rewarded", str _playerX], _filename, true] call A3A_fnc_log;
+[2, format ["%1 захопив прапор", str _playerX], _filename, true] call A3A_fnc_log;	//Flag capture by %1 rewarded
 
 {
 	if (isPlayer _x) then
