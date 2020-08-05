@@ -78,9 +78,9 @@ else
 	private _type = "Other";
 	switch (true) do
 	{
-	    case (_markerX in airportsX): {_type = "Airport"};
-			case (_markerX in outposts): {_type = "Outpost"};
-			case (_markerX in citiesX): {_type = "City"};
+	    case (_markerX in airportsX): {_type = "Аеродром"};		//Airport
+			case (_markerX in outposts): {_type = "Аванпост"};	//Outpost
+			case (_markerX in citiesX): {_type = "Місто"};		//City
 	};
 	private _preference = garrison getVariable (format ["%1_preference", _type]);
 	private _request = [];
@@ -133,9 +133,9 @@ if (_markerX in airportsX) then
 			_prestigeInvaders = -10;
 			};
 		};
-	["TaskSucceeded", ["", "Airbase Taken"]] remoteExec ["BIS_fnc_showNotification",_winner];
-	["TaskFailed", ["", "Airbase Lost"]] remoteExec ["BIS_fnc_showNotification",_looser];
-	["TaskUpdated",["",format ["%1 lost an Airbase",_textX]]] remoteExec ["BIS_fnc_showNotification",_other];
+	["TaskSucceeded", ["", "Аеродром взято"]] remoteExec ["BIS_fnc_showNotification",_winner];
+	["TaskFailed", ["", "Аеродром втрачено"]] remoteExec ["BIS_fnc_showNotification",_looser];
+	["TaskUpdated",["",format ["%1 втратили аеродром",_textX]]] remoteExec ["BIS_fnc_showNotification",_other];
 	killZones setVariable [_markerX,[],true];
 	};
 if (_markerX in outposts) then
@@ -152,9 +152,9 @@ if (_markerX in outposts) then
 		{
 		if (_looser == Occupants) then {_prestigeOccupants = 5;_prestigeInvaders = 2} else {_prestigeOccupants = 2;_prestigeInvaders = 5};
 		};
-	["TaskSucceeded", ["", "Outpost Taken"]] remoteExec ["BIS_fnc_showNotification",_winner];
-	["TaskFailed", ["", "Outpost Lost"]] remoteExec ["BIS_fnc_showNotification",_looser];
-	["TaskUpdated",["",format ["%1 lost an Outpost",_textX]]] remoteExec ["BIS_fnc_showNotification",_other];
+	["TaskSucceeded", ["", "Аванпост взято"]] remoteExec ["BIS_fnc_showNotification",_winner];
+	["TaskFailed", ["", "Аванпост втрачено"]] remoteExec ["BIS_fnc_showNotification",_looser];
+	["TaskUpdated",["",format ["%1 втратили аванпост",_textX]]] remoteExec ["BIS_fnc_showNotification",_other];
 	killZones setVariable [_markerX,[],true];
 	};
 if (_markerX in seaports) then
@@ -170,24 +170,24 @@ if (_markerX in seaports) then
 		{
 		if (_looser == Occupants) then {_prestigeOccupants = 5;_prestigeInvaders = 2} else {_prestigeOccupants = 2;_prestigeInvaders = 5};
 		};
-	["TaskSucceeded", ["", "Seaport Taken"]] remoteExec ["BIS_fnc_showNotification",_winner];
-	["TaskFailed", ["", "Seaport Lost"]] remoteExec ["BIS_fnc_showNotification",_looser];
-	["TaskUpdated",["",format ["%1 lost a Seaport",_textX]]] remoteExec ["BIS_fnc_showNotification",_other];
+	["TaskSucceeded", ["", "Порт взято"]] remoteExec ["BIS_fnc_showNotification",_winner];
+	["TaskFailed", ["", "Порт втрачено"]] remoteExec ["BIS_fnc_showNotification",_looser];
+	["TaskUpdated",["",format ["%1 втратили порт",_textX]]] remoteExec ["BIS_fnc_showNotification",_other];
 	};
 if (_markerX in factories) then
 	{
-	["TaskSucceeded", ["", "Factory Taken"]] remoteExec ["BIS_fnc_showNotification",_winner];
-	["TaskFailed", ["", "Factory Lost"]] remoteExec ["BIS_fnc_showNotification",_looser];
-	["TaskUpdated",["",format ["%1 lost a Factory",_textX]]] remoteExec ["BIS_fnc_showNotification",_other];
+	["TaskSucceeded", ["", "Завод взято"]] remoteExec ["BIS_fnc_showNotification",_winner];
+	["TaskFailed", ["", "Завод втрачено"]] remoteExec ["BIS_fnc_showNotification",_looser];
+	["TaskUpdated",["",format ["%1 втратили завод",_textX]]] remoteExec ["BIS_fnc_showNotification",_other];
 	};
 if (_markerX in resourcesX) then
 	{
-	["TaskSucceeded", ["", "Resource Taken"]] remoteExec ["BIS_fnc_showNotification",_winner];
-	["TaskFailed", ["", "Resource Lost"]] remoteExec ["BIS_fnc_showNotification",_looser];
-	["TaskUpdated",["",format ["%1 lost a Resource",_textX]]] remoteExec ["BIS_fnc_showNotification",_other];
+	["TaskSucceeded", ["", "Ресурси взято"]] remoteExec ["BIS_fnc_showNotification",_winner];
+	["TaskFailed", ["", "Ресурси втрачено"]] remoteExec ["BIS_fnc_showNotification",_looser];
+	["TaskUpdated",["",format ["%1 втратили ресурси",_textX]]] remoteExec ["BIS_fnc_showNotification",_other];
 	};
 
-[3, format ["Notification and points done for marker change at %1", _markerX], _fileName] call A3A_fnc_log;
+[3, format ["Notification and points done for marker change at %1", _markerX], _fileName] call A3A_fnc_log;			//??????????
 
 {_nul = [_markerX,_x] spawn A3A_fnc_deleteControls} forEach controlsX;
 if (_winner == teamPlayer) then
@@ -276,4 +276,4 @@ if ((_winner != teamPlayer) and (_looser != teamPlayer)) then
 	};
 markersChanging = markersChanging - [_markerX];
 
-[3, format ["Finished marker change at %1", _markerX], _fileName] call A3A_fnc_log;
+[3, format ["Finished marker change at %1", _markerX], _fileName] call A3A_fnc_log;				//?????????

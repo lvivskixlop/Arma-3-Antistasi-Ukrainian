@@ -24,55 +24,55 @@ if (random 100 < _chance) then
 	{
 	if (_sideX == Occupants) then
 		{
-		if ([vehNATOPlane] call A3A_fnc_vehAvailable) then {_textX = format ["%1 %2 Planes Available<br/>",_textX,nameOccupants]} else {_textX = format ["%1 %2 Planes Unavailable<br/>",_textX,nameOccupants]}
+		if ([vehNATOPlane] call A3A_fnc_vehAvailable) then {_textX = format ["%1 %2 Літаків доступно<br/>",_textX,nameOccupants]} else {_textX = format ["%1 %2 Літаків не доступно<br/>",_textX,nameOccupants]}
 		}
 	else
 		{
-		if ([vehCSATPlane] call A3A_fnc_vehAvailable) then {_textX = format ["%1 %2 Planes Available<br/>",_textX,nameInvaders]} else {_textX = format ["%1 %2 Planes Unavailable<br/>",_textX,nameInvaders]}
+		if ([vehCSATPlane] call A3A_fnc_vehAvailable) then {_textX = format ["%1 %2 Літаків доступно<br/>",_textX,nameInvaders]} else {_textX = format ["%1 %2 Літаків не доступно<br/>",_textX,nameInvaders]}
 		};
 	};
 if (random 100 < _chance) then
 	{
 	if (_sideX == Occupants) then
 		{
-		if ({[_x] call A3A_fnc_vehAvailable} count vehNATOAttackHelis > 0) then {_textX = format ["%1 %2 Attack Helis Available<br/>",_textX,nameOccupants]} else {_textX = format ["%1 %2 Attack Helis Unavailable<br/>",_textX,nameOccupants]}
+		if ({[_x] call A3A_fnc_vehAvailable} count vehNATOAttackHelis > 0) then {_textX = format ["%1 %2 Ударних гелікоптерів доступно<br/>",_textX,nameOccupants]} else {_textX = format ["%1 %2 Ударних гелікоптерів не доступно<br/>",_textX,nameOccupants]}
 		}
 	else
 		{
-		if ({[_x] call A3A_fnc_vehAvailable} count vehCSATAttackHelis > 0) then {_textX = format ["%1 %2 Attack Helis Available<br/>",_textX,nameInvaders]} else {_textX = format ["%1 %2 Attack Helis Unavailable<br/>",_textX,nameInvaders]}
+		if ({[_x] call A3A_fnc_vehAvailable} count vehCSATAttackHelis > 0) then {_textX = format ["%1 %2 Ударних гелікоптерів доступно<br/>",_textX,nameInvaders]} else {_textX = format ["%1 %2 Ударних гелікоптерів не доступно<br/>",_textX,nameInvaders]}
 		};
 	};
 if (random 100 < _chance) then
 	{
 	if (_sideX == Occupants) then
 		{
-		if ({[_x] call A3A_fnc_vehAvailable} count vehNATOAPC > 0) then {_textX = format ["%1 %2 APCs Available<br/>",_textX,nameOccupants]} else {_textX = format ["%1 %2 APCs Unavailable<br/>",_textX,nameOccupants]}
+		if ({[_x] call A3A_fnc_vehAvailable} count vehNATOAPC > 0) then {_textX = format ["%1 %2 БМП доступно<br/>",_textX,nameOccupants]} else {_textX = format ["%1 %2 БМП не доступно<br/>",_textX,nameOccupants]}
 		}
 	else
 		{
-		if ({[_x] call A3A_fnc_vehAvailable} count vehCSATAPC > 0) then {_textX = format ["%1 %2 APCs Available<br/>",_textX,nameInvaders]} else {_textX = format ["%1 %2 APCs Unavailable<br/>",_textX,nameInvaders]}
+		if ({[_x] call A3A_fnc_vehAvailable} count vehCSATAPC > 0) then {_textX = format ["%1 %2 БМП доступно<br/>",_textX,nameInvaders]} else {_textX = format ["%1 %2 БМП не доступно<br/>",_textX,nameInvaders]}
 		};
 	};
 if (random 100 < _chance) then
 	{
 	if (_sideX == Occupants) then
 		{
-		if ([vehNATOTank] call A3A_fnc_vehAvailable) then {_textX = format ["%1 %2 Tanks Available<br/>",_textX,nameOccupants]} else {_textX = format ["%1 %2 Tanks Unavailable<br/>",_textX,nameOccupants]}
+		if ([vehNATOTank] call A3A_fnc_vehAvailable) then {_textX = format ["%1 %2 Танків доступно<br/>",_textX,nameOccupants]} else {_textX = format ["%1 %2 Танків не доступно<br/>",_textX,nameOccupants]}
 		}
 	else
 		{
-		if ([vehCSATTank] call A3A_fnc_vehAvailable) then {_textX = format ["%1 %2 Tanks Available<br/>",_textX,nameInvaders]} else {_textX = format ["%1 %2 Tanks Unavailable<br/>",_textX,nameInvaders]}
+		if ([vehCSATTank] call A3A_fnc_vehAvailable) then {_textX = format ["%1 %2 Танків доступно<br/>",_textX,nameInvaders]} else {_textX = format ["%1 %2 Танків не доступно<br/>",_textX,nameInvaders]}
 		};
 	};
 if (random 100 < _chance) then
 	{
 	if (_sideX == Occupants) then
 		{
-		if ([vehNATOAA] call A3A_fnc_vehAvailable) then {_textX = format ["%1 %2 AA Tanks Available<br/>",_textX,nameOccupants]} else {_textX = format ["%1 %2 AA Tanks Unavailable<br/>",_textX,nameOccupants]}
+		if ([vehNATOAA] call A3A_fnc_vehAvailable) then {_textX = format ["%1 %2 ППО доступно<br/>",_textX,nameOccupants]} else {_textX = format ["%1 %2 ППО не доступно<br/>",_textX,nameOccupants]}
 		}
 	else
 		{
-		if ([vehCSATAA] call A3A_fnc_vehAvailable) then {_textX = format ["%1 %2 AA Tanks Available<br/>",_textX,nameInvaders]} else {_textX = format ["%1 %2 AA Tanks Unavailable<br/>",_textX,nameInvaders]}
+		if ([vehCSATAA] call A3A_fnc_vehAvailable) then {_textX = format ["%1 %2 ППО доступно<br/>",_textX,nameInvaders]} else {_textX = format ["%1 %2 ППО не доступно<br/>",_textX,nameInvaders]}
 		};
 	};
 
@@ -83,9 +83,9 @@ if (count _minesAAF > 0) then
 	{
 	{if (random 100 < _chance) then {teamPlayer revealMine _x; _revealMineX = true}} forEach _minesAAF;
 	};
-if (_revealMineX) then {_textX = format ["%1 New Mines marked on your map<br/>",_textX];};
+if (_revealMineX) then {_textX = format ["%1 Нові мінні поля позначено на карті<br/>",_textX];};
 
-if (_textX == "<t size='0.6' color='#C1C0BB'>Intel Found.<br/> <t size='0.5' color='#C1C0BB'><br/>") then {_textX = format ["<t size='0.6' color='#C1C0BB'>Intel Not Found.<br/> <t size='0.5' color='#C1C0BB'><br/>"];};
+if (_textX == "<t size='0.6' color='#C1C0BB'>Знайдено розвіддані.<br/> <t size='0.5' color='#C1C0BB'><br/>") then {_textX = format ["<t size='0.6' color='#C1C0BB'>Intel Not Found.<br/> <t size='0.5' color='#C1C0BB'><br/>"];};
 
 //[_textX,-0.9999,0,30,0,0,4] spawn bis_fnc_dynamicText;
 [_textX, [safeZoneX, (0.2 * safeZoneW)], [0.25, 0.5], 30, 0, 0, 4] spawn bis_fnc_dynamicText;

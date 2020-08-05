@@ -1,6 +1,6 @@
 if (player != theBoss) exitWith {hint "Only our Commander has access to this function"};
 
-if ((count weaponCargo boxX >0) or (count magazineCargo boxX >0) or (count itemCargo boxX >0) or (count backpackCargo boxX >0)) exitWith {hint "You must first empty your Ammobox in order to move the HQ"};
+if ((count weaponCargo boxX >0) or (count magazineCargo boxX >0) or (count itemCargo boxX >0) or (count backpackCargo boxX >0)) exitWith {hint "Ви повинні спочатку звільшити арсенал, щоб переміщувати штаб"};
 
 petros enableAI "MOVE";
 petros enableAI "AUTOTARGET";
@@ -39,7 +39,7 @@ if (count _garrison > 0) then
 	_hr = 0;
 	if ({(alive _x) and (!captive _x) and ((side _x == Occupants) or (side _x == Invaders)) and (_x distance _positionX < 500)} count allUnits > 0) then
 		{
-		hint "HQ Garrison will stay here and hold the enemy";
+		hint "Зарнізон штабу залишиться тут, щоб стримувати ворога.";
 		}
 	else
 		{
@@ -68,9 +68,9 @@ if (count _garrison > 0) then
 	} forEach _garrison;
 	[_hr,_costs] remoteExec ["A3A_fnc_resourcesFIA",2];
 	garrison setVariable ["Synd_HQ",[],true];
-	hint format ["Garrison removed\n\nRecovered Money: %1 €\nRecovered HR: %2",_costs,_hr];
+	hint format ["Гарнізон видалено\n\nПовернено грошей: %1 €\nПовернено HR: %2",_costs,_hr];
 	};
 
 sleep 5;
 
-petros addAction ["Build HQ here", A3A_fnc_buildHQ,nil,0,false,true];
+petros addAction ["Побудувати штаб тут", A3A_fnc_buildHQ,nil,0,false,true];

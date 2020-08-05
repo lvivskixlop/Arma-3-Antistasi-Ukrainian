@@ -28,4 +28,4 @@ private _countCiv = 0;
 	};
 } forEach allGroups;
 
-diag_log format ["[Antistasi] Performance Log. %10 ServerFPS: %1, Players: %11, DeadUnits: %2, AllUnits:%3, AllObjects: %4, Groups: Rebels-%5, Invaders-%6, Occupants-%7, Civ-%8, Total-%9",diag_fps,(count alldead),count allunits,count allMissionObjects "all",_countRebels,_countInvaders,_countOccupants,_countCiv,_countGroups, _message, count (allPlayers)];
+diag_log format ["[Antistasi] Журнал продуктивності. %10 FPS сервера: %1, Гравців: %11, Мертвих бійців: %2, Всього бійців:%3, Всіх об'єктів: %4, Групи: Укарїнців-%5, Тутешніх-%6, Росіян-%7, Цивільних-%8, Загалом-%9",diag_fps,(count alldead),count allunits,count allMissionObjects "all",_countRebels,_countInvaders,_countOccupants,_countCiv,_countGroups, _message, count (allPlayers)];  //diag_log format ["[Antistasi] Performance Log. %10 ServerFPS: %1, Players: %11, DeadUnits: %2, AllUnits:%3, AllObjects: %4, Groups: Rebels-%5, Invaders-%6, Occupants-%7, Civ-%8, Total-%9",diag_fps,(count alldead),count allunits,count allMissionObjects "all",_countRebels,_countInvaders,_countOccupants,_countCiv,_countGroups, _message, count (allPlayers)];

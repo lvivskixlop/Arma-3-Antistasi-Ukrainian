@@ -33,4 +33,4 @@ if ((_x distance _posHQ < 150) and (alive _x) and (isNull(attachedTo _x))) then
 	};
 } forEach vehicles;
 
-hint "Nearby units have been healed and can go undercover. Nearby vehicles have been repaired, rearmed and are no longer reported."
+hint "Найближчих бійців було повністю відліковано і вони можуть знову бути в режимі інкогніто. Найближчий транспорт відремонтовано та переозброєно і він більше не в розшуку."
