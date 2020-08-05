@@ -67,11 +67,11 @@ if ({alive _x} count units _groupX == 0) then
 	deleteMarker _markerX;
 	if (_isRoad) then
 		{
-		["TaskFailed", ["", "Roadblock Lost"]] remoteExec ["BIS_fnc_showNotification", 0];
+		["TaskFailed", ["", "Блокпост втрачено"]] remoteExec ["BIS_fnc_showNotification", 0];
 		}
 	else
 		{
-		["TaskFailed", ["", "Watchpost Lost"]] remoteExec ["BIS_fnc_showNotification", 0];
+		["TaskFailed", ["", "Наглядовий пост втрачено"]] remoteExec ["BIS_fnc_showNotification", 0];
 		};
 	};
 

@@ -225,8 +225,8 @@ if (spawner getVariable _markerX != 2) then
 	diag_log format ["%1: [Antistasi]: Server | Control %1 captured by %2. Is Roadblock: %3",servertime, _markerX, _winner, _isControl];
 	if (_isControl) then
 		{
-		["TaskSucceeded", ["", "Roadblock Destroyed"]] remoteExec ["BIS_fnc_showNotification",_winner];
-		["TaskFailed", ["", "Roadblock Lost"]] remoteExec ["BIS_fnc_showNotification",_sideX];
+		["TaskSucceeded", ["", "Блокпост знищено"]] remoteExec ["BIS_fnc_showNotification",_winner];
+		["TaskFailed", ["", "Блокпост втрачено"]] remoteExec ["BIS_fnc_showNotification",_sideX];
 		};
 	if (sidesX getVariable [_markerX,sideUnknown] == Occupants) then
 		{

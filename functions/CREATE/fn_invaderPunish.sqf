@@ -15,7 +15,7 @@ _civilians = [];
 diag_log format ["[Antistasi] Launching CSAT Punish Against %1 from %2 (CSATpunish.sqf)", _attackDestination, _attackOrigin];
 
 _nameDestination = [_attackDestination] call A3A_fnc_localizar;
-[[teamPlayer,civilian,Occupants],"invaderPunish",[format ["%2 is attacking innocent civilians in %1! Defend the city at all costs",_nameDestination,nameInvaders],format ["%1 Punishment",nameInvaders],_attackDestination],getMarkerPos _attackDestination,false,0,true,"Defend",true] call BIS_fnc_taskCreate;
+[[teamPlayer,civilian,Occupants],"invaderPunish",[format ["%2 вбивають цивільних в %1! Захистіть місто будь-якою ціною!",_nameDestination,nameInvaders],format ["%1 Покарання",nameInvaders],_attackDestination],getMarkerPos _attackDestination,false,0,true,"Defend",true] call BIS_fnc_taskCreate;
 
 _nul = [_attackOrigin,_attackDestination,Invaders] spawn A3A_fnc_artillery;
 private _sideTarget = if (sidesX getVariable [_attackDestination,sideUnknown] == Occupants) then {Occupants} else {teamPlayer};
@@ -147,7 +147,7 @@ waitUntil {sleep 5; (({not (captive _x)} count _soldiers) < ({captive _x} count 
 
 if ((({not (captive _x)} count _soldiers) < ({captive _x} count _soldiers)) or ({alive _x} count _soldiers < round (_soldiersSpawned / 3)) or (time > _missionExpireTime)) then {
 	{_x doMove [0,0,0]} forEach _soldiers;
-	["invaderPunish",[format ["%2 is attacking innocent civilians in %1! Defend the city at all costs",_nameDestination,nameInvaders],format ["%1 Punishment",nameInvaders],_attackDestination],getMarkerPos _attackDestination,"SUCCEEDED"] call A3A_fnc_taskUpdate;
+	["invaderPunish",[format ["%2 вбивають цивільних в %1! Захистіть місто будь-якою ціною!",_nameDestination,nameInvaders],format ["%1 Покарання",nameInvaders],_attackDestination],getMarkerPos _attackDestination,"SUCCEEDED"] call A3A_fnc_taskUpdate;
 	if ({(side _x == teamPlayer) and (_x distance _posDestination < _size * 2)} count allUnits >= {(side _x == _sideTarget) and (_x distance _posDestination < _size * 2)} count allUnits) then {
 		if (sidesX getVariable [_attackDestination,sideUnknown] == Occupants) then {[-15,15,_posDestination] remoteExec ["A3A_fnc_citySupportChange",2]} else {[-5,15,_posDestination] remoteExec ["A3A_fnc_citySupportChange",2]};
 		[-5,0] remoteExec ["A3A_fnc_prestige",2];
@@ -159,7 +159,7 @@ if ((({not (captive _x)} count _soldiers) < ({captive _x} count _soldiers)) or (
 		{[10,0,_x] remoteExec ["A3A_fnc_citySupportChange",2]} forEach citiesX;
 	};
 } else {
-	["invaderPunish",[format ["%2 is attacking innocent civilians in %1! Defend the city at all costs",_nameDestination,nameInvaders],format ["%1 Punishment",nameInvaders],_attackDestination],getMarkerPos _attackDestination,"FAILED"] call A3A_fnc_taskUpdate;
+	["invaderPunish",[format ["%2 вбивають цивільних в %1! Захистіть місто будь-якою ціною!",_nameDestination,nameInvaders],format ["%1 Покарання",nameInvaders],_attackDestination],getMarkerPos _attackDestination,"FAILED"] call A3A_fnc_taskUpdate;
 	[-20,-20,_posDestination] remoteExec ["A3A_fnc_citySupportChange",2];
 	{[-10,-10,_x] remoteExec ["A3A_fnc_citySupportChange",2]} forEach citiesX;
 	destroyedSites = destroyedSites + [_attackDestination];
