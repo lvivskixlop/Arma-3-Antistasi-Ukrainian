@@ -17,7 +17,7 @@ private _convoyMarker = format ["convoy%1", _convoyID];
 
 if(!(_maxSpeed > 0)) exitWith
 {
-  diag_log format ["ConvoyMovement[%1]: Max speed is 0 or lower, can't simulate convoy with it!", _convoyID];
+  diag_log format ["ConvoyMovement[%1]: Максимальна швидкість 0 чи менше. Неможливо симулювати!", _convoyID];
   deleteMarker _convoyMarker;
 };
 
@@ -119,7 +119,7 @@ for "_i" from 1 to (_pointsCount - 1) do
 if(_isDestroyed) exitWith {deleteMarker _convoyMarker};
 if(!_isSimulated) exitWith {};
 
-diag_log format ["ConvoyMovement[%1]: Convoy arrived at destination!", _convoyID];
+diag_log format ["ConvoyMovement[%1]: Колона прибула на місце призначення!", _convoyID];
 
 [_convoyID, (_route select 0), (_route select (_pointsCount - 1)), _units, _convoySide, _convoyType] spawn A3A_fnc_onConvoyArrival;
 
