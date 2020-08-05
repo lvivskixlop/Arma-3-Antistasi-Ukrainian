@@ -7,10 +7,10 @@ if (isNil "garageIsOpen") then {
 
 garage_mode = _this select 0;
 
-if (garage_mode == GARAGE_FACTION && (not([player] call A3A_fnc_isMember))) exitWith {hint "You cannot access the Garage as you are guest in this server"};
-if (garage_mode == GARAGE_FACTION && !allowMembersFactionGarageAccess && player != theBoss) exitWith {hint "Member access to the faction garage is disabled. You must be the commander.";};
-if (player != player getVariable "owner") exitWith {hint "You cannot access the Garage while you are controlling AI"};
-if ([player,300] call A3A_fnc_enemyNearCheck) exitWith {Hint "You cannot manage the Garage with enemies nearby"};
+if (garage_mode == GARAGE_FACTION && (not([player] call A3A_fnc_isMember))) exitWith {hint "Ви не маєте доступу до гаража, так як ви не є членом сервера."};
+if (garage_mode == GARAGE_FACTION && !allowMembersFactionGarageAccess && player != theBoss) exitWith {hint "Доступ до спільного гаражу вимкнений. Ви повинні бути командиром.";};
+if (player != player getVariable "owner") exitWith {hint "Ви не маєте доступу до гаражу, коли контролюєте бота."};
+if ([player,300] call A3A_fnc_enemyNearCheck) exitWith {Hint "Ви не можете користуватись гаражом, коли вороги поблизу."};
 
 garage_vehiclesAvailable = [];
 
@@ -29,10 +29,10 @@ if (count _airportsX > 0) then {_hasAir = true};
 		};
 } forEach (if (garage_mode == GARAGE_FACTION) then {vehInGarage} else {[] call A3A_fnc_getPersonalGarageLocal});
 
-if (count garage_vehiclesAvailable == 0) exitWith {hintC "The Garage is empty or the vehicles you have are not suitable to recover in the place you are.\n\nAir vehicles need to be recovered near Airport flags."};
+if (count garage_vehiclesAvailable == 0) exitWith {hintC "Гараж порожній, або у вас нема відповідного місця для техніки, що є.\n\nПовітряний транспорт можна дістати тільки біля аеродромів."};
 
 garage_nearestMarker = [markersX select {sidesX getVariable [_x,sideUnknown] == teamPlayer},player] call BIS_fnc_nearestPosition;
-if !(player inArea garage_nearestMarker) exitWith {hint "You need to be close to one of your garrisons to be able to retrieve a vehicle from your garage"};
+if !(player inArea garage_nearestMarker) exitWith {hint "Ви повинні бути бляжче до гарнізону, щоб дістати техніку з гаража."};
 
 garage_vehicleIndex = 0;
 _initialType = garage_vehiclesAvailable select garage_vehicleIndex;
@@ -67,12 +67,12 @@ if (isNil "garage_keyDownHandler") then {
 		_handled;
 	}];
 };
-private _extraMessage = "Arrow Up-Down to Switch Vehicles<br/>";
+private _extraMessage = "Стрілочка Вверх-Вних, щоб перебирати техніку<br/>";
 
 //Only allow access to the faction garage if someone else isn't already accessing it. 
 //Try to find the player to make sure they're still online - aim to avoid a situation where players are locked out of the garage.
 if (garage_mode == GARAGE_FACTION && !isNil "garageLocked" && {(allPlayers findIf { getPlayerUID _x == (garageLocked select 1)}) > -1}) exitWith {
-	hint format ["%1 is accessing the garage right now. Please try again later. If this is broken, ask the player to log out.", garageLocked select 0];
+	hint format ["%1 зара використовує гараж.  Почекайте трохи. Якщо воно залагає, то нехай %1 перезайде", garageLocked select 0];
 };
 //Define this last-thing, as we need to vehPlacement cleanup code to unset it.
 garageLocked = [name player, getPlayerUID player];
