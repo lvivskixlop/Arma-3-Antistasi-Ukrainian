@@ -26,7 +26,7 @@ switch (_callbackTarget) do {
 		
 			case CALLBACK_SHOULD_CANCEL_PLACEMENT: {
 				if (!(player inArea garage_nearestMarker)) exitWith {
-					[true, "You need to be close to one of your garrisons to be able to retrieve a vehicle from your garage"];
+					[true, "Ви повинні бути ближче до своїх гарнізонів, щоб дістати техніку з гаража."];
 				};
 				[false];
 			};
@@ -35,7 +35,7 @@ switch (_callbackTarget) do {
 				private _pos = _callbackParams select 0;
 				if (_pos distance2d (getMarkerPos garage_nearestMarker) > 50) exitWith 
 				{
-					[false, "Vehicles must be placed within 50m of the flag"];
+					[false, "Техніка повинна ставитись в районі 50м від прапора."];
 				};
 				[true];
 			};
@@ -43,11 +43,11 @@ switch (_callbackTarget) do {
 			case CALLBACK_CAN_PLACE_VEH: {
 				if (!(player inArea garage_nearestMarker)) exitWith 
 				{
-					[false, "You need to be close to one of your garrisons to be able to retrieve a vehicle from your garage"];
+					[false, "Ви повинні бути ближче до своїх гарнізонів, щоб дістати техніку з гаража."];
 				};
 				if ([player,300] call A3A_fnc_enemyNearCheck) exitWith
 				{
-					[false, "You cannot manage the Garage with enemies nearby"];
+					[false, "Гараж не можна використовувати, коли вороги поблизу."];
 				};
 				[true];
 			};
@@ -98,7 +98,7 @@ switch (_callbackTarget) do {
 		
 			case CALLBACK_SHOULD_CANCEL_PLACEMENT: {
 				if (!(player inArea vehiclePurchase_nearestMarker)) exitWith {
-					[true, "You need to be close to the flag to be able to purchase a vehicle"];
+					[true, "Підійдіть ближче до прапора, щоб купити техніку."];
 				};
 				[false];
 			};
@@ -107,7 +107,7 @@ switch (_callbackTarget) do {
 				private _pos = _callbackParams select 0;
 				if (_pos distance2d (getMarkerPos vehiclePurchase_nearestMarker) > 50) exitWith 
 				{
-					[false, "Vehicles must be placed within 50m of the flag"];
+					[false, "Техніка повинна ставитись в районі 50м від прапора."];
 				};
 				[true];
 			};
@@ -115,11 +115,11 @@ switch (_callbackTarget) do {
 			case CALLBACK_CAN_PLACE_VEH: {
 				if (!(player inArea vehiclePurchase_nearestMarker)) exitWith 
 				{
-					[false, "You need to be close to one of your garrisons to be able to retrieve a vehicle from your garage"];
+					[false, "Ви повинні бути ближче до своїх гарнізонів, щоб дістати техніку з гаража."];
 				};
 				if ([player,300] call A3A_fnc_enemyNearCheck) exitWith
 				{
-					[false, "You cannotbuy vehicles with enemies nearby"];
+					[false, "Не можна купувати техніку, коли ворог поблизу."];
 				};
 				[true];
 			};
@@ -181,13 +181,13 @@ switch (_callbackTarget) do {
 				private _pos =	_callbackParams param [0];
 				switch (build_type) do {
 					case "RB": {
-						[isOnRoad _pos, "Roadblocks can only be built on roads"];
+						[isOnRoad _pos, "Блокпости можна будувати тільки на дорогах."];
 					};
 					case "SB": {
-						[!(isOnRoad _pos) && _pos inArea build_nearestFriendlyMarker, "Bunkers can only be built off roads, in friendly areas"];
+						[!(isOnRoad _pos) && _pos inArea build_nearestFriendlyMarker, "Бункери можна будувати тільки на своїй території поза дорогами."];
 					};
 					case "CB": {
-						[!(isOnRoad _pos) && _pos inArea build_nearestFriendlyMarker, "Bunkers can only be built off roads, in friendly areas"];
+						[!(isOnRoad _pos) && _pos inArea build_nearestFriendlyMarker, "Бункери можна будувати тільки на своїй території поза дорогами."];
 					};
 					default {
 						[true];
