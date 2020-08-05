@@ -1,13 +1,13 @@
 private ["_typeX","_costs","_groupX","_unit","_radiusX","_roads","_road","_pos","_truckX","_textX","_mrk","_hr","_exists","_positionTel","_isRoad","_typeGroup","_resourcesFIA","_hrFIA"];
 
-if (["outpostsFIA"] call BIS_fnc_taskExists) exitWith {hint "We can only deploy / delete one Observation Post or Roadblock at a time."};
-if (!([player] call A3A_fnc_hasRadio)) exitWith {if !(hasIFA) then {hint "You need a radio in your inventory to be able to give orders to other squads"} else {hint "You need a Radio Man in your group to be able to give orders to other squads"}};
+if (["outpostsFIA"] call BIS_fnc_taskExists) exitWith {hint "Ми можемо виставляти тільки один блокпост чи наглядовий пост одночасно."};
+if (!([player] call A3A_fnc_hasRadio)) exitWith {if !(hasIFA) then {hint "Вам потрібно мати рацію, щоб віддавати накази іншим відділенням."} else {hint "У вашій групі повинен бути радист, щоб віддавати накази іншим відділенням."}};
 
 _typeX = _this select 0;
 
 if (!visibleMap) then {openMap true};
 positionTel = [];
-if (_typeX != "delete") then {hint "Click on the position you wish to build the Observation Post or Roadblock. \n Remember: to build Roadblocks you must click exactly on a road map section"} else {hint "Click on the Observation Post or Roadblock to delete."};
+if (_typeX != "delete") then {hint "Клацайте на позицію, де ви б хтіли побудувати блокпочт чи наглядовий пост. \nПам'ятайте, що для блокпоста вам необхідно клацати на дорогу."} else {hint "Клацніть на наглядовий пост чи блокпост, щоб його видалити."};
 
 onMapSingleClick "positionTel = _pos;";
 
@@ -19,8 +19,8 @@ if (!visibleMap) exitWith {};
 _positionTel = positionTel;
 _pos = [];
 
-if ((_typeX == "delete") and (count outpostsFIA < 1)) exitWith {hint "No Posts or Roadblocks deployed to delete"};
-if ((_typeX == "delete") and ({(alive _x) and (!captive _x) and ((side _x == Occupants) or (side _x == Invaders)) and (_x distance _positionTel < 500)} count allUnits > 0)) exitWith {hint "You cannot delete a Post while enemies are near it"};
+if ((_typeX == "delete") and (count outpostsFIA < 1)) exitWith {hint "Тут нема чого видяляти."};
+if ((_typeX == "delete") and ({(alive _x) and (!captive _x) and ((side _x == Occupants) or (side _x == Invaders)) and (_x distance _positionTel < 500)} count allUnits > 0)) exitWith {hint "Ви не можете видалити пост, коли вороги поблизу."};
 
 _costs = 0;
 _hr = 0;
@@ -53,7 +53,7 @@ else
 _resourcesFIA = server getVariable "resourcesFIA";
 _hrFIA = server getVariable "hr";
 
-if (((_resourcesFIA < _costs) or (_hrFIA < _hr)) and (_typeX!= "delete")) exitWith {hint format ["You lack of resources to build this Outpost or Roadblock \n %1 HR and %2 € needed",_hr,_costs]};
+if (((_resourcesFIA < _costs) or (_hrFIA < _hr)) and (_typeX!= "delete")) exitWith {hint format ["У вас не достатньо ресурсів, щоб побудувати пост.\nПотрібно %1 HR і %2 ₴",_hr,_costs]};
 
 if (_typeX != "delete") then
 	{

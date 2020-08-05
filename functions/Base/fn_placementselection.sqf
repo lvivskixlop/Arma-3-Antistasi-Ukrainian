@@ -5,11 +5,11 @@ private _disabledPlayerDamage = false;
 
 if (_newGame) then {
 	[2,"New session selected",_fileName] call A3A_fnc_log;
-	"Initial HQ Placement Selection" hintC ["Click on the Map Position you want to start the Game.","Close the map with M to start in the default position.","Don't select areas with enemies nearby!!\n\nGame experience changes a lot on different starting positions."];
+	"Initial HQ Placement Selection" hintC ["Клацніть на карті, щоб вибрати стартову позицію.","Закрийте карту на М, щоб почати в стандартній позиції","Не вибирайте території з ворогами поблизу!\n\nІгровий досвід буде дуже змінюватись в залежності від стартової позиції."];
 } else {
 	player allowDamage false;
 	_disabledPlayerDamage = true;
-	format ["%1 is Dead",name petros] hintC format ["%1 has been killed. You lost part of your assets and need to select a new HQ position far from the enemies.",name petros];
+	format ["%1 is Dead",name petros] hintC format ["%1 був убитий. Ви втратичи частину своїх надбань. Тепер потрібно будувати новий штаб, далеко від ворога.",name petros];
 };
 
 hintC_arr_EH = findDisplay 72 displayAddEventHandler ["unload",{
@@ -71,7 +71,7 @@ while {_positionIsInvalid} do {
 	if (!_positionIsInvalid && !_newGame) then {
 		//Invalid if enemies nearby
 		_positionIsInvalid = (allUnits findIf {(side _x == Occupants || side _x == Invaders) && {_x distance _positionClicked < 500}}) > -1;
-		if (_positionIsInvalid) then {hint "There are enemies in the surroundings of that area, please select another.";};
+		if (_positionIsInvalid) then {hint "На цій території є ворог. Будь ласка оберіть іншу зону.";};
 	};
 	sleep 0.1;
 };
