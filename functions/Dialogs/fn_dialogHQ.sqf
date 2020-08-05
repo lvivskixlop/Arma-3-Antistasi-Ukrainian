@@ -9,7 +9,7 @@ _display = findDisplay 100;
 if (str (_display) != "no display") then
 {
 	_ChildControl = _display displayCtrl 109;
-	_ChildControl  ctrlSetTooltip format ["Current level: %2. Next Level Training Cost: %1 €",1000 + (1.5*((skillFIA) *750)),skillFIA];
+	_ChildControl  ctrlSetTooltip format ["Ваш рівень: %2. Ціна наступного рівня: %1 ₴",1000 + (1.5*((skillFIA) *750)),skillFIA];
 /*
 	_ChildControl = _display displayCtrl 110;
 	{
@@ -19,7 +19,7 @@ if (str (_display) != "no display") then
 
 	if (isNil "_veh") then
 		{
-		_textX = "No vehicles to sell"
+		_textX = "Немає техніки на продаж"
 		}
 	else
 		{
@@ -31,7 +31,7 @@ if (str (_display) != "no display") then
 		if (_typeVehX in arrayCivVeh) then
 			{
 			if (_typeVehX == "C_Van_01_fuel_F") then {_costs = 50} else {_costs = 25};
-			_textX = "Civ Vehicle."
+			_textX = "Цивільна техніка."
 			};
 		if (_typeVehX in vehAAFAT) then
 			{
@@ -43,17 +43,17 @@ if (str (_display) != "no display") then
 				{
 				_costs = 5000;
 				};
-			_textX = "AAF Tank";
+			_textX = "Танк";	//AAF Tank
 			};
 		if (_typeVehX in vehAAFnormal) then {_costs = 300; _textX = "AAF Normal Vehicle."};
 		if (_costs == 0) then
 			{
-			_textX = "The closest vehicle is not suitable in our marketplace"
+			_textX = "Найближча техніка не продається"
 			}
 		else
 			{
 			_costs = round (_costs * (1-damage _veh));
-			_textX = format ["%2 Price: %1 €",_costs,_textX];
+			_textX = format ["%2 Ціна: %1 ₴",_costs,_textX];
 			};
 		};
 

@@ -3,8 +3,8 @@ private ["_roads","_pos","_positionX","_groupX"];
 _markersX = markersX + [respawnTeamPlayer];
 
 _esHC = false;
-if !((vehicle player getVariable "SA_Tow_Ropes") isEqualTo objNull) exitWith {hint "You cannot Fast Travel with your Tow Rope out or a Vehicle attached"};
-if (count hcSelected player > 1) exitWith {hint "You can select one group only to Fast Travel"};
+if !((vehicle player getVariable "SA_Tow_Ropes") isEqualTo objNull) exitWith {hint "Ви не можете телепортуватись, коли причіплений буксирний шнурок."};
+if (count hcSelected player > 1) exitWith {hint "Ви можете телепортувати тільки одну групу одночасно."};
 if (count hcSelected player == 1) then {_groupX = hcSelected player select 0; _esHC = true} else {_groupX = group player};
 _checkForPlayer = false;
 if ((!_esHC) and limitedFT) then {_checkForPlayer = true};
@@ -12,9 +12,9 @@ _boss = leader _groupX;
 
 if ((_boss != player) and (!_esHC)) then {_groupX = player};
 
-if (({isPlayer _x} count units _groupX > 1) and (_esHC)) exitWith {hint "You cannot Fast Travel groups commanded by players"};
+if (({isPlayer _x} count units _groupX > 1) and (_esHC)) exitWith {hint "Ви не можете телепортувати відділення, яким керує гравець."};
 
-if (player != player getVariable ["owner",player]) exitWith {hint "You cannot Fast Travel while you are controlling AI"};
+if (player != player getVariable ["owner",player]) exitWith {hint "Ви не можете телепортуватись, коли керуєте ботами."};
 
 _checkX = false;
 //_distanceX = 500 - (([_boss,false] call A3A_fnc_fogCheck) * 450);
@@ -22,7 +22,7 @@ _distanceX = 500;
 
 {if ([_x,_distanceX] call A3A_fnc_enemyNearCheck) exitWith {_checkX = true}} forEach units _groupX;
 
-if (_checkX) exitWith {Hint "You cannot Fast Travel with enemies near the group"};
+if (_checkX) exitWith {Hint "Ви не можете телепортуватись, коли ворог близько до групи."};
 
 {if ((vehicle _x!= _x) and ((isNull (driver vehicle _x)) or (!canMove vehicle _x) or (vehicle _x isKindOf "Boat"))) then
 	{
@@ -30,12 +30,12 @@ if (_checkX) exitWith {Hint "You cannot Fast Travel with enemies near the group"
 	}
 } forEach units _groupX;
 
-if (_checkX) exitWith {Hint "You cannot Fast Travel if you don't have a driver in all your vehicles or your vehicles are damaged and cannot move or your group is in a boat"};
+if (_checkX) exitWith {Hint "Ви не можете телепортуватись в техніці, якщо в ній немає водія, чи вона не може їздити. Також не можна телепортувати групу, яка знаходиться в човні."};
 
 positionTel = [];
 
 if (_esHC) then {hcShowBar false};
-hint "Click on the zone you want to travel";
+hint "Клацніть на зону, до якої хочете телепортуватись.";
 if (!visibleMap) then {openMap true};
 onMapSingleClick "positionTel = _pos;";
 
@@ -67,7 +67,7 @@ if (count _positionTel > 0) then
  			_timePassed = 0;
  			while {_timePassed < _distanceX} do
  				{
- 				cutText [format ["Fast traveling, travel time: %1s , please wait", (_distanceX - _timePassed)],"BLACK",0.0001];
+ 				cutText [format ["Телепортую. Будь ласка чекайте: %1 секунд.", (_distanceX - _timePassed)],"BLACK",0.0001];
  				sleep 1;
  				_timePassed = _timePassed + 1;
  				}
@@ -79,7 +79,7 @@ if (count _positionTel > 0) then
 			{if (vehicle _x != _x) then {_vehicles pushBackUnique (vehicle _x)}} forEach units _groupX;
 			{if ((vehicle _x) in _vehicles) exitWith {_checkForPlayer = true}} forEach (call A3A_fnc_playableUnits);
 			};
-		if (_checkForPlayer and ((_base != "SYND_HQ") and !(_base in airportsX))) exitWith {hint format ["%1 Fast Travel has been cancelled because some player has boarded their vehicle and the destination is not HQ or an Airbase",groupID _groupX]};
+		if (_checkForPlayer and ((_base != "SYND_HQ") and !(_base in airportsX))) exitWith {hint format ["%1 Телепортування скасовано, бо або хтось сів в транспорт, або місцем призначення не є аеродром чи штаб.",groupID _groupX]};
 		{
 		_unit = _x;
 		if ((!isPlayer _unit) or (_unit == player)) then
@@ -128,14 +128,14 @@ if (count _positionTel > 0) then
 			//_unit hideObject false;
 		} forEach units _groupX;
 		//if (!_esHC) then {sleep _distanceX};
-		if (!_esHC) then {disableUserInput false;cutText ["You arrived to destination","BLACK IN",1]} else {hint format ["Group %1 arrived to destination",groupID _groupX]};
+		if (!_esHC) then {disableUserInput false;cutText ["Ви прибули на місце призначення","BLACK IN",1]} else {hint format ["Група %1 прибула на місце призначення",groupID _groupX]};
 		if (_forcedX) then {forcedSpawn = forcedSpawn - [_base]};
 		sleep 5;
 		{_x allowDamage true} forEach units _groupX;
 		}
 	else
 		{
-		Hint "You must click near marker under your control";
+		Hint "Ви маєте клацнути на територію, яка вам підконтрольна.";
 		};
 	};
 openMap false;
