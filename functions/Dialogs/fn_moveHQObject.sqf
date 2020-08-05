@@ -1,19 +1,19 @@
-if (player != theBoss) exitWith {hint "Only Player Commander is allowed to move HQ assets"};
+if (player != theBoss) exitWith {hint "Лише командир може пересувати об'єкти штабу."};
 private ["_thingX","_playerX","_id","_sites","_markerX","_size","_positionX"];
 
 _thingX = _this select 0;
 _playerX = _this select 1;
 _id = _this select 2;
 
-if (!(isNull attachedTo _thingX)) exitWith {hint "The asset you want to move is being moved by another player"};
-if (vehicle _playerX != _playerX) exitWith {hint "You cannot move HQ assets while in a vehicle"};
+if (!(isNull attachedTo _thingX)) exitWith {hint "Об'єкт, який ви хочете пересунути вже хтось пересуває."};
+if (vehicle _playerX != _playerX) exitWith {hint "Ви не можете пересувати об'єкти, коли знаходитесь в транспорті."};
 
-if ({!(isNull _x)} count (attachedObjects _playerX) != 0) exitWith {hint "You have other things attached, you cannot move this"};
+if ({!(isNull _x)} count (attachedObjects _playerX) != 0) exitWith {hint "Ви не можете це пересунути, бо до вас причіплено інші штуки."};
 _sites = markersX select {sidesX getVariable [_x,sideUnknown] == teamPlayer};
 _markerX = [_sites,_playerX] call BIS_fnc_nearestPosition;
 _size = [_markerX] call A3A_fnc_sizeMarker;
 _positionX = getMarkerPos _markerX;
-if (_playerX distance2D _positionX > _size) exitWith {hint "This asset needs to be closer to it relative zone center to be able to be moved"};
+if (_playerX distance2D _positionX > _size) exitWith {hint "Щоб пересувати цей об'єкт він повинен бути ближче до центру зони, до якої він належить."};
 
 _thingX setVariable ["objectBeingMoved", true];
 
@@ -40,7 +40,7 @@ private _fnc_placeObject = {
 	_thingX setPosATL [getPosATL _thingX select 0,getPosATL _thingX select 1,0.1];
 
 	_thingX setVariable ["objectBeingMoved", false];
-	_thingX addAction ["Move this asset", A3A_fnc_moveHQObject,nil,0,false,true,"","(_this == theBoss)"];
+	_thingX addAction ["Пересунути цей об'єкт", A3A_fnc_moveHQObject,nil,0,false,true,"","(_this == theBoss)"];
 };
 
 private _actionX = _playerX addAction ["Drop Here", {
@@ -53,6 +53,6 @@ waitUntil {sleep 1; (_playerX != attachedTo _thingX) or (vehicle _playerX != _pl
 
 [_thingX, _playerX, _actionX] call _fnc_placeObject;
 
-if (vehicle _playerX != _playerX) exitWith {hint "You cannot move HQ assets while in a vehicle"};
+if (vehicle _playerX != _playerX) exitWith {hint "Ви не можете пересувати об'єкти, коли знаходитесь в транспорті."};
 
-if  (_playerX distance2D _positionX > _size) exitWith {hint "This asset cannot be moved more far away for its zone center"};
+if  (_playerX distance2D _positionX > _size) exitWith {hint "Цей об'єкт не може пересунутися далі від центру зони."};
