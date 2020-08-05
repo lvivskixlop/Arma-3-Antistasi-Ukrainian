@@ -1,8 +1,8 @@
 private ["_typeX","_costs","_positionTel","_quantity","_quantityMax"];
 
-if (["Mines"] call BIS_fnc_taskExists) exitWith {hint "We can only deploy one minefield at a time."};
+if (["Mines"] call BIS_fnc_taskExists) exitWith {hint "Ми можемо мінувати тільки одну ділянку одночасно."};
 
-if (!([player] call A3A_fnc_hasRadio)) exitWith {if !(hasIFA) then {hint "You need a radio in your inventory to be able to give orders to other squads"} else {hint "You need a Radio Man in your group to be able to give orders to other squads"}};
+if (!([player] call A3A_fnc_hasRadio)) exitWith {if !(hasIFA) then {hint "Вам потрібно мати рацію, щоб віддавати накази іншим відділенням."} else {hint "У вашій групі повинен бути радист, щоб віддавати накази іншим відділенням."}};
 
 _typeX = _this select 0;
 
@@ -13,11 +13,11 @@ if (_typeX == "delete") then
 	_costs = _costs - (server getVariable (SDKExp select 0));
 	_hr = 1;
 	};
-if ((server getVariable "resourcesFIA" < _costs) or (server getVariable "hr" < _hr)) exitWith {hint format ["Not enought resources to recruit a mine deploying team (%1 € and %2 HR needed)",_costs,_hr]};
+if ((server getVariable "resourcesFIA" < _costs) or (server getVariable "hr" < _hr)) exitWith {hint format ["Недостатньо ресурсів, щоб найняти мінувальників (треба %1 ₴ і %2 HR)",_costs,_hr]};
 
 if (_typeX == "delete") exitWith
 	{
-	hint "Explosive Specialists is available on your High Command bar.\n\nSend him anywhere on the map and he will deactivate and load in his truck any mine he may find.\n\nReturning back to HQ will unload the mines he stored in his vehicle";
+	hint "Мінери тепер доступні у ващому меню вищого командування.\n\nПошліть його кудись на карті і він буде там розміновувати, і складати всі міни в вантажівку.\n\nКоли він повернеться назад до штабу він вивантаже всі з вантажівки міни в арсенал.";
 	[[],"A3A_fnc_mineSweep"] remoteExec ["A3A_fnc_scheduler",2];
 	};
 
@@ -37,11 +37,11 @@ if (_typeX == "ATMine") then
 if (_x select 0 == _typeM) exitWith {_quantity = _x select 1}
 } forEach _pool;
 
-if (_quantity < 5) exitWith {hint "You need at least 5 mines of this type to build a Minefield"};
+if (_quantity < 5) exitWith {hint "Вам потрібно хоча б 5 мін цього типу, щоб зробити мінне поле."};
 
 if (!visibleMap) then {openMap true};
 positionTel = [];
-hint "Click on the position you wish to build the minefield.";
+hint "Клацайте на позицію, де хочете замінувати.";
 
 onMapSingleClick "positionTel = _pos;";
 
