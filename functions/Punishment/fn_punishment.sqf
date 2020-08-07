@@ -21,7 +21,7 @@ _overheadPercent = 0.3;								//Lowers the bar (1.0 - accumulated overhead) for
 /////////////////         //////////////////
 if (!tkPunish) exitWith {"tkPunish is Disabled"};
 
-if (isDedicated) exitWith {"Is a Dedicated Server"};
+if (isDedicated) exitWith {"Це є виділений сервер"};
 
 if (!isMultiplayer) exitWith {"Is not Multiplayer"};
 
@@ -33,7 +33,7 @@ _coolDown = _foolish getVariable ["punishment_coolDown", 0];
 if (_forgive) exitWith 
 {
 	if (_coolDown > 1) then {[_foolish] call A3A_fnc_punishment_release;};
-	["TK NOTIFICATION!\nAn admin looks with pity upon your soul.\nYou have been partially forgiven."] remoteExec ["hint", _foolish, false];	
+	["НЕ СТРІЛЯЙ В СВОЇХ!\nОстільки адмін сьогодні добрий, то тебе було частково помилувано."] remoteExec ["hint", _foolish, false];	
 	if (_coolDown > 1) exitWith {"Admin Forgive"};
 
 	_punishment_vars = _foolish getVariable ["punishment_vars", [0,0,[0,0],[scriptNull,scriptNull]]];		//[timeTotal,offenceTotal,_lastOffenceData,[wardenHandle,sentenceHandle]]
@@ -109,23 +109,23 @@ if (!_forcePunish) then
 			_artilleryScanner = getNumber (configFile >> "CfgVehicles" >> _vehicle >> "artilleryScanner");
 			if (_artilleryScanner != 0) then 
 			{
-				_exitCode = "Inside Artillery";
+				_exitCode = "З артилерії";
 				[format ["%1: [Antistasi] | INFO | PUNISHMENT | EXEMPTION, ARTY, %2 | %3", servertime, _vehicle, _playerStats]] remoteExec ["diag_log", 2];
-				["TK NOTIFICATION!\nArty Team Damage."] remoteExec ["hint", _foolish, false];
+				["НЕ СТРІЛЯЙ В СВОЇХ!\nАртилерія наробила трошки френдліфаєру.."] remoteExec ["hint", _foolish, false];
 			};
 		};
 		if (_vehicle isKindOf "Helicopter" || _vehicle isKindOf "Plane") then
 		{
 			[format ["%1: [Antistasi] | INFO | PUNISHMENT | EXEMPTION, AIRCRAFT, %2 | %3", servertime, _vehicle, _playerStats]] remoteExec ["diag_log", 2];
-			["TK NOTIFICATION!\nCAS Team Damage."] remoteExec ["hint", _foolish, false];
-			_exitCode = "Inside Aircraft";
+			["НЕ СТРІЛЯЙ В СВОЇХ!\nАвіаударом було побито своїх."] remoteExec ["hint", _foolish, false];
+			_exitCode = "З літака";
 		};
 	};
 	if (
 		if (_victimListed) then
 		{
-			if (!alive _victim || (_victim getVariable ["ACE_isUnconscious", false])) exitWith {_exitCode = "Victim is a corpse"; true;};
-			if (_victim == _foolish) exitWith {_exitCode = "Victim of Suicide"; true;};
+			if (!alive _victim || (_victim getVariable ["ACE_isUnconscious", false])) exitWith {_exitCode = "Жертвою є труп"; true;};
+			if (_victim == _foolish) exitWith {_exitCode = "Жертва суїциду"; true;};
 			false;
 		}
 	) exitWith {_exitCode};
@@ -136,22 +136,22 @@ if (!_forcePunish) then
 	if (_adminType != "Not" || isServer ) exitWith
 	{
 		[format ["%1: [Antistasi] | INFO | PUNISHMENT | EXEMPTION, ADMIN, %2 | %3", servertime, _adminType, _playerStats]] remoteExec ["diag_log", 2];
-		["TK NOTIFICATION!\nYou damaged a player as admin."] remoteExec ["hint", _foolish, false];
-		_exitCode = "Player is Voted or Logged Admin"; "Player is Voted or Logged Admin";
+		["НЕ СТРІЛЯЙ В СВОЇХ!\nТи ж адмін! Ти повинен був захищати нас від хаосу, а не створювати його!"] remoteExec ["hint", _foolish, false];
+		_exitCode = "Гравець зайшов за адміна"; "Гравець зайшов за адміна";
 	};
 	if (_foolish == theBoss) exitWith 
 	{
 		[format ["%1: [Antistasi] | INFO | PUNISHMENT | EXEMPTION, COMMANDER | %2", servertime, _playerStats]] remoteExec ["diag_log", 2];
-		["TK NOTIFICATION!\nYou damaged a player as the Supreme Commander."] remoteExec ["hint", _foolish, false];
-		if (_victimListed) then {[format["%1 hurt you!",name _foolish]] remoteExec ["hint", _victim, false];};
-		_exitCode = "Player is  Commander";
+		["НЕ СТРІЛЯЙ В СВОЇХ!\nТи ж командир! Ти повинен був захищати нас від хаосу, а не створювати його!"] remoteExec ["hint", _foolish, false];
+		if (_victimListed) then {[format["%1 стріляє по тобі!",name _foolish]] remoteExec ["hint", _victim, false];};
+		_exitCode = "Гравець є командир";
 	};
 	if ([_foolish] call A3A_fnc_isMember) exitWith 
 	{
 		[format ["%1: [Antistasi] | INFO | PUNISHMENT | EXEMPTION, MEMBER | %2", servertime, _playerStats]] remoteExec ["diag_log", 2];
-		["TK NOTIFICATION!\nYou damaged a player as a trusted member."] remoteExec ["hint", _foolish, false];
-		if (_victimListed) then {[format["%1 hurt you!",name _foolish]] remoteExec ["hint", _victim, false];};
-		_exitCode = "Player is  Member";
+		["НЕ СТРІЛЯЙ В СВОЇХ!\nТи ж є членом сервера! Тобі довіряли!"] remoteExec ["hint", _foolish, false];
+		if (_victimListed) then {[format["%1 стріляє по тобі!",name _foolish]] remoteExec ["hint", _victim, false];};
+		_exitCode = "Гравець є членом сервера";
 	};
 
 	_pvpNearby = false;
@@ -173,8 +173,8 @@ if (!_forcePunish) then
 if (_exitCode != "") exitWith {_exitCode;};
 
 [format ["%1: [Antistasi] | INFO | PUNISHMENT | WARNING | %2", servertime, _playerStats]] remoteExec ["diag_log", 2];
-["TK WARNING!\nWatch your fire!"] remoteExec ["hint", _foolish, false]; 
-if (_victimListed) then {[format["%1 hurt you!",name _foolish]] remoteExec ["hint", _victim, false];}; 
+["НЕ СТРІЛЯЙ В СВОЇХ!"] remoteExec ["hint", _foolish, false]; 
+if (_victimListed) then {[format["%1 стріляє по тобі!",name _foolish]] remoteExec ["hint", _victim, false];}; 
 
 _punishment_vars set [0,_timeTotal];
 _punishment_vars set [1,_offenceTotal];
@@ -186,4 +186,4 @@ if (_grandOffence < 1) exitWith {"Strike"};
 [format ["%1: [Antistasi] | INFO | PUNISHMENT | GUILTY | %2", servertime, _playerStats]] remoteExec ["diag_log", 2];
 
 [_foolish,_timeTotal] call A3A_fnc_punishment_warden;
-"Found Guilty";
+"Був винен";

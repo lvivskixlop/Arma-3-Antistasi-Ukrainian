@@ -2,7 +2,7 @@ params["_detainee"];
 
 _addAction_parameters =
 [
-	"[ADMIN] Forgive Player", 
+	"[ADMIN] Пробачити гравця", 
 	{
 		params ["_detainee", "_caller", "_actionId", "_arguments"];
 		if ([] call BIS_fnc_admin > 0 || isServer) then 
