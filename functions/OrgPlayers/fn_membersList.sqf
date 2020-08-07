@@ -1,6 +1,6 @@
-if !(membershipEnabled) exitWith {hint "Server Member feature is disabled"};
+if !(membershipEnabled) exitWith {hint "Функція членів сервера вимкнена."};
 private ["_countX"];
-_textX = "In Game Members\n\n";
+_textX = "Члени сервера.\n\n";
 _countN = 0;
 
 {
@@ -12,6 +12,6 @@ if (!isNull _playerX) then
 	};
 } forEach (call A3A_fnc_playableUnits);
 
-_textX = format ["%1\nNo members:\n%2",_textX,_countN];
+_textX = format ["%1\nНемає нікого:\n%2",_textX,_countN];
 
 hint format ["%1",_textX];

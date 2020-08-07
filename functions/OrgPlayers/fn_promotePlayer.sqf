@@ -4,7 +4,7 @@ private ["_puntMax","_textX","_multiplier","_newRank","_selectable","_disconnect
 _puntMax = 0;
 _multiplier = 1;
 
-private _textX = "Promoted Players:\n\n";
+private _textX = "Підвищення отримали:\n\n";
 
 _promoted = false;
 {
@@ -34,6 +34,6 @@ _promoted = false;
 
 if (_promoted) then
 {
-	_textX = format ["%1\n\nCONGRATULATIONS!!",_textX];
+	_textX = format ["%1\n\nМої вітання! З тебе могорич!",_textX];
 	[petros,"hint",_textX] remoteExec ["A3A_fnc_commsMP"];
 };
