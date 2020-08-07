@@ -12,7 +12,7 @@ _detainee setVariable ["punishment_vars", _punishment_vars, true];		//[timeTotal
 _countX = floor _sentence;
 while {_countX > 0} do
 {
-	[ format["Please do not teamkill. Play with the turtles for %1 more seconds.",_countX]] remoteExec ["hintSilent", _detainee, false];
+	[ format["Не вбивай більше своїх, будь ласка. Осьо черепашки, грайся собі з ними.",_countX]] remoteExec ["hintSilent", _detainee, false];
 	uiSleep 1;
 	_countX = _countX -1;
 };
