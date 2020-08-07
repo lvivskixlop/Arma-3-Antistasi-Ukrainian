@@ -1,10 +1,10 @@
 _veh = cursortarget;
 
-if (isNull _veh) exitWith {hint "You are not looking to any vehicle"};
+if (isNull _veh) exitWith {hint "Ви не дивитесь на техніку"};
 
-if (_veh distance getMarkerPos respawnTeamPlayer > 50) exitWith {hint "Vehicle must be closer than 50 meters to the flag"};
+if (_veh distance getMarkerPos respawnTeamPlayer > 50) exitWith {hint "Техніка повинна бути в радіусі 50м від прапора."};
 
-if ({isPlayer _x} count crew _veh > 0) exitWith {hint "In order to sell, vehicle must be empty."};
+if ({isPlayer _x} count crew _veh > 0) exitWith {hint "Техніка повинна бути порожня, щоб її продати."};
 
 _owner = _veh getVariable "ownerX";
 _exit = false;
@@ -16,9 +16,9 @@ if (!isNil "_owner") then
 		};
 	};
 
-if (_exit) exitWith {hint "You are not owner of this vehicle and you cannot sell it"};
+if (_exit) exitWith {hint "Ви не можете продати цю техніку, бо вона вам не належить."};
 
-if (not(_veh isKindOf "Air")) exitWith {hint "Only Air Vehicles can be used to increase Airstrike points"};
+if (not(_veh isKindOf "Air")) exitWith {hint "Лише повітряною технікою можна набирати очки авіаударів."};
 
 _typeX = typeOf _veh;
 
@@ -29,7 +29,7 @@ _pointsX = 2;
 if (_typeX in vehAttackHelis) then {_pointsX = 5};
 if ((_typeX == vehCSATPlane) or (_typeX == vehNATOPlane)) then {_pointsX = 10};
 deleteVehicle _veh;
-hint format ["Air Support increased in %1 points",_pointsX];
+hint format ["Додано %1 очків авіаудару.",_pointsX];
 bombRuns = bombRuns + _pointsX;
 publicVariable "bombRuns";
 [] remoteExec ["A3A_fnc_statistics",theBoss];

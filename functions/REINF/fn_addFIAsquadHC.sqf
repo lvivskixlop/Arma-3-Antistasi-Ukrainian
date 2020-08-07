@@ -1,14 +1,14 @@
 
-if (player != theBoss) exitWith {hint "Only our Commander has access to this function"};
+if (player != theBoss) exitWith {hint "Лише командир може використовувати цю функцію."};
 //if (!allowPlayerRecruit) exitWith {hint "Server is very loaded. \nWait one minute or change FPS settings in order to fulfill this request"};
-if (markerAlpha respawnTeamPlayer == 0) exitWith {hint "You cant recruit a new squad while you are moving your HQ"};
-if (!([player] call A3A_fnc_hasRadio)) exitWith {if !(hasIFA) then {hint "You need a radio in your inventory to be able to give orders to other squads"} else {hint "You need a Radio Man in your group to be able to give orders to other squads"}};
+if (markerAlpha respawnTeamPlayer == 0) exitWith {hint "Ви не можете наймати бійців, коли переміщуєте штаб."};
+if (!([player] call A3A_fnc_hasRadio)) exitWith {if !(hasIFA) then {hint "Вам потрібно мати рацію, щоб віддавати накази іншим відділенням."} else {hint "У вашій групі повинен бути радист, щоб віддавати накази іншим відділенням."}};
 _checkX = false;
 {
 	if (((side _x == Invaders) or (side _x == Occupants)) and (_x distance petros < 500) and ([_x] call A3A_fnc_canFight) and !(isPlayer _x)) exitWith {_checkX = true};
 } forEach allUnits;
 
-if (_checkX) exitWith {Hint "You cannot Recruit Squads with enemies near your HQ"};
+if (_checkX) exitWith {Hint "Ви не можете наймати відділення бійців, коли ворог поблизу штабу."};
 
 private ["_typeGroup","_esinf","_typeVehX","_costs","_costHR","_exit","_formatX","_pos","_hr","_resourcesFIA","_groupX","_roads","_road","_groupX","_truckX","_vehicle","_mortarX","_morty"];
 
@@ -17,8 +17,8 @@ _typeGroup = _this select 0;
 _exit = false;
 if (_typeGroup isEqualType "") then
 	{
-	if (_typeGroup == "not_supported") then {_exit = true; hint "The group or vehicle type you request is not supported in your modset"};
-	if (hasIFA and ((_typeGroup == SDKMortar) or (_typeGroup == SDKMGStatic)) and !debug) then {_exit = true; hint "The group or vehicle type you request is not supported in your modset"};
+	if (_typeGroup == "not_supported") then {_exit = true; hint "Ця техніка, чи відділення не підтримується з вашою збіркою модів."};
+	if (hasIFA and ((_typeGroup == SDKMortar) or (_typeGroup == SDKMGStatic)) and !debug) then {_exit = true; hint "Ця техніка, чи відділення не підтримується з вашою збіркою модів."};
 	};
 
 if (activeGREF) then
@@ -71,11 +71,11 @@ else
 		_costs = _costs + ([vehSDKTruck] call A3A_fnc_vehiclePrice)
 		};
 	};
-if ((_withBackpck != "") and hasIFA) exitWith {hint "Your current modset does not support packing / unpacking static weapons";};
+if ((_withBackpck != "") and hasIFA) exitWith {hint "Ваша збірка модів не дозволяє спаковувати і розпаковувати станкову зброю.";};
 
-if (_hr < _costHR) then {_exit = true;hint format ["You do not have enough HR for this request (%1 required)",_costHR]};
+if (_hr < _costHR) then {_exit = true;hint format ["У вас не достатньо HR, щоб найняти (треба %1)",_costHR]};
 
-if (_resourcesFIA < _costs) then {_exit = true;hint format ["You do not have enough money for this request (%1 € required)",_costs]};
+if (_resourcesFIA < _costs) then {_exit = true;hint format ["У вас не достатньо грошей, щоб найняти (треба %1₴)",_costs]};
 
 if (_exit) exitWith {};
 
@@ -162,7 +162,7 @@ else
 //leader _groupX setBehaviour "SAFE";
 theBoss hcSetGroup [_groupX];
 petros directSay "SentGenReinforcementsArrived";
-hint format ["Group %1 at your command.\n\nGroups are managed from the High Command bar (Default: CTRL+SPACE)\n\nIf the group gets stuck, use the AI Control feature to make them start moving. Mounted Static teams tend to get stuck (solving this is WiP)\n\nTo assign a vehicle for this group, look at some vehicle, and use Vehicle Squad Mngmt option in Y menu", groupID _groupX];
+hint format ["Група %1 під вашим командуванням.\n\nКеруйте групою з меню вищого командування (CTRL+SPACE).\n\nЯкщо група десь застрягла, використовуйте Контроль ботами, щоб змусити їх рухатись.\n\nЩоб призначити техніку відділенню, гляньте на техніку, і через Y-меню виберіть Керування технікою відділення.", groupID _groupX];
 
 if (!_esinf) exitWith {};
 if !(_bypassAI) then {_groupX spawn A3A_fnc_attackDrillAI};
@@ -197,7 +197,7 @@ _display = findDisplay 100;
 if (str (_display) != "no display") then
 	{
 	_ChildControl = _display displayCtrl 104;
-	_ChildControl  ctrlSetTooltip format ["Buy a vehicle for this squad for %1 €",_costs];
+	_ChildControl  ctrlSetTooltip format ["Купіть техніку для цього відділення за %1₴",_costs];
 	_ChildControl = _display displayCtrl 105;
 	_ChildControl  ctrlSetTooltip "Barefoot Infantry";
 	};
@@ -209,7 +209,7 @@ if ((!dialog) and (isNil "vehQuery")) exitWith {};
 
 vehQuery = nil;
 //_resourcesFIA = server getVariable "resourcesFIA";
-//if (_resourcesFIA < _costs) exitWith {hint format ["You do not have enough money for this vehicle: %1 € required",_costs]};
+//if (_resourcesFIA < _costs) exitWith {hint format ["У вас немає достатньо грошей, щоб купити цю техніку. Треба %1₴",_costs]};
 _pos = position _road findEmptyPosition [1,30,"B_G_Van_01_transport_F"];
 _mortarX = _typeVehX createVehicle _pos;
 _nul = [_mortarX] call A3A_fnc_AIVEHinit;
@@ -218,5 +218,5 @@ _mortarX setVariable ["owner",_groupX,true];
 _nul = [0, - _costs] remoteExec ["A3A_fnc_resourcesFIA",2];
 leader _groupX assignAsDriver _mortarX;
 {[_x] orderGetIn true; [_x] allowGetIn true} forEach units _groupX;
-hint "Vehicle Purchased";
+hint "Техніку придбано";
 petros directSay "SentGenBaseUnlockVehicle";
