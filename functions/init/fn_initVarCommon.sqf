@@ -157,7 +157,7 @@ waitUntil
 {
 	if (scriptDone _getMissionPath) exitWith {true};
 	if (hasInterface) then {
-		hint "Stuck on compiling missionPath, re-launch the mission.";
+		hint "Не можу скомпілювати missionPath. Пререзапустіть місію.";
 	};
 	[1,"Stuck on compiling missionPath, re-launch the mission.",_fileName] call A3A_fnc_log;
 	false;

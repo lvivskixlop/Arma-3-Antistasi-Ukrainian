@@ -122,7 +122,7 @@ if (loadLastSave) then {
 		publicVariable "membersX";
 	};
 	if (membershipEnabled and (membersX isEqualTo [])) then {
-		[petros,"hint","Membership is enabled but members list is empty. Current players will be added to the member list"] remoteExec ["A3A_fnc_commsMP"];
+		[petros,"hint","Функцію членів сервера увімкнено, але в списку нікого немає. Зара туди будуть додані всі гравці, що є на сервері."] remoteExec ["A3A_fnc_commsMP"];
 		[2,"Previous data loaded",_fileName] call A3A_fnc_log;
 		[2,"Membership enabled, adding current players to list",_fileName] call A3A_fnc_log;
 		membersX = [];

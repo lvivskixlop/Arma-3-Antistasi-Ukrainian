@@ -173,11 +173,11 @@ else
 {sidesX setVariable [_x, Occupants, true]} forEach _controlsNATO;
 {sidesX setVariable [_x, Invaders, true]} forEach _controlsCSAT;
 
-[_mrkCSAT, airportsX, flagCSATmrk, "%1 Airbase", true] call _fnc_initMarker;
-[_mrkCSAT, resourcesX, "loc_rock", "Resources"] call _fnc_initMarker;
-[_mrkCSAT, factories, "u_installation", "Factory"] call _fnc_initMarker;
-[_mrkCSAT, outposts, "loc_bunker", "%1 Outpost", true] call _fnc_initMarker;
-[_mrkCSAT, seaports, "b_naval", "Sea Port"] call _fnc_initMarker;
+[_mrkCSAT, airportsX, flagCSATmrk, "%1 Аеродром", true] call _fnc_initMarker;
+[_mrkCSAT, resourcesX, "loc_rock", "Ресурси"] call _fnc_initMarker;
+[_mrkCSAT, factories, "u_installation", "Завод"] call _fnc_initMarker;
+[_mrkCSAT, outposts, "loc_bunker", "%1 Аванпост", true] call _fnc_initMarker;
+[_mrkCSAT, seaports, "b_naval", "Порт"] call _fnc_initMarker;
 
 if (!(isNil "loadLastSave") && {loadLastSave}) exitWith {};
 
@@ -186,38 +186,38 @@ if (debug) then {
 	diag_log format ["%1: [Antistasi] | DEBUG | initGarrisons.sqf | Setting up Airbase stuff.", servertime];
 };
 
-[airportsX, "Airport"] call _fnc_initGarrison;								//Old system
-[airportsX, "Airport", [0,0,0]] call A3A_fnc_createGarrison;	//New system
+[airportsX, "Аеродром"] call _fnc_initGarrison;								//Old system
+[airportsX, "Аеродром", [0,0,0]] call A3A_fnc_createGarrison;	//New system
 
 if (debug) then {
 	diag_log format ["%1: [Antistasi] | DEBUG | initGarrisons.sqf | Setting up Resource stuff.", servertime];
 };
 
-[resourcesX, "Resource"] call _fnc_initGarrison;							//Old system
-[resourcesX, "Other", [0,0,0]] call A3A_fnc_createGarrison;	//New system
+[resourcesX, "Ресурси"] call _fnc_initGarrison;							//Old system
+[resourcesX, "Інші", [0,0,0]] call A3A_fnc_createGarrison;	//New system
 
 if (debug) then {
 	diag_log format ["%1: [Antistasi] | DEBUG | initGarrisons.sqf | Setting up Factory stuff.", servertime];
 };
 
-[factories, "Factory"] call _fnc_initGarrison;
-[factories, "Other", [0,0,0]] call A3A_fnc_createGarrison;
+[factories, "Завод"] call _fnc_initGarrison;
+[factories, "Інші", [0,0,0]] call A3A_fnc_createGarrison;
 
 if (debug) then {
 	diag_log format ["%1: [Antistasi] | DEBUG | initGarrisons.sqf | Setting up Outpost stuff.", servertime];
 };
 
-[outposts, "Outpost"] call _fnc_initGarrison;
-[outposts, "Outpost", [1,1,0]] call A3A_fnc_createGarrison;
+[outposts, "Аванпост"] call _fnc_initGarrison;
+[outposts, "Аванпост", [1,1,0]] call A3A_fnc_createGarrison;
 
 if (debug) then {
 	diag_log format ["%1: [Antistasi] | DEBUG | initGarrisons.sqf | Setting up Seaport stuff.", servertime];
 };
 
-[seaports, "Seaport"] call _fnc_initGarrison;
-[seaports, "Other", [1,0,0]] call A3A_fnc_createGarrison;
+[seaports, "Порт"] call _fnc_initGarrison;
+[seaports, "Інші", [1,0,0]] call A3A_fnc_createGarrison;
 
 //New system, adding cities
-[citiesX, "City", [0,0,0]] call A3A_fnc_createGarrison;
+[citiesX, "Місто", [0,0,0]] call A3A_fnc_createGarrison;
 
 [2,"InitGarrisons completed",_fileName] call A3A_fnc_log;
