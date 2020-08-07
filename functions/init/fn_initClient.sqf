@@ -41,11 +41,11 @@ if (isMultiplayer) then {
 	musicON = false;
 	//waitUntil {scriptdone _introshot};
 	disableUserInput true;
-	cutText ["Waiting for Players and Server Init","BLACK",0];
-	[2,"Waiting for server...",_fileName] call A3A_fnc_log;
+	cutText ["Чекаєм поки сервер ініціалізується","BLACK",0];
+	[2,"Чекаєм сервера...",_fileName] call A3A_fnc_log;
 	waitUntil {(!isNil "serverInitDone")};
-	cutText ["Starting Mission","BLACK IN",0];
-	[2,"Server loaded!",_fileName] call A3A_fnc_log;
+	cutText ["Стартуєм місію","BLACK IN",0];
+	[2,"Сервер завантажився!",_fileName] call A3A_fnc_log;
 	[2,format ["JIP client: %1",_isJIP],_fileName] call A3A_fnc_log;
 	if (hasTFAR) then {
 		[] execVM "orgPlayers\radioJam.sqf";
@@ -57,7 +57,7 @@ if (isMultiplayer) then {
 			if ((_typeX == "Put") or (_typeX == "Throw")) then {
 				private _shieldDistance = 100;
 				if (player distance petros < _shieldDistance) then {
-					hint format ["You cannot throw grenades or place explosives within %1m of base.", _shieldDistance];
+					hint format ["Не можна використовувати вибухонебезпечні речовини з радіусі %1м від штабу! А то будуть тобі і ровер і колеґі!", _shieldDistance];
 					deleteVehicle (_this select 6);
 					if (_typeX == "Put") then {
 						if (player distance petros < 10) then {
@@ -150,11 +150,11 @@ if (player getVariable ["pvp",false]) exitWith {
 			if (!hasACEhearing) then {
 				if (soundVolume <= 0.5) then {
 					0.5 fadeSound 1;
-					hintSilent "You've taken out your ear plugs.";
+					hintSilent "Ви витягнули беруші.";
 				}
 				else {
 					0.5 fadeSound 0.1;
-					hintSilent "You've inserted your ear plugs.";
+					hintSilent "Ви вставили беруші.";
 				};
 			};
 		}
@@ -214,7 +214,7 @@ player addEventHandler ["HandleDamage", {
 	private _instigator = param [6];
 	if(!isNull _instigator && isPlayer _instigator && _victim != _instigator && side _instigator == teamPlayer && _damage > 0.9) then {
 		[_instigator, 20, 0.21, _victim] remoteExec ["A3A_fnc_punishment",_instigator];
-		[format ["%1 was injured by %2 (UID: %3), %4m from HQ",name _victim,name _instigator,getPlayerUID _instigator,_victim distance2D posHQ]] remoteExec ["diag_log",2];
+		[format ["%2 (UID: %3) вирішив постріляти по %1 (UID: %3), в %4м від штабу. %2, ти не правий!",name _victim,name _instigator,getPlayerUID _instigator,_victim distance2D posHQ]] remoteExec ["diag_log",2];
 	};
 }];
 player addEventHandler ["InventoryOpened", {
@@ -252,14 +252,14 @@ player addEventHandler ["InventoryClosed", {
 	_sideType = getNumber (configfile >> "CfgVehicles" >> _typeSoldier >> "side");
 	if ((_sideType == 1) or (_sideType == 0) and (_uniform != "")) then {
 		if !(player getVariable ["disguised",false]) then {
-			hint "You are wearing an enemy uniform, this will make the AI attack you. Beware!";
+			hint "Ви носите ворожу форму. Боти можуть вас сплутати з кацапом і випадково застрелити!";
 			player setVariable ["disguised",true];
 			player addRating (-1*(2001 + rating player));
 		};
 	}
 	else {
 		if (player getVariable ["disguised",false]) then {
-			hint "You removed your enemy uniform";
+			hint "Ворожу форму знято.";
 			player addRating (rating player * -1);
 		};
 	};
@@ -297,7 +297,7 @@ player addEventHandler ["WeaponAssembled", {
 		};
 	_markersX = markersX select {sidesX getVariable [_x,sideUnknown] == teamPlayer};
 	_pos = position _veh;
-	if (_markersX findIf {_pos inArea _x} != -1) then {hint "Static weapon has been deployed for use in a nearby zone, and will be used by garrison militia if you leave it here the next time the zone spawns"};
+	if (_markersX findIf {_pos inArea _x} != -1) then {hint "Станкову зброю виставлено. Тепер її можуть використовувати боти з гарнізону."};
 	}
 	else {
 		_veh addEventHandler ["Killed",{[_this select 0] remoteExec ["A3A_fnc_postmortem",2]}];
@@ -323,7 +323,7 @@ player addEventHandler ["GetInMan", {
 			if (!isNil "_owner") then {
 				if (_owner isEqualType "") then {
 					if ({getPlayerUID _x == _owner} count (units group player) == 0) then {
-						hint "You cannot board other player vehicle if you are not in the same group";
+						hint "Ви не можете сісти в техніку до іншого гравця, бо ви не в одній групі. Міняється через 'U'.";
 						moveOut _unit;
 						_exit = true;
 					};
@@ -352,7 +352,7 @@ if (isMultiplayer) then {
 			};
 			if (serverCommandAvailable "#logout") then {
 				_isMember = true;
-				hint "You are not in the member's list, but as you are Server Admin, you have been added. Welcome!";
+				hint "Вас немає в списку членів сервера. О, але я бачу, шо ви є адмін! Ну тоді ласкаво просимо! Зараз ми скоренько запишем вас до списку.";
 			};
 			
 			if (_isMember) then {
@@ -363,7 +363,7 @@ if (isMultiplayer) then {
 				if (_nonMembers >= (playableSlotsNumber teamPlayer) - bookedSlots) then {["memberSlots",false,1,false,false] call BIS_fnc_endMission};
 				if (memberDistance != 16000) then {[] execVM "orgPlayers\nonMemberDistance.sqf"};
 				
-				hint "Welcome Guest\n\nYou have joined this server as guest";
+				hint "Добрий день!\n\nВи долучились до сервера як гість.";
 			};
 		};
 	};
@@ -407,16 +407,16 @@ else
 _textX = [];
 
 if ((hasTFAR) or (hasACRE)) then {
-	_textX = ["TFAR or ACRE Detected\n\nAntistasi detects TFAR or ACRE in the server config.\nAll players will start with addon default radios.\nDefault revive system will shut down radios while players are unconscious.\n\n"];
+	_textX = ["Знайдено TFAR чи ACRE."];//TFAR or ACRE Detected\n\nAntistasi detects TFAR or ACRE in the server config.\nAll players will start with addon default radios.\nDefault revive system will shut down radios while players are unconscious.\n\n
 };
 if (hasACE) then {
-	_textX = _textX + ["ACE 3 Detected\n\nAntistasi detects ACE modules in the server config.\nACE items added to arsenal and ammoboxes. Default AI control is disabled\nIf ACE Medical is used, default revive system will be disabled.\nIf ACE Hearing is used, default earplugs will be disabled."];
+	_textX = _textX + ["Знайдено ACE 3"];//ACE 3 Detected\n\nAntistasi detects ACE modules in the server config.\nACE items added to arsenal and ammoboxes. Default AI control is disabled\nIf ACE Medical is used, default revive system will be disabled.\nIf ACE Hearing is used, default earplugs will be disabled.
 };
 if (hasRHS) then {
-	_textX = _textX + ["RHS Detected\n\nAntistasi detects RHS in the server config.\nDepending on the modules will have the following effects.\n\nAFRF: Replaces CSAT by a mix of russian units\n\nUSAF: Replaces NATO by a mix of US units\n\nGREF: Recruited AI will count with RHS as basic weapons, replaces FIA with Chdk units. Adds some civilian trucks"];
+	_textX = _textX + ["Знайдено RHS"];//RHS Detected\n\nAntistasi detects RHS in the server config.\nDepending on the modules will have the following effects.\n\nAFRF: Replaces CSAT by a mix of russian units\n\nUSAF: Replaces NATO by a mix of US units\n\nGREF: Recruited AI will count with RHS as basic weapons, replaces FIA with Chdk units. Adds some civilian trucks
 };
 if (hasFFAA) then {
-	_textX = _textX + ["FFAA Detected\n\nAntistasi detects FFAA in the server config.\nFIA Faction will be replaced by Spanish Armed Forces"];
+	_textX = _textX + ["Знайдено... FFAA? Що ж то за мод такий, цікаво. Ну грай собі здоровий."];//FFAA Detected\n\nAntistasi detects FFAA in the server config.\nFIA Faction will be replaced by Spanish Armed Forces
 };
 
 if (hasTFAR or hasACE or hasRHS or hasACRE or hasFFAA) then {
@@ -439,11 +439,11 @@ gameMenu = (findDisplay 46) displayAddEventHandler ["KeyDown",A3A_fnc_keys];
 //if ((!isServer) and (isMultiplayer)) then {boxX call jn_fnc_arsenal_init};
 
 boxX allowDamage false;
-boxX addAction ["Transfer Vehicle cargo to Ammobox", {[] spawn A3A_fnc_empty;}, 4];
-boxX addAction ["Move this asset", A3A_fnc_moveHQObject,nil,0,false,true,"","(_this == theBoss)", 4];
+boxX addAction ["Перенести з техніки до Арсеналу.", {[] spawn A3A_fnc_empty;}, 4];
+boxX addAction ["Пересунути цей об'єкт", A3A_fnc_moveHQObject,nil,0,false,true,"","(_this == theBoss)", 4];
 flagX allowDamage false;
-flagX addAction ["Unit Recruitment", {if ([player,300] call A3A_fnc_enemyNearCheck) then {hint "You cannot recruit units while there are enemies near you"} else { [] spawn A3A_fnc_unit_recruit; }},nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull]) and (side (group _this) == teamPlayer)"];
-flagX addAction ["Move this asset", A3A_fnc_moveHQObject,nil,0,false,true,"","(_this == theBoss)", 4];
+flagX addAction ["Найняти бійців", {if ([player,300] call A3A_fnc_enemyNearCheck) then {hint "Не можна наймати бійців, коли ворог поблизу."} else { [] spawn A3A_fnc_unit_recruit; }},nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull]) and (side (group _this) == teamPlayer)"];
+flagX addAction ["Пересунути цей об'єкт", A3A_fnc_moveHQObject,nil,0,false,true,"","(_this == theBoss)", 4];
 
 //Adds a light to the flag
 private _flagLight = "#lightpoint" createVehicle (getPos flagX);
@@ -455,28 +455,28 @@ _flagLight lightAttachObject [flagX, [0, 0, 4]];
 _flagLight setLightAttenuation [7, 0, 0.5, 0.5];
 
 vehicleBox allowDamage false;
-vehicleBox addAction ["Heal, Repair and Rearm", A3A_fnc_healAndRepair,nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull]) and (side (group _this) == teamPlayer)", 4];
-vehicleBox addAction ["Vehicle Arsenal", JN_fnc_arsenal_handleAction, [], 0, true, false, "", "alive _target && vehicle _this != _this", 10];
+vehicleBox addAction ["Полікувати, зремонтувати, переозброїти", A3A_fnc_healAndRepair,nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull]) and (side (group _this) == teamPlayer)", 4];
+vehicleBox addAction ["Арсенал техніки", JN_fnc_arsenal_handleAction, [], 0, true, false, "", "alive _target && vehicle _this != _this", 10];
 if (isMultiplayer) then {
-	vehicleBox addAction ["Personal Garage", { [GARAGE_PERSONAL] spawn A3A_fnc_garage },nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull]) and (side (group _this) == teamPlayer)", 4];
+	vehicleBox addAction ["Особистий гараж", { [GARAGE_PERSONAL] spawn A3A_fnc_garage },nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull]) and (side (group _this) == teamPlayer)", 4];
 };
-vehicleBox addAction ["Faction Garage", { [GARAGE_FACTION] spawn A3A_fnc_garage; },nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull]) and (side (group _this) == teamPlayer)", 4];
-vehicleBox addAction ["Buy Vehicle", {if ([player,300] call A3A_fnc_enemyNearCheck) then {hint "You cannot buy vehicles while there are enemies near you"} else {nul = createDialog "vehicle_option"}},nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull]) and (side (group _this) == teamPlayer)", 4];
-vehicleBox addAction ["Move this asset", A3A_fnc_moveHQObject,nil,0,false,true,"","(_this == theBoss)", 4];
+vehicleBox addAction ["Спільний гараж", { [GARAGE_FACTION] spawn A3A_fnc_garage; },nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull]) and (side (group _this) == teamPlayer)", 4];
+vehicleBox addAction ["Купити техніку", {if ([player,300] call A3A_fnc_enemyNearCheck) then {hint "Не можна купувати техніку, коли ворог поблизу"} else {nul = createDialog "vehicle_option"}},nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull]) and (side (group _this) == teamPlayer)", 4];
+vehicleBox addAction ["Пересунути цей об'єкт", A3A_fnc_moveHQObject,nil,0,false,true,"","(_this == theBoss)", 4];
 
 fireX allowDamage false;
 [fireX, "fireX"] call A3A_fnc_flagaction;
 
 mapX allowDamage false;
-mapX addAction ["Game Options", {hint format ["Antistasi - %2\n\nVersion: %1\n\nDifficulty: %3\nUnlock Weapon Number: %4\nLimited Fast Travel: %5",antistasiVersion,worldName,if (skillMult == 2) then {"Normal"} else {if (skillMult == 1) then {"Easy"} else {"Hard"}},minWeaps,if (limitedFT) then {"Yes"} else {"No"}]; nul=CreateDialog "game_options";},nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull]) and (side (group _this) == teamPlayer)", 4];
-mapX addAction ["Map Info", A3A_fnc_cityinfo,nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull]) and (side (group _this) == teamPlayer)", 4];
-mapX addAction ["Move this asset", A3A_fnc_moveHQObject,nil,0,false,true,"","(_this == theBoss)", 4];
-if (isMultiplayer) then {mapX addAction ["AI Load Info", { [] remoteExec ["A3A_fnc_AILoadInfo",4];},nil,0,false,true,"","((_this == theBoss) || (serverCommandAvailable ""#logout""))"]};
+mapX addAction ["Опції гри", {hint format ["Antistasi - %2\n\nВерсія: %1\n\nСкладність: %3\nКількість зброї, що безкінечна: %4\nОбмеження телепорту: %5",antistasiVersion,worldName,if (skillMult == 2) then {"Нормальна"} else {if (skillMult == 1) then {"Для слабаків"} else {"Складна"}},minWeaps,if (limitedFT) then {"Та"} else {"Ніт"}]; nul=CreateDialog "game_options";},nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull]) and (side (group _this) == teamPlayer)", 4];
+mapX addAction ["Інформація на карті", A3A_fnc_cityinfo,nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull]) and (side (group _this) == teamPlayer)", 4];
+mapX addAction ["Пересунути цей об'єкт", A3A_fnc_moveHQObject,nil,0,false,true,"","(_this == theBoss)", 4];
+if (isMultiplayer) then {mapX addAction ["Інформація по ботах", { [] remoteExec ["A3A_fnc_AILoadInfo",4];},nil,0,false,true,"","((_this == theBoss) || (serverCommandAvailable ""#logout""))"]};
 _nul = [player] execVM "OrgPlayers\unitTraits.sqf";
 groupPetros = group petros;
-groupPetros setGroupIdGlobal ["Petros","GroupColor4"];
+groupPetros setGroupIdGlobal ["Петро","GroupColor4"];//Petros
 petros setIdentity "friendlyX";
-petros setName "Petros";
+petros setName "Петро";
 petros disableAI "MOVE";
 petros disableAI "AUTOTARGET";
 [petros,"mission"] call A3A_fnc_flagaction;
