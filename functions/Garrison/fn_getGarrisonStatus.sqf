@@ -14,16 +14,16 @@ private ["_ratio", "_result"];
 
 _ratio = ["_marker"] call A3A_fnc_getGarrisonRatio;
 
-_result = "Decimated";
+_result = "Знищений";//Decimated
 if(_ratio > 0.9) then
 {
-  _result = "Good"
+  _result = "Все ок"//Good
 }
 else
 {
   if(_ratio > 0.4) then
   {
-    _result = "Weakened"
+    _result = "Послаблений"//Weakened
   };
 };
 
