@@ -64,7 +64,7 @@ while {true} do
 	// revuelta civil!!
 	if ((_prestigeNATO < _prestigeSDK) and (sidesX getVariable [_city,sideUnknown] == Occupants)) then
 		{
-		["TaskSucceeded", ["", format ["%1 joined %2",[_city, false] call A3A_fnc_location,nameTeamPlayer]]] remoteExec ["BIS_fnc_showNotification",teamPlayer];
+		["TaskSucceeded", ["", format ["%1 доєднались до нас",[_city, false] call A3A_fnc_location,nameTeamPlayer]]] remoteExec ["BIS_fnc_showNotification"];
 		sidesX setVariable [_city,teamPlayer,true];
 		_nul = [5,0] remoteExec ["A3A_fnc_prestige",2];
 		_mrkD = format ["Dum%1",_city];
@@ -84,7 +84,7 @@ while {true} do
 		};
 	if ((_prestigeNATO > _prestigeSDK) and (sidesX getVariable [_city,sideUnknown] == teamPlayer)) then
 		{
-		["TaskFailed", ["", format ["%1 joined %2",[_city, false] call A3A_fnc_location,nameOccupants]]] remoteExec ["BIS_fnc_showNotification",teamPlayer];
+		["TaskFailed", ["", format ["%1 доєднались до нас",[_city, false] call A3A_fnc_location,nameOccupants]]] remoteExec ["BIS_fnc_showNotification"];
 		sidesX setVariable [_city,Occupants,true];
 		_nul = [-5,0] remoteExec ["A3A_fnc_prestige",2];
 		_mrkD = format ["Dum%1",_city];
@@ -115,7 +115,7 @@ while {true} do
 	_hrAddBLUFOR = (round _hrAddBLUFOR);
 	_recAddSDK = (round _recAddSDK);
 
-	_textX = format ["<t size='0.6' color='#C1C0BB'>Taxes Income.<br/> <t size='0.5' color='#C1C0BB'><br/>Manpower: +%1<br/>Money: +%2 €",_hrAddBLUFOR,_recAddSDK];
+	_textX = format ["<t size='0.6' color='#C1C0BB'>Прибуток з податків.<br/> <t size='0.5' color='#C1C0BB'><br/>Кадри: +%1<br/>Гроші: +%2 ₴",_hrAddBLUFOR,_recAddSDK];
 	[] call A3A_fnc_FIAradio;
 	//_updated = false;
 	_updated = [] call A3A_fnc_arsenalManage;
@@ -192,7 +192,7 @@ while {true} do
 			_changingX = true;
 			destroyedSites = destroyedSites - [_x];
 			_nameX = [_x] call A3A_fnc_localizar;
-			["TaskSucceeded", ["", format ["%1 Rebuilt",_nameX]]] remoteExec ["BIS_fnc_showNotification",[teamPlayer,civilian]];
+			["TaskSucceeded", ["", format ["%1 Відбудовано",_nameX]]] remoteExec ["BIS_fnc_showNotification",[teamPlayer,civilian]];
 			sleep 2;
 			};
 		} forEach (destroyedSites - citiesX) select {sidesX getVariable [_x,sideUnknown] != teamPlayer};

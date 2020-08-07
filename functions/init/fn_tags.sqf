@@ -68,7 +68,7 @@ while{true}do{
 											}
 											else
 											{
-											_driver = "No Driver<br/>";
+											_driver = "Нема водія<br/>";
 											};
 
 
@@ -80,7 +80,7 @@ while{true}do{
 											}
 											else
 											{
-											_gunner = "No gunner<br/>";
+											_gunner = "Нема стрільця<br/>";
 											};
 
 
@@ -92,7 +92,7 @@ while{true}do{
 											}
 											else
 											{
-											_commander = "No Commander<br/>";
+											_commander = "Нема командира<br/>";
 											};
 	// PASSENGER/CARGO COUNT
 
