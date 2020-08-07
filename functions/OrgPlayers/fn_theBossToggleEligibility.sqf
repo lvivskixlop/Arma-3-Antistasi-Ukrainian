@@ -10,21 +10,21 @@ if (_playerX getVariable ["eligible",true]) then
 		theBoss = objNull; publicVariable "theBoss";
 		
 		if(!isNull _suggestedNextBoss && isPlayer _suggestedNextBoss) then {
-			hint format ["You resign of being Commander. It should be passed to %1 if they are eligible.", name _suggestedNextBoss];
+			hint format ["Ви пішли у відставку з ролі командира. Командування перейде до %1, якщо він буде підходити на цю роль.", name _suggestedNextBoss];
 			[_suggestedNextBoss] call A3A_fnc_makePlayerBossIfEligible;
 		} else {
-			hint "You resign of being Commander. Others will take the command if there is someone suitable for it.";
+			hint "Ви пішли у відставку з ролі командира. Командування перейде до когось іншого.";
 		};
 		[] call A3A_fnc_assignBossIfNone;
 	}
 	else
 	{
-		hint "You decided not to be eligible for Commander.";
+		hint "Ви вирішили, що ви не підходите на роль командира.";
 	};
 }
 else
 {
-	hint "You are now eligible to be Commander of our forces.";
+	hint "Тепер ви можете стати командиром.";
 	_playerX setVariable ["eligible",true,true];
 	[] call A3A_fnc_assignBossIfNone;
 };
