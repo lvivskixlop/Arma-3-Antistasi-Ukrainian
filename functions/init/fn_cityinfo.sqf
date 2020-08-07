@@ -18,7 +18,7 @@ if (_x in destroyedSites) then {_popCSAT = _popCSAT + _numCIV};
 } forEach citiesX;
 _popFIA = round _popFIA;
 _popAAF = round _popAAF;
-hint format ["%7\n\nTotal pop: %1\n%6 Support: %2\n%5 Support: %3 \n\nMurdered Pop: %4\n\nClick on the zone",_pop, _popFIA, _popAAF, _popCSAT,nameOccupants,nameTeamPlayer,worldName];
+hint format ["%5\n\nНаселення: %1\nПідтримують нас: %2\nПідтримують окупантів: %3 \n\nНаселення вбито: %4\n\nКлацніть на зону",_pop, _popFIA, _popAAF, _popCSAT,worldName];
 
 if (!visibleMap) then {openMap true};
 
@@ -33,11 +33,11 @@ while {visibleMap} do
 		{
 		_positionTel = positionTel;
 		_siteX = [markersX, _positionTel] call BIS_Fnc_nearestPosition;
-		_textX = "Click on the zone";
+		_textX = "Клацніть на зону";
 		_nameFaction = if (sidesX getVariable [_siteX,sideUnknown] == teamPlayer) then {nameTeamPlayer} else {if (sidesX getVariable [_siteX,sideUnknown] == Occupants) then {nameOccupants} else {nameInvaders}};
 		if (_siteX == "Synd_HQ") then
 			{
-			_textX = format ["%2 HQ%1",[_siteX] call A3A_fnc_garrisonInfo,nameTeamPlayer];
+			_textX = format ["%2 Штаб%1",[_siteX] call A3A_fnc_garrisonInfo,nameTeamPlayer];
 			};
 		if (_siteX in citiesX) then
 			{
@@ -47,7 +47,7 @@ while {visibleMap} do
 			_prestigeOPFOR = _dataX select 2;
 			_prestigeBLUFOR = _dataX select 3;
 			_power = [_siteX] call A3A_fnc_powerCheck;
-			_textX = format ["%1\n\nPop %2\n%6 Support: %3 %5\n%7 Support: %4 %5",[_siteX,false] call A3A_fnc_location,_numCiv,_prestigeOPFOR,_prestigeBLUFOR,"%",nameOccupants,nameTeamPlayer];
+			_textX = format ["%1\n\nНаселення %2\nПідтримують окупантів: %3 %5\nПідтримують нас: %4 %5",[_siteX,false] call A3A_fnc_location,_numCiv,_prestigeOPFOR,_prestigeBLUFOR,"%"];
 			_positionX = getMarkerPos _siteX;
 			_result = "NONE";
 			switch (_power) do
@@ -76,89 +76,89 @@ while {visibleMap} do
 				};
 			*/
 			_textX = format ["%1\nInfluence: %2",_textX,_result];
-			if (_siteX in destroyedSites) then {_textX = format ["%1\nDESTROYED",_textX]};
+			if (_siteX in destroyedSites) then {_textX = format ["%1\nЗНИЩЕНО",_textX]};
 			if (sidesX getVariable [_siteX,sideUnknown] == teamPlayer) then {_textX = format ["%1\n%2",_textX,[_siteX] call A3A_fnc_garrisonInfo]};
 			};
 		if (_siteX in airportsX) then
 			{
 			if (not(sidesX getVariable [_siteX,sideUnknown] == teamPlayer)) then
 				{
-				_textX = format ["%1 Airport",_nameFaction];
+				_textX = format ["%1 Аеродром",_nameFaction];
 				_busy = [_siteX,true] call A3A_fnc_airportCanAttack;
-				if (_busy) then {_textX = format ["%1\nStatus: Idle",_textX]} else {_textX = format ["%1\nStatus: Busy",_textX]};
+				if (_busy) then {_textX = format ["%1\nСтатус: очікує",_textX]} else {_textX = format ["%1\nСтатус: зайнятий",_textX]};
 				_garrison = count (garrison getVariable [_siteX, []]);
-				if (_garrison >= 40) then {_textX = format ["%1\nGarrison: Good",_textX]} else {if (_garrison >= 20) then {_textX = format ["%1\nGarrison: Weakened",_textX]} else {_textX = format ["%1\nGarrison: Decimated",_textX]}};
+				if (_garrison >= 40) then {_textX = format ["%1\nСтан гарнізону: Все ок",_textX]} else {if (_garrison >= 20) then {_textX = format ["%1\nСтан гарнізону: Послаблений",_textX]} else {_textX = format ["%1\nСтан гарнізону: Знищений",_textX]}};
 				}
 			else
 				{
-				_textX = format ["%2 Airport%1",[_siteX] call A3A_fnc_garrisonInfo,_nameFaction];
+				_textX = format ["%2 Аеродром%1",[_siteX] call A3A_fnc_garrisonInfo,_nameFaction];
 				};
 			};
 		if (_siteX in resourcesX) then
 			{
 			if (not(sidesX getVariable [_siteX,sideUnknown] == teamPlayer)) then
 				{
-				_textX = format ["%1 Resources",_nameFaction];
+				_textX = format ["%1 Ресурси",_nameFaction];
 				_garrison = count (garrison getVariable [_siteX, []]);
-				if (_garrison >= 30) then {_textX = format ["%1\nGarrison: Good",_textX]} else {if (_garrison >= 10) then {_textX = format ["%1\nGarrison: Weakened",_textX]} else {_textX = format ["%1\nGarrison: Decimated",_textX]}};
+				if (_garrison >= 30) then {_textX = format ["%1\nСтан гарнізону: Все ок",_textX]} else {if (_garrison >= 10) then {_textX = format ["%1\nСтан гарнізону: Послаблений",_textX]} else {_textX = format ["%1\nСтан гарнізону: Знищений",_textX]}};
 				}
 			else
 				{
-				_textX = format ["%2 Resources%1",[_siteX] call A3A_fnc_garrisonInfo,_nameFaction];
+				_textX = format ["%2 Ресурси%1",[_siteX] call A3A_fnc_garrisonInfo,_nameFaction];
 				};
-			if (_siteX in destroyedSites) then {_textX = format ["%1\nDESTROYED",_textX]};
+			if (_siteX in destroyedSites) then {_textX = format ["%1\nЗНИЩЕНО",_textX]};
 			};
 		if (_siteX in factories) then
 			{
 			if (not(sidesX getVariable [_siteX,sideUnknown] == teamPlayer)) then
 				{
-				_textX = format ["%1 Factory",_nameFaction];
+				_textX = format ["%1 Завод",_nameFaction];
 				_garrison = count (garrison getVariable [_siteX, []]);
-				if (_garrison >= 16) then {_textX = format ["%1\nGarrison: Good",_textX]} else {if (_garrison >= 8) then {_textX = format ["%1\nGarrison: Weakened",_textX]} else {_textX = format ["%1\nGarrison: Decimated",_textX]}};
+				if (_garrison >= 16) then {_textX = format ["%1\nСтан гарнізону: Все ок",_textX]} else {if (_garrison >= 8) then {_textX = format ["%1\nСтан гарнізону: Послаблений",_textX]} else {_textX = format ["%1\nСтан гарнізону: Знищений",_textX]}};
 				}
 			else
 				{
-				_textX = format ["%2 Factory%1",[_siteX] call A3A_fnc_garrisonInfo,_nameFaction];
+				_textX = format ["%2 Завод%1",[_siteX] call A3A_fnc_garrisonInfo,_nameFaction];
 				};
-			if (_siteX in destroyedSites) then {_textX = format ["%1\nDESTROYED",_textX]};
+			if (_siteX in destroyedSites) then {_textX = format ["%1\nЗНИЩЕНО",_textX]};
 			};
 		if (_siteX in outposts) then
 			{
 			if (not(sidesX getVariable [_siteX,sideUnknown] == teamPlayer)) then
 				{
-				_textX = format ["%1 Grand Outpost",_nameFaction];
+				_textX = format ["%1 Аванпост",_nameFaction];
 				_busy = [_siteX,true] call A3A_fnc_airportCanAttack;
-				if (_busy) then {_textX = format ["%1\nStatus: Idle",_textX]} else {_textX = format ["%1\nStatus: Busy",_textX]};
+				if (_busy) then {_textX = format ["%1\nСтатус: очікує",_textX]} else {_textX = format ["%1\nСтатус: зайнятий",_textX]};
 				_garrison = count (garrison getVariable [_siteX, []]);
-				if (_garrison >= 16) then {_textX = format ["%1\nGarrison: Good",_textX]} else {if (_garrison >= 8) then {_textX = format ["%1\nGarrison: Weakened",_textX]} else {_textX = format ["%1\nGarrison: Decimated",_textX]}};
+				if (_garrison >= 16) then {_textX = format ["%1\nСтан гарнізону: Все ок",_textX]} else {if (_garrison >= 8) then {_textX = format ["%1\nСтан гарнізону: Послаблений",_textX]} else {_textX = format ["%1\nСтан гарнізону: Знищений",_textX]}};
 				}
 			else
 				{
-				_textX = format ["%2 Grand Outpost%1",[_siteX] call A3A_fnc_garrisonInfo,_nameFaction];
+				_textX = format ["%2 Аванпост%1",[_siteX] call A3A_fnc_garrisonInfo,_nameFaction];
 				};
 			};
 		if (_siteX in seaports) then
 			{
 			if (not(sidesX getVariable [_siteX,sideUnknown] == teamPlayer)) then
 				{
-				_textX = format ["%1 Seaport",_nameFaction];
+				_textX = format ["%1 Порт",_nameFaction];
 				_garrison = count (garrison getVariable [_siteX, []]);
-				if (_garrison >= 20) then {_textX = format ["%1\nGarrison: Good",_textX]} else {if (_garrison >= 8) then {_textX = format ["%1\nGarrison: Weakened",_textX]} else {_textX = format ["%1\nGarrison: Decimated",_textX]}};
+				if (_garrison >= 20) then {_textX = format ["%1\nСтан гарнізону: Все ок",_textX]} else {if (_garrison >= 8) then {_textX = format ["%1\nСтан гарнізону: Послаблений",_textX]} else {_textX = format ["%1\nСтан гарнізону: Знищений",_textX]}};
 				}
 			else
 				{
-				_textX = format ["%2 Seaport%1",[_siteX] call A3A_fnc_garrisonInfo,_nameFaction];
+				_textX = format ["%2 Порт%1",[_siteX] call A3A_fnc_garrisonInfo,_nameFaction];
 				};
 			};
 		if (_siteX in outpostsFIA) then
 			{
 			if (isOnRoad (getMarkerPos _siteX)) then
 				{
-				_textX = format ["%2 Roadblock%1",[_siteX] call A3A_fnc_garrisonInfo,_nameFaction];
+				_textX = format ["%2 Блокпост%1",[_siteX] call A3A_fnc_garrisonInfo,_nameFaction];
 				}
 			else
 				{
-				_textX = format ["%1 Watchpost",_nameFaction];
+				_textX = format ["%1 Наглядовий пост",_nameFaction];
 				};
 			};
 		hint format ["%1",_textX];
