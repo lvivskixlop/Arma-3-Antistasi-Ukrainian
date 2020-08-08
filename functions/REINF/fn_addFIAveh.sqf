@@ -1,11 +1,11 @@
 
-if (!(isNil "placingVehicle") && {placingVehicle}) exitWith { hint "Unable to buy vehicle, you are already placing something" };
-if (player != player getVariable ["owner",player]) exitWith {hint "You cannot buy vehicles while you are controlling AI"};
-if ([player,300] call A3A_fnc_enemyNearCheck) exitWith {Hint "You cannot buy vehicles with enemies nearby"};
+if (!(isNil "placingVehicle") && {placingVehicle}) exitWith { hint "Не можна купувати техніку, коли ставите якусь." };
+if (player != player getVariable ["owner",player]) exitWith {hint "Ви не можете купити техніку, коли контролюєте ботом."};
+if ([player,300] call A3A_fnc_enemyNearCheck) exitWith {Hint "Ви не можете купувати техніку, коли ворог поблизу."};
 
 
 private _typeVehX = _this select 0;
-if (_typeVehX == "not_supported") exitWith {hint "The vehicle you requested is not supported in your current modset"};
+if (_typeVehX == "not_supported") exitWith {hint "Техніка, яку ви попросили не підтримується у вашій збірці модів."};
 
 vehiclePurchase_cost = [_typeVehX] call A3A_fnc_vehiclePrice;
 
@@ -22,10 +22,10 @@ if (!isMultiPlayer) then {_resourcesFIA = server getVariable "resourcesFIA"} els
 		};
 	};
 
-if (_resourcesFIA < vehiclePurchase_cost) exitWith {hint format ["You do not have enough money for this vehicle: %1 € required",vehiclePurchase_cost]};
+if (_resourcesFIA < vehiclePurchase_cost) exitWith {hint format ["У вас немає достатньо грошей, щоб купити цю техніку. Треба %1₴",vehiclePurchase_cost]};
 vehiclePurchase_nearestMarker = [markersX select {sidesX getVariable [_x,sideUnknown] == teamPlayer},player] call BIS_fnc_nearestPosition;
-if !(player inArea vehiclePurchase_nearestMarker) exitWith {hint "You need to be close to the flag to be able to purchase a vehicle"};
+if !(player inArea vehiclePurchase_nearestMarker) exitWith {hint "Ви повинні бути біля прапора, щоб купити техніку."};
 
-private _extraMessage =	format ["Buying vehicle for $%1", vehiclePurchase_cost];
+private _extraMessage =	format ["Купується техніку за %1₴", vehiclePurchase_cost];
 
 [_typeVehX, "BUYFIA", _extraMessage] call A3A_fnc_vehPlacementBegin;
