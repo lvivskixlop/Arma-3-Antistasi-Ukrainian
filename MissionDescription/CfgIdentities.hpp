@@ -11,8 +11,8 @@ class CfgIdentities
   };
   class friendlyX
   {
-    name = "Petros";
-    nameSound = "Petros";
+    name = "Петро";
+    nameSound = "Петро";
     face="GreekHead_A3_01";
     glasses="None";
     speaker="Male01GRE";
