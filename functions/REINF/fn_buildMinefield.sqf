@@ -51,7 +51,7 @@ for "_i" from 0 to (count _typeMagazines) - 1 do
 _index = _typeAmmunition call jn_fnc_arsenal_itemType;
 [_index,_typeAmmunition,_quantity] call jn_fnc_arsenal_removeItem;
 
-_mrk = createMarker [format ["Minefield%1", random 1000], _positionTel];
+_mrk = createMarker [format ["Міни%1", random 1000], _positionTel];
 _mrk setMarkerShape "ELLIPSE";
 _mrk setMarkerSize [100,100];
 _mrk setMarkerType "hd_warning";
@@ -60,8 +60,8 @@ _mrk setMarkerBrush "DiagGrid";
 _mrk setMarkerText _textX;
 [_mrk,0] remoteExec ["setMarkerAlpha",[Occupants,Invaders]];
 
-[[teamPlayer,civilian],"Mines",[format ["An Engineer Team has been deployed at your command with High Command Option. Once they reach the position, they will start to deploy %1 mines in the area. Cover them in the meantime.",_quantity],"Minefield Deploy",_mrk],_positionTel,false,0,true,"map",true] call BIS_fnc_taskCreate;
-//_tsk = ["Mines",[teamPlayer,civilian],[format ["An Engineer Team has been deployed at your command with High Command Option. Once they reach the position, they will start to deploy %1 mines in the area. Cover them in the meantime.",_quantity],"Minefield Deploy",_mrk],_positionTel,"CREATED",5,true,true,"map"] call BIS_fnc_setTask;
+[[teamPlayer,civilian],"Mines",[format ["Групу інженерів було відправлено, щоб намінувати %1 мін. Прикрийте їх, щоб всякі засранці їх не постріляли.",_quantity],"Мінування",_mrk],_positionTel,false,0,true,"map",true] call BIS_fnc_taskCreate;
+//_tsk = ["Mines",[teamPlayer,civilian],[format ["Групу інженерів було відправлено, щоб намінувати %1 мін. Прикрийте їх, щоб всякі засранці їх не постріляли.",_quantity],"Мінування",_mrk],_positionTel,"CREATED",5,true,true,"map"] call BIS_fnc_setTask;
 //missionsX pushBack _tsk; publicVariable "missionsX";
 
 _groupX = createGroup teamPlayer;
@@ -114,7 +114,7 @@ if ((_truckX distance _positionTel < 50) and ({alive _x} count units _groupX > 0
 			_mineX = createMine [_typeX,_positionTel,[],100];
 			teamPlayer revealMine _mineX;
 			};
-		["Mines",[format ["An Engineer Team has been deployed at your command with High Command Option. Once they reach the position, they will start to deploy %1 mines in the area. Cover them in the meantime.",_quantity],"Minefield Deploy",_mrk],_positionTel,"SUCCEEDED","Map"] call A3A_fnc_taskUpdate;
+		["Mines",[format ["Групу інженерів було відправлено, щоб намінувати %1 мін. Прикрийте їх, щоб всякі засранці їх не постріляли.",_quantity],"Мінування",_mrk],_positionTel,"SUCCEEDED","Map"] call A3A_fnc_taskUpdate;
 		sleep 15;
 		//_nul = [_tsk,true] call BIS_fnc_deleteTask;
 		_nul = [0,"Mines"] spawn A3A_fnc_deleteTask;
@@ -122,7 +122,7 @@ if ((_truckX distance _positionTel < 50) and ({alive _x} count units _groupX > 0
 		}
 	else
 		{
-		["Mines",[format ["An Engineer Team has been deployed at your command with High Command Option. Once they reach the position, they will start to deploy %1 mines in the area. Cover them in the meantime.",_quantity],"Minefield Deploy",_mrk],_positionTel,"FAILED","Map"] call A3A_fnc_taskUpdate;
+		["Mines",[format ["Групу інженерів було відправлено, щоб намінувати %1 мін. Прикрийте їх, щоб всякі засранці їх не постріляли.",_quantity],"Мінування",_mrk],_positionTel,"FAILED","Map"] call A3A_fnc_taskUpdate;
 		sleep 15;
 		theBoss hcRemoveGroup _groupX;
 		//_nul = [_tsk,true] call BIS_fnc_deleteTask;
@@ -135,7 +135,7 @@ if ((_truckX distance _positionTel < 50) and ({alive _x} count units _groupX > 0
 	}
 else
 	{
-	["Mines",[format ["An Engineer Team has been deployed at your command with High Command Option. Once they reach the position, they will start to deploy %1 mines in the area. Cover them in the meantime.",_quantity],"Minefield Deploy",_mrk],_positionTel,"FAILED","Map"] call A3A_fnc_taskUpdate;
+	["Mines",[format ["Групу інженерів було відправлено, щоб намінувати %1 мін. Прикрийте їх, щоб всякі засранці їх не постріляли.",_quantity],"Мінування",_mrk],_positionTel,"FAILED","Map"] call A3A_fnc_taskUpdate;
 	sleep 15;
 	theBoss hcRemoveGroup _groupX;
 	//_nul = [_tsk,true] call BIS_fnc_deleteTask;

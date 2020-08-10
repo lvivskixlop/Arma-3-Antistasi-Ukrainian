@@ -1,5 +1,5 @@
-if (!(isNil "placingVehicle") && {placingVehicle}) exitWith { hint "You can't build while placing something." };
-if (player != player getVariable ["owner",objNull]) exitWith {hint "You cannot construct anything while controlling AI"};
+if (!(isNil "placingVehicle") && {placingVehicle}) exitWith { hint "Ви не можете будувати, коли щось ставите." };
+if (player != player getVariable ["owner",objNull]) exitWith {hint "Ви не можете будувати, коли контролюєте бота."};
 
 build_engineerSelected = objNull;
 
@@ -37,32 +37,32 @@ if (_playerIsEngineer) then {
 	if ([player] call A3A_fnc_canFight && !([player] call _engineerIsBusy)) then {
 		build_engineerSelected = player;
 	} else {
-		_abortMessage = _abortMessage + "You are an engineer, but not in a state to build: you may be unconscious or undercover.\n";
+		_abortMessage = _abortMessage + "Хоч ви і є інженер, але ви не можете будувати. Бо ви є в режимі інкогніто.\n";
 	};
 } else {
-	_abortMessage =	_abortMessage + "You are not an engineer.\n";
+	_abortMessage =	_abortMessage + "Ви не є інженером.\n";
 };
 
 //Check if an engineer can build.
 if (isNull build_engineerSelected && count _otherPlayerEngineers > 0) then {
 	build_engineerSelected = _otherPlayerEngineers select 0;
-	_abortMessage = _abortMessage + "There is a human engineer in your squad. Ask them to build.\n";
+	_abortMessage = _abortMessage + "В вашому відділенні є людина інженер. Попросіть його.\n";
 };
 
 if (isNull build_engineerSelected) then {
 	if (count _aiEngineers > 0 && player != leader player) exitWith {
-		_abortMessage =	_abortMessage + "Only squad leaders can order AI to build";
+		_abortMessage =	_abortMessage + "Тільки командири відділень можуть командувати ботам будувати щось.";
 	};
 	
 	{
 		if ([_x] call A3A_fnc_canFight && !([_x] call _engineerIsBusy)) exitWith {
 			build_engineerSelected = _x;
-			_abortMessage = _abortMessage + format ["Ordering %1 to build", _x];
+			_abortMessage = _abortMessage + format ["Замовляю %1, щоб побудувати.", _x];
 		};
 	} forEach _aiEngineers;
 	
 	if (isNull build_engineerSelected) exitWith {
-		_abortMessage =	_abortMessage + "You have no available engineers in your squad. They may be unconscious or busy.";
+		_abortMessage =	_abortMessage + "У вашому відділення немає інженерів, або вони без свідомості чи зайняті.";
 	};
 };
 
@@ -152,7 +152,7 @@ if ((build_type == "SB") or (build_type == "CB")) then
 	if (build_cost > _resourcesFIA) then
 		{
 		_leave = true;
-		_textX = format ["You do not have enough money for this construction (%1 € needed)",build_cost]
+		_textX = format ["У вас не достатньо грошей, щоб збудувати це (треба %1 ₴)",build_cost]
 		}
 	else
 		{
@@ -161,7 +161,7 @@ if ((build_type == "SB") or (build_type == "CB")) then
 		if (!(_playerPosition inArea build_nearestFriendlyMarker)) then
 			{
 			_leave = true;
-			_textX = "You cannot build a bunker outside a controlled zone";
+			_textX = "Ви не можете будувати поза зоною.";
 			build_nearestFriendlyMarker = nil;
 			};
 		};

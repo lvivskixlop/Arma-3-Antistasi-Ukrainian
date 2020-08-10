@@ -12,7 +12,7 @@ if (!_isPlayer) then
 else
 {
 	build_time = build_time / 2;
-	hint "Walk to the selected position to start building";
+	hint "Підійдіть до вибраної позиції, щоб почати будівництво.";
 };
 
 build_targetLocation = _positionX;
@@ -31,7 +31,7 @@ waitUntil {sleep 1;(time > _timeOut) or (build_engineerSelected distance _positi
 if (time > _timeOut) exitWith 
 {
 	build_cancelBuild = true;
-	hint "You didn't move to the position, construction has timed out.";
+	hint "Ви не встигли підійти до позиції. Час на будівництво вийшов.";
 };
 
 build_atBuildLocation = true;
@@ -80,7 +80,7 @@ waitUntil  {sleep 5; !([build_engineerSelected] call A3A_fnc_canFight) or (build
 build_engineerSelected setVariable ["constructing",false];
 if (!_isPlayer) then {{build_engineerSelected enableAI _x} forEach ["ANIM","AUTOTARGET","FSM","MOVE","TARGET"]};
 
-if (time <= _timeOut) exitWith {hint "Construction cancelled"};
+if (time <= _timeOut) exitWith {hint "Будівництво скасовано"};
 if (!_isPlayer) then {build_engineerSelected doFollow (leader build_engineerSelected)};
 
 private _veh = createVehicle [_structureType, _positionX, [], 0, "CAN_COLLIDE"];
