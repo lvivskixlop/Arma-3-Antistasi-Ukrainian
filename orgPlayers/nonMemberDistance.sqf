@@ -29,7 +29,7 @@ while {!([player] call A3A_fnc_isMember)} do
 		};
 	if (_countX != INITIAL_COUNT_TIME) then
 		{
-		hint format ["You have to get closer to the HQ or the closest server member in %1 seconds. \n\n After this timeout you will be teleported to your HQ",_countX];
+		hint format ["Не тікайте далеко від штабу, чи інших гравців. \n\n Бо через %1 сек вас телепортне до штабу",_countX];
 		sleep 1;
 		if (_countX == 0) then 
 			{

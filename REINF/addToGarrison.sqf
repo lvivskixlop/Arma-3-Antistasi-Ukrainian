@@ -5,7 +5,7 @@ _thingX = _this select 0;
 
 onMapSingleClick "positionTel = _pos";
 
-hint "Select the zone on which sending the selected troops as garrison";
+hint "Виберіть зону, до гарнізону якої хочете додати бійців.";
 
 waitUntil {sleep 0.5; (count positionTel > 0) or (not visiblemap)};
 onMapSingleClick "";
@@ -16,11 +16,11 @@ _positionTel = positionTel;
 
 _nearX = [markersX,_positionTel] call BIS_fnc_nearestPosition;
 
-if !(_positionTel inArea _nearX) exitWith {hint "You must click near a marked zone"};
+if !(_positionTel inArea _nearX) exitWith {hint "Треба клацати біля помаркованої зони."};
 
-if (not(sidesX getVariable [_nearX,sideUnknown] == teamPlayer)) exitWith {hint format ["That zone does not belong to %1",nameTeamPlayer]};
+if (not(sidesX getVariable [_nearX,sideUnknown] == teamPlayer)) exitWith {hint format ["Ця зона нам не підконтрольна."]};
 
-if ((_nearX in outpostsFIA) and !(isOnRoad getMarkerPos _nearX)) exitWith {hint "You cannot manage garrisons on this kind of zone"};
+if ((_nearX in outpostsFIA) and !(isOnRoad getMarkerPos _nearX)) exitWith {hint "Не можна керувати гарнізоном в зоні цього типу."};
 
 _thingX = _this select 0;
 
@@ -43,9 +43,9 @@ _leave = false;
 if ((typeOf _x == staticCrewTeamPlayer) or (typeOf _x == SDKUnarmed) or (typeOf _x in arrayCivs) or (!alive _x)) exitWith {_leave = true}
 } forEach _unitsX;
 
-if (_leave) exitWith {hint "Static crewman, prisoners, refugees or dead units cannot be added to any garrison"};
+if (_leave) exitWith {hint "Полонені, заручники, трупи не можуть бути додані до гарнізону."};
 
-if ((groupID _groupX == "MineF") or (groupID _groupX == "Watch") or (isPlayer(leader _groupX))) exitWith {hint "You cannot garrison player led, Watchpost, Roadblocks or Minefield building squads"};
+if ((groupID _groupX == "MineF") or (groupID _groupX == "Watch") or (isPlayer(leader _groupX))) exitWith {hint "Не можна ставити гарнізон на мінні поля, блокпости, аванпости."};
 
 
 if (isNull _groupX) then
@@ -53,12 +53,12 @@ if (isNull _groupX) then
 	_groupX = createGroup teamPlayer;
 	_unitsX joinSilent _groupX;
 	//{arrayids = arrayids + [name _x]} forEach _unitsX;
-	hint "Adding units to garrison";
+	hint "Додаю бійців до гарнізону.";
 	if !(hasIFA) then {{arrayids pushBackUnique (name _x)} forEach _unitsX};
 	}
 else
 	{
-	hint format ["Adding %1 squad to garrison", groupID _groupX];
+	hint format ["Додаю %1 до гарнізону", groupID _groupX];
 	theBoss hcRemoveGroup _groupX;
 	};
 /*
@@ -158,6 +158,6 @@ else
 		};
 	} forEach _unitsX;
 	theBoss hcSetGroup [_groupX];
-	hint format ["Group %1 is back to HC control because the zone which was pointed to garrison has been lost",groupID _groupX];
+	hint format ["Група %1 тепер є в меню вищого командування, бо їх гарнізон було розбито і базу втрачено.",groupID _groupX];
 	};
 
