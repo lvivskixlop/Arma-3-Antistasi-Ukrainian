@@ -1,10 +1,10 @@
 private["_player"];
 if (player != player getVariable["owner", player]) exitWith {
-	hint "You cannot go Undercover while you are controlling AI"
+	hint "Ви не можете переходити в режим інкогніто, коли контролюєте бота."
 };
 _player = player getVariable["owner", player];
 if (captive _player) exitWith {
-	hint "You are Undercover already"
+	hint "Ви вже є в режимі інкогніто"
 };
 
 private["_compromised", "_changeX", "_airportsX", "_roadblocks", "_arrayCivVeh", "_player", "_size", "_base", "_onDetectionMarker", "_onBaseMarker", "_airportSide"];
@@ -22,21 +22,21 @@ _compromised = _player getVariable "compromised";
 
 if (vehicle _player != _player) then {
 	if (not(typeOf(vehicle _player) in _arrayCivVeh)) then {
-		hint "You are not in a civilian vehicle";
+		hint "Ви не є в цивільній техніці.";
 		_changeX = "Init"
 	};
 	if (vehicle _player in reportedVehs) then {
-		hint "This vehicle has been reported to the enemy. Change or renew your vehicle in the Garage to go Undercover";
+		hint "Цю техніку вже спалили. Обновіть її в гаражі, щоб могти увійти в режим інкогніто знову.";
 		_changeX = "Init";
 	};
 }
 else {
 	if ((primaryWeapon _player != "") or (secondaryWeapon _player != "") or (handgunWeapon _player != "") or (vest _player != "") or (headgear _player in allArmoredHeadgear) or (hmd _player != "") or (not(uniform _player in allCivilianUniforms))) then {
-		hint "You cannot go Undercover while:\n\nA weapon is visible\nWearing a vest\nWearing a helmet\nWearing NVGs\nWearing a mil uniform";
+		hint "Ви не можете перейти в режим інкогніто, бо:\n\nУ вас видно зброю\nНосите жилет\nНосите шолом\nНосите ПНБ\nНосите військовий однострій.";
 		_changeX = "Init";
 	};
 	if (dateToNumber date < _compromised) then {
-		hint "You have been reported in the last 30 minutes therefore you cannot go Undercover";
+		hint "Вас вже спалили і ви не зможете перейти в жерим інкогніто протягом 30 хвилин.";
 		_changeX = "Init";
 	};
 };
@@ -47,7 +47,7 @@ if ({
 		((side _x == Invaders) or(side _x == Occupants)) and(((_x knowsAbout _player > 1.4) and(_x distance _player < 500)) or(_x distance _player < 350))
 	}
 	count allUnits > 0) exitWith {
-	hint "You cannot go Undercover while enemies are spotting you";
+	hint "Ви не можете перейти в режим інкогніто, коли ворог вас бачить.";
 	if (vehicle _player != _player) then {
 		{
 			if ((isPlayer _x) and(captive _x)) then {
@@ -64,7 +64,7 @@ if ({
 _base = [_airportsX, _player] call BIS_fnc_nearestPosition;
 _size = [_base] call A3A_fnc_sizeMarker;
 if ((_player distance getMarkerPos _base < _size * 2) and(not(sidesX getVariable[_base, sideUnknown] == teamPlayer))) exitWith {
-	hint "You cannot go Undercover near Airports, Outposts or Roadblocks"
+	hint "Ви не можете перейти в режим інкогніто біля аеродромів, аванпостів, чи блокпостів."
 };
 
 ["Undercover ON", 0, 0, 4, 0, 0, 4] spawn bis_fnc_dynamicText;
@@ -226,7 +226,7 @@ if (vehicle _player != _player) then {
 [] spawn A3A_fnc_statistics;
 switch _changeX do {
 	case "Reported":{
-			hint "You have been reported or spotted by the enemy";
+			hint "Вас побачив ворог, або на вас настукали.";
 			//_compromised = _player getVariable "compromised";
 			if (vehicle _player != _player) then {
 				//_player setVariable ["compromised",[_compromised select 0,vehicle _player]];
@@ -238,37 +238,37 @@ switch _changeX do {
 			};
 		};
 	case "VNoCivil":{
-			hint "You entered a non civilian vehicle"
+			hint "Ви сіли до військової техніки."
 		};
 	case "VCompromised":{
-			hint "You entered in a reported vehicle"
+			hint "Ви сіли до техніки, яку вже розшукують."
 		};
 	case "SpotBombTruck":{
-			hint "Explosives have been spotted on your vehicle";
+			hint "Пси занюхали в вашій техніці вибухівку.";
 			reportedVehs pushBackUnique(vehicle _player);
 			publicVariable "reportedVehs";
 		};
 	case "Carretera":{
-			hint "You went too far away from any roads and have been spotted";
+			hint "Ви від'їхали задалеко від дороги і спалились.";
 			reportedVehs pushBackUnique(vehicle _player);
 			publicVariable "reportedVehs";
 		};
 	case "clothes":{
-			hint "You cannot stay Undercover while:\n\nA weapon is visible\nWearing a vest\nWearing a helmet\nWearing NVGs\nWearing a mil uniform"
+			hint "Ви не можете перейти в режим інкогніто, бо:\n\nУ вас видно зброю\nНосите жилет\nНосите шолом\nНосите ПНБ\nНосите військовий однострій."
 		};
 	case "clothes2":{
-			hint "You cannot stay Undercover while showing:\n\nA weapon is visible\nWearing a vest\nWearing a helmet\nWearing NVGs\nWearing a mil uniform\n\nThe enemy added you to their Wanted List";
+			hint "Ви не можете залишатись в режимі інкогніто, бо у вас було видно:\n\nЗброю\nБронежилет чи розгрузку\nШолом\nПНБ\nВійськовий однострій.\n\nВас було додано в їхню базу даних 'Їх розшукує міліція'";
 			_player setVariable["compromised", dateToNumber[date select 0, date select 1, date select 2, date select 3, (date select 4) + 30]];
 		};
 	case "BadMedic":{
-			hint "You cannot stay Undercover while healing a compromised resistance member";
+			hint "Ви не можете бути в режимі інкогніто, коли лікуєте військового.";
 		};
 	case "BadMedic2":{
-			hint "You cannot stay Undercover while healing a compromised resistance member\n\nThe enemy added you to their Wanted List";
+			hint "Ви не можете бути в режимі інкогніто, коли лікуєте військового.\n\nВас було додано в їхню базу даних 'Їх розшукує міліція'";
 			_player setVariable["compromised", dateToNumber[date select 0, date select 1, date select 2, date select 3, (date select 4) + 30]];
 		};
 	case "Compromised":{
-			hint "You left your vehicle and you are still on the Wanted List"
+			hint "Ви покинули свою техніку і ви досі в розшуку."
 		};
 	case "distanceX":{
 			hint "You have gotten too close to an enemy Base, Outpost or Roadblock";
@@ -283,13 +283,13 @@ switch _changeX do {
 			};
 		};
 	case "NoFly":{
-			hint "You have gotten too close to an enemy Airbase no-fly zone";
+			hint "Ви підійшли надто близько во ворожої авіабази.";
 			//_compromised = _player getVariable "compromised";
 			reportedVehs pushBackUnique(vehicle _player);
 			publicVariable "reportedVehs";
 		};
 	case "Control":{
-			hint "The Installation Garrison has recognised you";
+			hint "Вас розпізнали люди з тутешнього гарнізону.";
 			//_compromised = _player getVariable "compromised";
 			reportedVehs pushBackUnique(vehicle _player);
 			publicVariable "reportedVehs";
