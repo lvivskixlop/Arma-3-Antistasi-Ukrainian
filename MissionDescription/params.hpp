@@ -2,161 +2,161 @@ class Params
 {
      class loadSave
      {
-          title = "Load last Persistent Save";
+          title = "Завантажити попереднє збереження";
           values[] = {1,0};
-          texts[] = {"Yes","No"};
+          texts[] = {"Та","Ні"};
           default = 1;
      };
      class gameMode
      {
           title = "Game Mode";
           values[] = {1,2,3,4};
-          texts[] = {"Reb vs Gov vs Inv","Reb vs Gov & Inv","Reb vs Gov","Reb vs Inv"};
+          texts[] = {"Reb vs Gov vs Inv(не то)","Reb vs Gov & Inv(і не ото)","Reb vs Gov(і навіть не то)","Reb vs Inv(треба ось це)"};
           default = 1;
      };
      class autoSave
      {
-          title = "Enable Autosave (every hour)";
+          title = "Щогодинне автозбереження";
           values[] = {1,0};
-          texts[] = {"Yes","No"};
+          texts[] = {"Та","Ні"};
           default = 1;
      };
      class membership
      {
-          title = "Enable Server Membership";
-          texts[] = {"Yes","No"};
+          title = "Ввімкнути 'членів сервера'";
+          texts[] = {"Та","Ні"};
           values[] = {1,0};
-          default = 1;
+          default = 0;
      };
      class switchComm
      {
-          title = "Enable Commander Switch (highest ranked player)";
+          title = "Ввімкнути командира? Щоб якись один гравець всім командував.";
           values[] = {1,0};
-          texts[] = {"Yes","No"};
+          texts[] = {"Та","Ні"};
           default = 1;
      };
      class tkPunish
      {
-          title = "Enable Teamkill Punish";
+          title = "Покарання за френдлі фаєр";
           values[] = {1,0};
-          texts[] = {"Yes","No"};
-          default = 1;
+          texts[] = {"Та","Ні"};
+          default = 0;
      };
      class mRadius
      {
-          title = "Distance from HQ for Sidemissions";
+          title = "Дистанція від штабу до місій";
           values[] = {2000,4000,6000,8000,10000,12000};
-          default = 4000;
+          default = 6000;
      };
      class allowPvP
      {
-          title = "Allow PvP Slots";
+          title = "ПВП слоти";
           values[] = {1,0};
-          texts[] = {"Yes","No"};
-          default = 1;
+          texts[] = {"Та","Ні"};
+          default = 0;
      };
      class pMarkers
      {
-          title = "Allow Friendly Player Markers";
+          title = "Маркери гравців";
           values[] = {1,0};
-          texts[] = {"Yes","No"};
-          default = 1;
+          texts[] = {"Та","Ні"};
+          default = 0;
      };
      class AISkill
      {
-          title = "Mission Difficulty";
+          title = "Складність";
           values[] = {1,2,3};
-          texts[] = {"Easy","Normal","Hard"};
-          default = 2;
+          texts[] = {"Для слабаків","Середньо","Складно"};
+          default = 3;
      };
      class unlockItem
      {
-          title = "Number of the same weapons required to unlock";
+          title = "Кількість зброї в арсеналі, щоб та стала безкінечною.";
           values[] = {15,25,40};
           default = 25;
      };
      class memberOnlyMagLimit
      {
-          title = "Number of magazines needed for guests to be able to use them";
+          title = "Обмеження кількості магазинів для гостей сервера.";
           values[] = {10,20,30,40,50,60};
           default = 40;
      };
      class civTraffic
      {
-          title = "Rate of Civ Traffic";
+          title = "Трафік цивільних";
           values[] = {0,1,2,3};
-          texts[] = {"None","Low","Medium","JAM"};
+          texts[] = {"Нема","Малий","Середній","Ліпше не треба"};
           default = 1;
      };
      class memberSlots
      {
-          title = "Percentage of Reserved Slots for Members";
+          title = "Вісоток слотів, зарезервованих для членів сервера";
           values[] = {0,20,40,60,80,100};
-          texts[] = {"None","20%","40%","60%","80%","All"};
+          texts[] = {"Нема","20%","40%","60%","80%","Всі"};
           default = 20;
      };
      class memberDistance
      {
-          title = "Max distance non members can be from the closest member or HQ (they will be teleported to HQ after some timeout)";
+          title = "Максимальна відстань, на яку можуть відходити гості сервера від штабу чи членів сервера. Якщо відійдуть задалеко, то їх телепортує до штабу";
           values[] = {4000,5000,6000,7000,8000,16000};
-          texts[] = {"4 Kmts","5 Kmts","6 Kmts","7 Kmts","8 Kmts","Unlimited"};
-          default = 5000;
+          texts[] = {"4 км","5 км","6 км","7 км","8 км","Безмежна"};
+          default = 16000;
      };
 	 class allowMembersFactionGarageAccess
      {
-          title = "Allow members to access the faction garage";
-          texts[] = {"Yes", "No"};
+          title = "Дати членам сервера доступ до спільного гаража.";
+          texts[] = {"Та","Ні"};
           values[] = {1,0};
           default = 1;
      };
      class allowFT
      {
-          title = "Limited Fast Travel";
+          title = "Ввімкнути телепорт";
           values[] = {0,1};
-          texts[] = {"No","Yes"};
+          texts[] = {"Ні","Та"};
           default = 1;
      };
      class napalmEnabled
      {
-          title = "Enable Napalm Bombing for AI";
+          title = "Бомбардування напалмом";
           values[] = {0,1};
-          texts[] = {"No","Yes"};
+          texts[] = {"Ні","Та"};
           default = 0;
      };
      class teamSwitchDelay
      {
-          title = "Delay After Leaving Before a Player Can Join Another Team";
+          title = "Затримка перед тим, як гравець зможе долучитись до іншої групи.";
           values[] = {0, 900, 1800, 3600};
-          texts[] = {"No delay","15 minutes","30 minutes","60 minutes"};
-          default = 3600;
+          texts[] = {"Нема","15 хв","30 хв","60 хв"};
+          default = 0;
      };
      class unlockedUnlimitedAmmo
      {
-          title = "Do Unlocked Weapons Automatically Unlock Their Standard Magazine?";
+          title = "Робити безкінечні набої до безкінечної зброї?";
           values[] = {1,0};
-          texts[] =  {"Yes","No"};
+          texts[] =  {"Та","Ні"};
           default = 0;
      };
      class allowGuidedLaunchers
      {
-          title = "Should Guided Launchers become unlocked?";
+          title = "Дозволити безкінечні ПТУР-и?";
           values[] = {1,0};
-          texts[] =  {"Yes","No"};
+          texts[] =  {"Та","Ні"};
           default = 0;
      };
      class allowUnlockedExplosives
      {
-          title = "Should Explosives become unlocked?";
+          title = "Дозволити безкінечну вибухівку?";
           values[] = {1,0};
-          texts[] =  {"Yes","No"};
+          texts[] =  {"Та","Ні"};
           default = 0;
      };
      class startWithLongRangeRadio
      {
-          title = "[TFAR] Start with Long Range Radio?";
+          title = "[TFAR] Стартувати з ДХ?";
           values[] = {1,0};
-          texts[] =  {"Yes","No"};
-          default = 1;
+          texts[] =  {"Та","Ні"};
+          default = 0;
      };
      class Spacer10
      {
@@ -167,72 +167,72 @@ class Params
      };
      class Kart
      {
-          title = "Allow Items and Vehicles from Karts DLC?";
+          title = "Karts DLC?";
           values[] = {1,0};
-          texts[] =  {"Yes","No"};
+          texts[] =  {"Та","Ні"};
           default = 0;
      };
      class Mark
      {
-          title = "Allow Items and Vehicles from Marksman DLC?";
+          title = "Marksman DLC?";
           values[] = {1,0};
-          texts[] =  {"Yes","No"};
+          texts[] =  {"Та","Ні"};
           default = 0;
      };
      class Heli
      {
-          title = "Allow Items and Vehicles from Heli DLC?";
+          title = "Heli DLC?";
           values[] = {1,0};
-          texts[] =  {"Yes","No"};
+          texts[] =  {"Та","Ні"};
           default = 0;
      };
      class Expansion
      {
-          title = "Allow Items and Vehicles from Apex DLC?";
+          title = "Apex DLC?";
           values[] = {1,0};
-          texts[] =  {"Yes","No"};
+          texts[] =  {"Та","Ні"};
           default = 0;
      };
      class Jets
      {
-          title = "Allow Items and Vehicles from Jets DLC?";
+          title = "Jets DLC?";
           values[] = {1,0};
-          texts[] =  {"Yes","No"};
+          texts[] =  {"Та","Ні"};
           default = 0;
      };
      class Orange
      {
-          title = "Allow Items and Vehicles from Laws of War DLC?";
+          title = "Laws of War DLC?";
           values[] = {1,0};
-          texts[] =  {"Yes","No"};
+          texts[] =  {"Та","Ні"};
           default = 0;
      };
      class Tanks
      {
-          title = "Allow Items and Vehicles from Tanks DLC?";
+          title = "Tanks DLC?";
           values[] = {1,0};
-          texts[] =  {"Yes","No"};
+          texts[] =  {"Та","Ні"};
           default = 0;
      };
      class GlobMob
      {
-          title = "Allow Items and Vehicles from Global Mobilization DLC?";
+          title = "Global Mobilization DLC?";
           values[] = {1,0};
-          texts[] =  {"Yes","No"};
+          texts[] =  {"Та","Ні"};
           default = 0;
      };
      class Enoch
      {
-          title = "Allow Items and Vehicles from Contact DLC?";
+          title = "Contact DLC?";
           values[] = {1,0};
-          texts[] =  {"Yes","No"};
+          texts[] =  {"Та","Ні"};
           default = 0;
      };
      class OfficialMod
      {
-          title = "Allow ADR-97 DLC?";
+          title = "ADR-97 DLC?";
           values[] = {1,0};
-          texts[] =  {"Yes","No"};
+          texts[] =  {"Та","Ні"};
           default = 0;
      };
      class Spacer0
@@ -244,7 +244,7 @@ class Params
      };
      class AdvancedParams
      {
-          title = "ADVANCED USERS ONLY";
+          title = "Тільки для супер мудрих";
           values[] = {""};
           texts[] = {""};
           default = "";
@@ -258,38 +258,38 @@ class Params
 	 };
      class CrateOptions
      {
-          title = "LOOT CRATE OPTIONS";
+          title = "Коробки з лутом";
           values[] = {""};
           texts[] = {""};
           default = "";
      };
 	 class truelyRandomCrates
 	 {
-		  title = "[Experimental] Truely Random Crates: Remove all balance checks from Crates";
+		  title = "[Experimental] Справжній рандом в коробках: забрати будь-який баланс. Сам хз, що то таке, най буде як є";
 		  values[] = {0, 1};
 		  texts[] = {"False", "True"};
 		  default = 0;
 	 };
 	 class cratePlayerScaling
 	 {
-		title = "Decrease loot quantity as player count increases? (Yes is recommended for balance reasons)";
+		title = "Зменшувати кількість луту, коли є більше гравців? (Кажуть, що ліпше та)";
 		values[] = {0, 1};
 		texts[] = {"False", "True"};
 		default = 1;
 	 };
      class crateWepTypeMax
      {
-          title = "Maximum Weapon Types in Crates";
+          title = "Максимальна кількість типів зброї.";
           values[] = {0,2,4,6,8,12,16};
           texts[] = {"1","3","5","7","9","13","17"};
-          default = 9;
+          default = 2;
      };
      class crateWepNumMax
      {
-          title = "Maximum Weapon Quantity in Crates";
+          title = "Максимальна кількість типів зброї.";
           values[] = {0,1,3,5,8,10,15};
           texts[] = {"None","1","3","5","8","10","15"};
-          default = 8;
+          default = 3;
      };
      class Spacer1
      {
@@ -300,17 +300,17 @@ class Params
      };
      class crateItemTypeMax
      {
-          title = "Maximum Item Types in Crates";
+          title = "Максимальна кількість видів предметів";
           values[] = {0,2,4,9};
           texts[] = {"1","3","5","10"};
-          default = 4;
+          default = 2;
      };
      class crateItemNumMax
      {
-          title = "Maximum Item Quantity in Crates";
+          title = "Максимальна кількість самих предметів";
           values[] = {0,1,3,5,10,15};
           texts[] = {"None","1","3","5","10","15"};
-          default = 5;
+          default = 3;
      };
      class Spacer2
      {
@@ -321,14 +321,14 @@ class Params
      };
      class crateAmmoTypeMax
      {
-          title = "Maximum Ammo Types in Crates";
+          title = "Максимальна кількість типів набоїв";
           values[] = {0,2,4,6,9,14,19};
           texts[] = {"1","3","5","7","10","15","20"};
-          default = 6;
+          default = 4;
      };
      class crateAmmoNumMax
      {
-          title = "Maximum Ammo Quantity in Crates";
+          title = "Максимальна кількість самих набоїв";
           values[] = {0,1,3,5,10,15,20,25,30};
           texts[] = {"None","1","3","5","10","15","20","25","30"};
           default = 20;
@@ -342,17 +342,17 @@ class Params
      };
      class crateExplosiveTypeMax
      {
-          title = "Maximum Explosive Types in Crates";
+          title = "Максимальна кількість типів вибухівки";
           values[] = {0,2,4,9};
           texts[] = {"1","3","5","10"};
           default = 2;
      };
      class crateExplosiveNumMax
      {
-          title = "Maximum Explosive Quantity in Crates";
+          title = "Максимальна кількість вибухівки";
           values[] = {0,1,3,5,10,15};
           texts[] = {"None","1","3","5","10","15"};
-          default = 5;
+          default = 3;
      };
      class Spacer4
      {
@@ -363,17 +363,17 @@ class Params
      };
      class crateAttachmentTypeMax
      {
-          title = "Maximum Attachment Types in Crates";
+          title = "Максимальна кількість примочок до зброї";
           values[] = {0,2,4,6,9,12,15,19};
           texts[] = {"1","3","5","7","10","13","16","20"};
-          default = 6;
+          default = 4;
      };
      class crateAttachmentNumMax
      {
-          title = "Maximum Attachment Quantity in Crates";
+          title = "Максимальна кількість їх самих";
           values[] = {0,1,3,5,7,10,15,20,30};
           texts[] = {"None","1","3","5","7","10","15","20","30"};
-          default = 15;
+          default = 3;
      };
      class Spacer5
      {
@@ -384,14 +384,14 @@ class Params
      };
      class crateBackpackTypeMax
      {
-          title = "Maximum Backpack Types in Crates";
+          title = "Максимальна кількість типів рюкзаків";
           values[] = {0,2,4,9};
           texts[] = {"1","3","5","10"};
           default = 0;
      };
      class crateBackpackNumMax
      {
-          title = "Maximum Backpack Quantity in Crates";
+          title = "Максимальна кількість їх самих";
           values[] = {0,1,3,5,10,15};
           texts[] = {"None","1","3","5","10","15"};
           default = 3;
@@ -405,14 +405,14 @@ class Params
      };
      class crateVestTypeMax
      {
-          title = "Maximum Vest Types in Crates";
+          title = "Максимальна кількість типів жилетів";
           values[] = {0,2,4,9};
           texts[] = {"1","3","5","10"};
           default = 0;
      };
      class crateVestNumMax
      {
-          title = "Maximum Vest Quantity in Crates";
+          title = "Максимальна кількість жилетів";
           values[] = {0,1,3,5,10,15};
           texts[] = {"None","1","3","5","10","15"};
           default = 0;
@@ -426,14 +426,14 @@ class Params
      };
      class crateHelmetTypeMax
      {
-          title = "Maximum Helmet Types in Crates";
+          title = "Максимальна кількість типів шоломів";
           values[] = {0,2,4,9};
           texts[] = {"1","3","5","10"};
           default = 0;
      };
      class crateHelmetNumMax
      {
-          title = "Maximum Helmet Quantity in Crates";
+          title = "Максимальна кількість шоломів";
           values[] = {0,1,3,5,10,15};
           texts[] = {"None","1","3","5","10","15"};
           default = 0;
@@ -447,16 +447,16 @@ class Params
      };
      class crateDeviceTypeMax
      {
-          title = "Maximum Device Backpack Types in Crates";
+          title = "Максимальна кількість типів рюкзакових девайсів (дрони, міномети, кулемети,...)";
           values[] = {0,2,4,9};
           texts[] = {"1","3","5","10"};
-          default = 2;
+          default = 0;
      };
      class crateDeviceNumMax
      {
-          title = "Maximum Device Backpack Quantity in Crates";
+          title = "Максимальна кількість їх самих";
           values[] = {0,1,3,5,10,15};
           texts[] = {"None","1","3","5","10","15"};
-          default = 3;
+          default = 1;
      };
 };
