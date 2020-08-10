@@ -104,22 +104,22 @@ while {(time < _bleedOut) and (_unit getVariable ["INCAPACITATED",false]) and (a
 			_helpX = [_unit] call A3A_fnc_askHelp;
 			if (isNull _helpX) then
 				{
-				_textX = format ["<t size='0.6'>There is no AI near to help you.<t size='0.5'><br/>Hit R to Respawn"];
+				_textX = format ["<t size='0.6'>Тут немає бота, який би вам допоміг.<t size='0.5'><br/>Тисніть R щоб відреспавнитись"];
 				}
 			else
 				{
-				if (_helpX != _unit) then {_textX = format ["<t size='0.6'>%1 is on the way to help you.<t size='0.5'><br/>Hit R to Respawn",name _helpX]} else {_textX = "<t size='0.6'>Wait until you get assistance or<t size='0.5'><br/>Hit R to Respawn"};
+				if (_helpX != _unit) then {_textX = format ["<t size='0.6'>%1 вже біжить вам на допомогу.<t size='0.5'><br/>Тисніть R щоб відреспавнитись",name _helpX]} else {_textX = "<t size='0.6'>Чекайте поки вам допоможуть чи<t size='0.5'><br/>Тисніть R щоб відреспавнитись"};
 				};
 			}
 		else
 			{
 			if (!isNil "_helpX") then
 				{
-				if (!isNull _helpX) then {_textX = format ["<t size='0.6'>%1 is on the way to help you.<t size='0.5'><br/>Hit R to Respawn",name _helpX]} else {_textX = "<t size='0.6'>Wait until you get assistance or<t size='0.5'><br/>Hit R to Respawn"};
+				if (!isNull _helpX) then {_textX = format ["<t size='0.6'>%1 вже біжить вам на допомогу.<t size='0.5'><br/>Тисніть R щоб відреспавнитись",name _helpX]} else {_textX = "<t size='0.6'>Чекайте поки вам допоможуть чи<t size='0.5'><br/>Тисніть R щоб відреспавнитись"};
 				}
 			else
 				{
-				_textX = "<t size='0.6'>Wait until you get assistance or<t size='0.5'><br/>Hit R to Respawn";
+				_textX = "<t size='0.6'>Чекайте поки вам допоможуть чи<t size='0.5'><br/>Тисніть R щоб відреспавнитись";
 				};
 			};
 		[_textX,0,0,3,0,0,4] spawn bis_fnc_dynamicText;
