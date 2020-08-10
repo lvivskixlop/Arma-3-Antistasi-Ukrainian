@@ -13,11 +13,11 @@ if (captive _medicX) then
 	};
 if !(alive _cured) exitWith
 	{
-	if (_player) then {hint format ["%1 is already dead",name _cured]};
+	if (_player) then {hint format ["%1 вже мертвий",name _cured]};
 	if (_inPlayerGroup) then {_medicX groupChat format ["%1 is already dead",name _cured]};
 	_healed
 	};
-if !([_medicX] call A3A_fnc_canFight) exitWith {if (_player) then {hint "You are not able to revive anyone"};_healed};
+if !([_medicX] call A3A_fnc_canFight) exitWith {if (_player) then {hint "Ви не здатні нікого підняти"};_healed};
 if  (
         (!([_medicX] call A3A_fnc_isMedic && "Medikit" in (items _medicX))) &&
         {(!("FirstAidKit" in (items _medicX))) &&
