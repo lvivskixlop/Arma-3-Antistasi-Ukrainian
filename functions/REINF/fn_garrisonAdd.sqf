@@ -2,7 +2,7 @@ private ["_hr","_resourcesFIA","_typeX","_costs","_markerX","_garrison","_positi
 
 _hr = server getVariable "hr";
 
-if (_hr < 1) exitWith {hint "You lack of HR to make a new recruitment"};
+if (_hr < 1) exitWith {hint "У вас не достатньо HR, щоб когось найняти."};
 
 _resourcesFIA = server getVariable "resourcesFIA";
 
@@ -21,17 +21,17 @@ else
 	_costs = server getVariable _typeX;
 	};
 
-if (_costs > _resourcesFIA) exitWith {hint format ["You do not have enough money for this kind of unit (%1 € needed)",_costs]};
+if (_costs > _resourcesFIA) exitWith {hint format ["У вас не достатньо грошей для цього бійця (треба %1 ₴)",_costs]};
 
 _markerX = positionXGarr;
 
-if ((_typeX == staticCrewTeamPlayer) and (_markerX in outpostsFIA)) exitWith {hint "You cannot add mortars to a Roadblock garrison"};
+if ((_typeX == staticCrewTeamPlayer) and (_markerX in outpostsFIA)) exitWith {hint "Не можна додавати міномети до гарнізону блокпостів."};
 
 _positionX = getMarkerPos _markerX;
 
-if (surfaceIsWater _positionX) exitWith {hint "This Garrison is still updating, please try again in a few seconds"};
+if (surfaceIsWater _positionX) exitWith {hint "Цей гарнізон оновлюється. Зачекайте, будь ласка, пару секунд."};
 
-if ([_positionX,500] call A3A_fnc_enemyNearCheck) exitWith {Hint "You cannot Recruit Garrison Units with enemies near the zone"};
+if ([_positionX,500] call A3A_fnc_enemyNearCheck) exitWith {Hint "Ви не можете наймати бійців до гарнізону, коли там є ворог поблизу."};
 _nul = [-1,-_costs] remoteExec ["A3A_fnc_resourcesFIA",2];
 /*
 _garrison = [];
@@ -45,7 +45,7 @@ waitUntil {(_countX < count (garrison getVariable [_markerX, []])) or (sidesX ge
 
 if (sidesX getVariable [_markerX,sideUnknown] == teamPlayer) then
 	{
-	hint format ["Soldier recruited.%1",[_markerX] call A3A_fnc_garrisonInfo];
+	hint format ["Найнято бійця.%1",[_markerX] call A3A_fnc_garrisonInfo];
 
 	if (spawner getVariable _markerX != 2) then
 		{

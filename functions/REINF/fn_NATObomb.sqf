@@ -1,12 +1,12 @@
-if (bombRuns < 1) exitWith {hint "You lack of enough Air Support to make this request"};
-//if (!allowPlayerRecruit) exitWith {hint "Server is very loaded. \nWait one minute or change FPS settings in order to fulfill this request"};
-	if (!([player] call A3A_fnc_hasRadio)) exitWith {if !(hasIFA) then {hint "You need a radio in your inventory to be able to give orders to other squads"} else {hint "You need a Radio Man in your group to be able to give orders to other squads"}};
-if ({sidesX getVariable [_x,sideUnknown] == teamPlayer} count airportsX == 0) exitWith {hint "You need to control an airport in order to fulfill this request"};
+if (bombRuns < 1) exitWith {hint "У вас не достатньо очків для авіаудару."};
+//if (!allowPlayerRecruit) exitWith {hint "Сервер дууже навантажений. \nЗачекайте поки воно не вспокоїться, чи змініть налаштування FPS сервера, щоб це зробити."};
+	if (!([player] call A3A_fnc_hasRadio)) exitWith {if !(hasIFA) then {hint "Вам потрібно мати рацію, щоб віддавати накази іншим відділенням."} else {hint "У вашій групі повинен бути радист, щоб віддавати накази іншим відділенням."}};
+if ({sidesX getVariable [_x,sideUnknown] == teamPlayer} count airportsX == 0) exitWith {hint "У вас повинен бути аеродром, щоб це зробити."};
 _typeX = _this select 0;
 
 positionTel = [];
 
-hint "Select the spot from which the plane will start to drop the bombs";
+hint "Виберіть місце, з якого злітатиме літак, який будєт всєх бамбіть.";
 
 if (!visibleMap) then {openMap true};
 onMapSingleClick "positionTel = _pos;";
@@ -19,13 +19,13 @@ if (!visibleMap) exitWith {};
 _pos1 = positionTel;
 positionTel = [];
 
-_mrkorig = createMarkerLocal [format ["BRStart%1",random 1000], _pos1];
+_mrkorig = createMarkerLocal [format ["BRStart%1",random 1000], _pos1];//BRStart
 _mrkorig setMarkerShapeLocal "ICON";
 _mrkorig setMarkerTypeLocal "hd_destroy";
 _mrkorig setMarkerColorLocal "ColorRed";
-_mrkOrig setMarkerTextLocal "Bomb Run Init";
+_mrkOrig setMarkerTextLocal "Бомбардування взліт";
 
-hint "Select the map position to which the plane will exit to calculate plane's route vector";
+hint "Виберіть на карті позицію, до якої літак буде відступати.";
 
 onMapSingleClick "positionTel = _pos;";
 
@@ -43,11 +43,11 @@ bombRuns = bombRuns - 1;
 publicVariable "bombRuns";
 [] spawn A3A_fnc_statistics;
 
-_mrkDest = createMarkerLocal [format ["BRFin%1",random 1000], _pos2];
+_mrkDest = createMarkerLocal [format ["BRFin%1",random 1000], _pos2];//BRFin
 _mrkDest setMarkerShapeLocal "ICON";
 _mrkDest setMarkerTypeLocal "hd_destroy";
 _mrkDest setMarkerColorLocal "ColorRed";
-_mrkDest setMarkerTextLocal "Bomb Run Exit";
+_mrkDest setMarkerTextLocal "Повернення";
 
 //openMap false;
 
@@ -63,7 +63,7 @@ _plane disableAI "TARGET";
 _plane disableAI "AUTOTARGET";
 _plane flyInHeight 100;
 
-driver _plane sideChat "Starting Bomb Run. ETA 30 seconds.";
+driver _plane sideChat "Починаю бомбардування. Приліт 30 секунд.";
 _wp1 = group _plane addWaypoint [_pos1, 0];
 _wp1 setWaypointType "MOVE";
 _wp1 setWaypointSpeed "LIMITED";
