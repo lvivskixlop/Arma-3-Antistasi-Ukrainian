@@ -1,12 +1,12 @@
 if (hasInterface) then {
-	if (!isNil "savingClient" && {savingClient}) exitWith {hint "Your personal stats are being saved"};
+	if (!isNil "savingClient" && {savingClient}) exitWith {hint "Вашу особисту статистику збережено"};
 	[] call A3A_fnc_savePlayer;
 };
 
 //Server only from here on out.
 if (!isServer) exitWith {};
 
-if (savingServer) exitWith {"Server data save is still in progress" remoteExecCall ["hint",theBoss]};
+if (savingServer) exitWith {"Сервер ще досі зберігає" remoteExecCall ["hint",theBoss]};
 savingServer = true;
 private ["_garrison"];
 ["countCA", countCA] call fn_SaveStat;
@@ -205,6 +205,6 @@ _controlsX = controlsX select {(sidesX getVariable [_x,sideUnknown] == teamPlaye
 ["controlsSDK",_controlsX] call fn_SaveStat;
 
 savingServer = false;
-_saveHintText = format ["Savegame Done.\n\nYou won't lose your stats in the event of a game update.\n\nRemember: if you want to preserve any vehicle, it must be near the HQ Flag with no AI inside.\nIf AI are inside, you will save the funds you spent on it.\n\nAI will be refunded\n\nStolen and purchased Static Weapons need to be ASSEMBLED in order to be saved. You can save disassembled Static Weapons in the ammo box.\n\nMounted Statics (Mortar/AA/AT squads) won't get saved, but you will be able to recover the cost.\n\nSame for assigned vehicles more than 50m away from HQ.\n\n%1 fund count:\nHR: %2\nMoney: %3 €",nameTeamPlayer,_hrBackground,_resourcesBackground];
+_saveHintText = format ["Збереження завершено.\n\nВи нічого не втратите, навіть якщо гра оновиться.\n\nПам'ятайте: якщо хочете зберегти якусь техніку, вона повинна стояти біля прапора штабу, без ботів всередині.\nЯкщо ж всетаки там були боти, то ви отримаєте за них компенсацію.\n\nСтанкова зброя повинна бути зібраною, щоб зберегтись. А щоб зберегти розібрану, закиньте її в арсенал.\n\nМіномети, ЗУ-шки, ПТУР-и, якими керують боти не будуть збережені, але всі кошти за них буде відшкодовано.\n\nТе ж буде і з технікою, яка стоїть далі ніж 50м від прапора штабу.\n\n%1 гроші:\nHR: %2\nГроші: %3 €",nameTeamPlayer,_hrBackground,_resourcesBackground];
 [petros,"hint",_saveHintText] remoteExec ["A3A_fnc_commsMP", 0];
 diag_log format ["%1: [Antistasi] | INFO | Persistent Save Completed.",servertime];
