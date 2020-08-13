@@ -476,7 +476,7 @@ SA_Attach_Tow_Ropes_Action = {
 
 		if!(missionNamespace getVariable ["SA_TOW_LOCKED_VEHICLES_ENABLED",false]) then {
 			if( locked _cargo > 1 ) then {
-				["Cannot attach tow ropes to locked vehicle",false] call SA_Hint;
+				["Не можна чіпати буксирний шнур до зачиненої техніки",false] call SA_Hint;
 				_canBeTowed = false;
 			};
 		};
@@ -484,7 +484,7 @@ SA_Attach_Tow_Ropes_Action = {
 		if!(missionNamespace getVariable ["SA_TOW_IN_EXILE_SAFEZONE_ENABLED",false]) then {
 			if(!isNil "ExilePlayerInSafezone") then {
 				if( ExilePlayerInSafezone ) then {
-					["Cannot attach tow ropes in safe zone",false] call SA_Hint;
+					["Не можна чіпати буксирний шнур до техніки в безпечній зоні",false] call SA_Hint;
 					_canBeTowed = false;
 				};
 			};
@@ -522,7 +522,7 @@ SA_Take_Tow_Ropes_Action = {
 
 		if!(missionNamespace getVariable ["SA_TOW_LOCKED_VEHICLES_ENABLED",false]) then {
 			if( locked _vehicle > 1 ) then {
-				["Cannot take tow ropes from locked vehicle",false] call SA_Hint;
+				["Не можна брати буксирний шнур з зачиненої техніки",false] call SA_Hint;
 				_canTakeTowRopes = false;
 			};
 		};
@@ -530,7 +530,7 @@ SA_Take_Tow_Ropes_Action = {
 		if!(missionNamespace getVariable ["SA_TOW_IN_EXILE_SAFEZONE_ENABLED",false]) then {
 			if(!isNil "ExilePlayerInSafezone") then {
 				if( ExilePlayerInSafezone ) then {
-					["Cannot take tow ropes in safe zone",false] call SA_Hint;
+					["Не можна брати буксирний шнур з техніки в безпечній зоні",false] call SA_Hint;
 					_canTakeTowRopes = false;
 				};
 			};
@@ -568,7 +568,7 @@ SA_Put_Away_Tow_Ropes_Action = {
 
 		if!(missionNamespace getVariable ["SA_TOW_LOCKED_VEHICLES_ENABLED",false]) then {
 			if( locked _vehicle > 1 ) then {
-				["Cannot put away tow ropes in locked vehicle",false] call SA_Hint;
+				["Не можна ховати буксирний шнур в зачинену техніку",false] call SA_Hint;
 				_canPutAwayTowRopes = false;
 			};
 		};
@@ -576,7 +576,7 @@ SA_Put_Away_Tow_Ropes_Action = {
 		if!(missionNamespace getVariable ["SA_TOW_IN_EXILE_SAFEZONE_ENABLED",false]) then {
 			if(!isNil "ExilePlayerInSafezone") then {
 				if( ExilePlayerInSafezone ) then {
-					["Cannot put away tow ropes in safe zone",false] call SA_Hint;
+					["Не можна ховати буксирний шнур до техніки, яка є в безпечній зоні",false] call SA_Hint;
 					_canPutAwayTowRopes = false;
 				};
 			};
@@ -633,7 +633,7 @@ SA_Pickup_Tow_Ropes_Action = {
 
 		if!(missionNamespace getVariable ["SA_TOW_LOCKED_VEHICLES_ENABLED",false]) then {
 			if( locked _vehicle > 1 ) then {
-				["Cannot pick up tow ropes from locked vehicle",false] call SA_Hint;
+				["Не можна підбирати буксирний шнур зачиненої техніки",false] call SA_Hint;
 				_canPickupTowRopes = false;
 			};
 		};
@@ -641,7 +641,7 @@ SA_Pickup_Tow_Ropes_Action = {
 		if!(missionNamespace getVariable ["SA_TOW_IN_EXILE_SAFEZONE_ENABLED",false]) then {
 			if(!isNil "ExilePlayerInSafezone") then {
 				if( ExilePlayerInSafezone ) then {
-					["Cannot pick up tow ropes in safe zone",false] call SA_Hint;
+					["Не можна підбирати буксирний шнур техніки, яка стоїть в безпечній зоні",false] call SA_Hint;
 					_canPickupTowRopes = false;
 				};
 			};
@@ -715,9 +715,9 @@ SA_Hint = {
     params ["_msg",["_isSuccess",true]];
     if (!isNil "ExileClient_gui_notification_event_addNotification") then {
 		if (_isSuccess) then {
-			["Success", [_msg]] call ExileClient_gui_notification_event_addNotification;
+			["Успішно", [_msg]] call ExileClient_gui_notification_event_addNotification;
 		} else {
-			["Whoops", [_msg]] call ExileClient_gui_notification_event_addNotification;
+			["Ой вей", [_msg]] call ExileClient_gui_notification_event_addNotification;
 		};
     } else {
         hint _msg;
@@ -738,23 +738,23 @@ SA_Set_Owner = {
 
 SA_Add_Player_Tow_Actions = {
 
-	player addAction ["Deploy Tow Ropes", {
+	player addAction ["Витягнути буксирний шнур", {
 		[] call SA_Take_Tow_Ropes_Action;
 	}, nil, 0, false, true, "", "call SA_Take_Tow_Ropes_Action_Check"];
 
-	player addAction ["Put Away Tow Ropes", {
+	player addAction ["Сховати буксирний шнур", {
 		[] call SA_Put_Away_Tow_Ropes_Action;
 	}, nil, 0, false, true, "", "call SA_Put_Away_Tow_Ropes_Action_Check"];
 
-	player addAction ["Attach To Tow Ropes", {
+	player addAction ["Чіпити буксирний шнур сюди", {
 		[] call SA_Attach_Tow_Ropes_Action;
 	}, nil, 0, false, true, "", "call SA_Attach_Tow_Ropes_Action_Check"];
 
-	player addAction ["Drop Tow Ropes", {
+	player addAction ["Кинути буксирний шнур", {
 		[] call SA_Drop_Tow_Ropes_Action;
 	}, nil, 0, false, true, "", "call SA_Drop_Tow_Ropes_Action_Check"];
 
-	player addAction ["Pickup Tow Ropes", {
+	player addAction ["Підібрати буксирний шнур", {
 		[] call SA_Pickup_Tow_Ropes_Action;
 	}, nil, 0, false, true, "", "call SA_Pickup_Tow_Ropes_Action_Check"];
 
