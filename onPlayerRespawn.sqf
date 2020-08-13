@@ -17,7 +17,7 @@ if (side group player == teamPlayer) then
 	{
 	_owner = _oldUnit getVariable ["owner",_oldUnit];
 
-	if (_owner != _oldUnit) exitWith {hint "Died while remote controlling AI"; selectPlayer _owner; disableUserInput false; deleteVehicle _newUnit};
+	if (_owner != _oldUnit) exitWith {hint "Ви вмерли, коли контролювали бота."; selectPlayer _owner; disableUserInput false; deleteVehicle _newUnit};
 
 	_nul = [0,-1,getPos _oldUnit] remoteExec ["A3A_fnc_citySupportChange",2];
 
@@ -144,7 +144,7 @@ if (side group player == teamPlayer) then
 			{
 			if !(player getVariable ["disguised",false]) then
 				{
-				hint "You are wearing an enemy uniform, this will make the AI attack you. Beware!";
+				hint "Ви носите кацапську форму. Такщо не дивуйтесь, якщо вас постріляють свої ж.";
 				player setVariable ["disguised",true];
 				player addRating (-1*(2001 + rating player));
 				};
@@ -153,7 +153,7 @@ if (side group player == teamPlayer) then
 			{
 			if (player getVariable ["disguised",false]) then
 				{
-				hint "You removed your enemy uniform";
+				hint "Ви зняли ворожу форму";
 				player addRating (rating player * -1);
 				};
 			};
